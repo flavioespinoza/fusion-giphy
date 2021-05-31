@@ -2,27 +2,27 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.2",
-  "hash": "485a2a6828d0942c1e44",
+  "hash": "0b8f8248bbe5149b78a6",
   "children": [
     {
       "errors": [],
       "warnings": [],
-      "hash": "485a2a6828d0942c1e44",
-      "time": 260,
-      "builtAt": 1622446872431,
+      "hash": "0b8f8248bbe5149b78a6",
+      "time": 268,
+      "builtAt": 1622447084512,
       "publicPath": "",
       "outputPath": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/.fusion/dist/development/server",
       "assetsByChunkName": {
         "main": [
           "server-main.js",
-          "main.5290daa865308cfede47.hot-update.js",
+          "main.7ae5a2f93b3d5b10ab47.hot-update.js",
           "server-main.js.map",
-          "main.5290daa865308cfede47.hot-update.js.map"
+          "main.7ae5a2f93b3d5b10ab47.hot-update.js.map"
         ]
       },
       "assets": [
         {
-          "name": "5290daa865308cfede47.hot-update.json",
+          "name": "7ae5a2f93b3d5b10ab47.hot-update.json",
           "size": 46,
           "chunks": [],
           "chunkNames": [],
@@ -33,7 +33,7 @@
           "emitted": true
         },
         {
-          "name": "main.5290daa865308cfede47.hot-update.js",
+          "name": "main.7ae5a2f93b3d5b10ab47.hot-update.js",
           "size": 7719,
           "chunks": [
             "main"
@@ -48,8 +48,8 @@
           "emitted": true
         },
         {
-          "name": "main.5290daa865308cfede47.hot-update.js.map",
-          "size": 4187,
+          "name": "main.7ae5a2f93b3d5b10ab47.hot-update.js.map",
+          "size": 4185,
           "chunks": [
             "main"
           ],
@@ -75,7 +75,7 @@
         },
         {
           "name": "server-main.js.map",
-          "size": 67610,
+          "size": 67608,
           "chunks": [
             "main"
           ],
@@ -96,9 +96,9 @@
           ],
           "assets": [
             "server-main.js",
-            "main.5290daa865308cfede47.hot-update.js",
+            "main.7ae5a2f93b3d5b10ab47.hot-update.js",
             "server-main.js.map",
-            "main.5290daa865308cfede47.hot-update.js.map"
+            "main.7ae5a2f93b3d5b10ab47.hot-update.js.map"
           ],
           "children": {},
           "childAssets": {}
@@ -111,9 +111,9 @@
           ],
           "assets": [
             "server-main.js",
-            "main.5290daa865308cfede47.hot-update.js",
+            "main.7ae5a2f93b3d5b10ab47.hot-update.js",
             "server-main.js.map",
-            "main.5290daa865308cfede47.hot-update.js.map"
+            "main.7ae5a2f93b3d5b10ab47.hot-update.js.map"
           ],
           "children": {},
           "childAssets": {}
@@ -131,11 +131,11 @@
           ],
           "files": [
             "server-main.js",
-            "main.5290daa865308cfede47.hot-update.js",
+            "main.7ae5a2f93b3d5b10ab47.hot-update.js",
             "server-main.js.map",
-            "main.5290daa865308cfede47.hot-update.js.map"
+            "main.7ae5a2f93b3d5b10ab47.hot-update.js.map"
           ],
-          "hash": "659fca554a465a98e7c0",
+          "hash": "c06959ce83d83918d337",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -1431,7 +1431,7 @@
               ],
               "optimizationBailout": [],
               "depth": 4,
-              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',\n  border: '1px solid gainsboro',\n  marginBottom: '8px'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n});\nButtonIcon.displayName = \"ButtonIcon\";\nconst ButtonIconClose = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer',\n  marginRight: '-12px'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIconClose.displayName = \"ButtonIconClose\";\n\nconst Components = () => {\n  const {\n    setSearch,\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 47\n    },\n    __self: this\n  }, React.createElement(ButtonIconClose, {\n    onClick: () => setSearch(''),\n    style: {\n      color: searchKey === '' ? 'white' : 'hotpink'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 48\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-times fa-xs\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 52\n    },\n    __self: this\n  })), React.createElement(SearchBar, {\n    autoFocus: true,\n    clear: true,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 54\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 55\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 59\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 61\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 65\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 67\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 71\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    noResultsMessage: searchKey === '' ? '' : `No results found for: ${searchKey}`,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 74\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 84\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 96\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 97\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
+              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',\n  border: '1px solid gainsboro',\n  marginBottom: '8px'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n});\nButtonIcon.displayName = \"ButtonIcon\";\nconst ButtonIconClose = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer',\n  marginRight: '-12px'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIconClose.displayName = \"ButtonIconClose\";\n\nconst Components = () => {\n  const {\n    setSearch,\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 45\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(ButtonIconClose, {\n    onClick: () => setSearch(''),\n    style: {\n      color: searchKey === '' ? 'white' : 'hotpink'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 47\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-times fa-xs\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 51\n    },\n    __self: this\n  })), React.createElement(SearchBar, {\n    autoFocus: true,\n    clear: true,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 53\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 54\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 58\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 60\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 64\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 66\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 70\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    noResultsMessage: searchKey === '' ? '' : `No results found for: ${searchKey}`,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 73\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 83\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 95\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 96\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
             },
             {
               "id": "./src/pages/pageNotFound.js",
@@ -4409,7 +4409,7 @@
           ],
           "optimizationBailout": [],
           "depth": 4,
-          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',\n  border: '1px solid gainsboro',\n  marginBottom: '8px'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n});\nButtonIcon.displayName = \"ButtonIcon\";\nconst ButtonIconClose = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer',\n  marginRight: '-12px'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIconClose.displayName = \"ButtonIconClose\";\n\nconst Components = () => {\n  const {\n    setSearch,\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 47\n    },\n    __self: this\n  }, React.createElement(ButtonIconClose, {\n    onClick: () => setSearch(''),\n    style: {\n      color: searchKey === '' ? 'white' : 'hotpink'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 48\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-times fa-xs\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 52\n    },\n    __self: this\n  })), React.createElement(SearchBar, {\n    autoFocus: true,\n    clear: true,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 54\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 55\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 59\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 61\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 65\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 67\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 71\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    noResultsMessage: searchKey === '' ? '' : `No results found for: ${searchKey}`,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 74\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 84\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 96\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 97\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
+          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',\n  border: '1px solid gainsboro',\n  marginBottom: '8px'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n});\nButtonIcon.displayName = \"ButtonIcon\";\nconst ButtonIconClose = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer',\n  marginRight: '-12px'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIconClose.displayName = \"ButtonIconClose\";\n\nconst Components = () => {\n  const {\n    setSearch,\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 45\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(ButtonIconClose, {\n    onClick: () => setSearch(''),\n    style: {\n      color: searchKey === '' ? 'white' : 'hotpink'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 47\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-times fa-xs\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 51\n    },\n    __self: this\n  })), React.createElement(SearchBar, {\n    autoFocus: true,\n    clear: true,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 53\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 54\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 58\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 60\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 64\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 66\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 70\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    noResultsMessage: searchKey === '' ? '' : `No results found for: ${searchKey}`,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 73\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 83\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 95\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 96\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
         },
         {
           "id": "./src/pages/pageNotFound.js",

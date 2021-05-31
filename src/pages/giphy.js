@@ -41,7 +41,6 @@ const Components = () => {
   // eslint-disable-next-line cup/no-undef
   const [width, setWidth] = useState(window.innerWidth);
   const [columns, setColumns] = useState(1);
-
   return (
     <FullHeightDiv>
       <SearchDiv>
