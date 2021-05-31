@@ -16,8 +16,9 @@ const FullHeightDiv = styled('div', {
 
 const SearchDiv = styled('div', {
   display: 'grid',
-  gridTemplateColumns: '9fr 1fr 1fr 1fr',
-  borderBottom: '1px solid gainsboro',
+  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',
+  border: '1px solid gainsboro',
+  marginBottom: '8px',
 });
 
 const ButtonIcon = styled('button', {
@@ -26,17 +27,31 @@ const ButtonIcon = styled('button', {
   cursor: 'pointer',
 });
 
+const ButtonIconClose = styled('button', {
+  backgroundColor: 'transparent',
+  border: 'none',
+  cursor: 'pointer',
+  marginRight: '-12px',
+});
+
 // define the components in a separate function so we can
 // use the context hook. You could also use the render props pattern
 const Components = () => {
-  const {fetchGifs, searchKey} = useContext(SearchContext);
+  const {setSearch, fetchGifs, searchKey} = useContext(SearchContext);
   // eslint-disable-next-line cup/no-undef
   const [width, setWidth] = useState(window.innerWidth);
   const [columns, setColumns] = useState(1);
+
   return (
     <FullHeightDiv>
       <SearchDiv>
-        <SearchBar />
+        <ButtonIconClose
+          onClick={() => setSearch('')}
+          style={{color: searchKey === '' ? 'white' : 'hotpink'}}
+        >
+          <i className="fad fa-times fa-xs"></i>
+        </ButtonIconClose>
+        <SearchBar autoFocus={true} clear={true} />
         <ButtonIcon
           onClick={() => setColumns(1)}
           style={{color: columns === 1 ? 'hotpink' : ''}}
@@ -59,6 +74,9 @@ const Components = () => {
       <Grid
         key={searchKey}
         fetchGifs={fetchGifs}
+        noResultsMessage={
+          searchKey === '' ? '' : `No results found for: ${searchKey}`
+        }
         width={width}
         columns={columns}
         gutter={6}

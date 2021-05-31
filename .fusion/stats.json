@@ -2,27 +2,27 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.2",
-  "hash": "2a0db56f5dde7e725d9c",
+  "hash": "485a2a6828d0942c1e44",
   "children": [
     {
       "errors": [],
       "warnings": [],
-      "hash": "2a0db56f5dde7e725d9c",
-      "time": 155,
-      "builtAt": 1622440410854,
+      "hash": "485a2a6828d0942c1e44",
+      "time": 260,
+      "builtAt": 1622446872431,
       "publicPath": "",
       "outputPath": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/.fusion/dist/development/server",
       "assetsByChunkName": {
         "main": [
           "server-main.js",
-          "main.8b9f01da6381dfcac183.hot-update.js",
+          "main.5290daa865308cfede47.hot-update.js",
           "server-main.js.map",
-          "main.8b9f01da6381dfcac183.hot-update.js.map"
+          "main.5290daa865308cfede47.hot-update.js.map"
         ]
       },
       "assets": [
         {
-          "name": "8b9f01da6381dfcac183.hot-update.json",
+          "name": "5290daa865308cfede47.hot-update.json",
           "size": 46,
           "chunks": [],
           "chunkNames": [],
@@ -33,8 +33,8 @@
           "emitted": true
         },
         {
-          "name": "main.8b9f01da6381dfcac183.hot-update.js",
-          "size": 6807,
+          "name": "main.5290daa865308cfede47.hot-update.js",
+          "size": 7719,
           "chunks": [
             "main"
           ],
@@ -48,8 +48,8 @@
           "emitted": true
         },
         {
-          "name": "main.8b9f01da6381dfcac183.hot-update.js.map",
-          "size": 3488,
+          "name": "main.5290daa865308cfede47.hot-update.js.map",
+          "size": 4187,
           "chunks": [
             "main"
           ],
@@ -63,7 +63,7 @@
         },
         {
           "name": "server-main.js",
-          "size": 91222,
+          "size": 88451,
           "chunks": [
             "main"
           ],
@@ -75,7 +75,7 @@
         },
         {
           "name": "server-main.js.map",
-          "size": 69221,
+          "size": 67610,
           "chunks": [
             "main"
           ],
@@ -96,9 +96,9 @@
           ],
           "assets": [
             "server-main.js",
-            "main.8b9f01da6381dfcac183.hot-update.js",
+            "main.5290daa865308cfede47.hot-update.js",
             "server-main.js.map",
-            "main.8b9f01da6381dfcac183.hot-update.js.map"
+            "main.5290daa865308cfede47.hot-update.js.map"
           ],
           "children": {},
           "childAssets": {}
@@ -111,9 +111,9 @@
           ],
           "assets": [
             "server-main.js",
-            "main.8b9f01da6381dfcac183.hot-update.js",
+            "main.5290daa865308cfede47.hot-update.js",
             "server-main.js.map",
-            "main.8b9f01da6381dfcac183.hot-update.js.map"
+            "main.5290daa865308cfede47.hot-update.js.map"
           ],
           "children": {},
           "childAssets": {}
@@ -125,17 +125,17 @@
           "rendered": true,
           "initial": true,
           "entry": true,
-          "size": 31242,
+          "size": 29112,
           "names": [
             "main"
           ],
           "files": [
             "server-main.js",
-            "main.8b9f01da6381dfcac183.hot-update.js",
+            "main.5290daa865308cfede47.hot-update.js",
             "server-main.js.map",
-            "main.8b9f01da6381dfcac183.hot-update.js.map"
+            "main.5290daa865308cfede47.hot-update.js.map"
           ],
-          "hash": "8ab09076e7002f386a46",
+          "hash": "659fca554a465a98e7c0",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -1300,7 +1300,7 @@
               "name": "./src/main.js",
               "index": 27,
               "index2": 35,
-              "size": 398,
+              "size": 447,
               "cacheable": true,
               "built": false,
               "optional": false,
@@ -1361,7 +1361,7 @@
               ],
               "optimizationBailout": [],
               "depth": 2,
-              "source": "import App from 'fusion-react';\nimport Router from 'fusion-plugin-react-router';\nimport Styletron from 'fusion-plugin-styletron-react';\nimport { RenderToken } from 'fusion-core';\nimport root from './root.js';\nexport default (() => {\n  const app = new App(root);\n  app.register(Styletron);\n  app.register(Router);\n  true && app.register(RenderToken, () => \"<div id='root'></div>\");\n  return app;\n});"
+              "source": "import App from 'fusion-react';\nimport Router from 'fusion-plugin-react-router';\nimport Styletron from 'fusion-plugin-styletron-react';\nimport { RenderToken } from 'fusion-core';\nimport '@fortawesome/fontawesome-pro/js/all.js';\nimport root from './root.js';\nexport default (() => {\n  const app = new App(root);\n  app.register(Styletron);\n  app.register(Router);\n  true && app.register(RenderToken, () => '<div id=\"root\"></div>');\n  return app;\n});"
             },
             {
               "id": "./src/pages/giphy.js",
@@ -1369,7 +1369,7 @@
               "name": "./src/pages/giphy.js",
               "index": 34,
               "index2": 32,
-              "size": 3887,
+              "size": 4641,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -1414,7 +1414,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "./pages/giphy.js",
-                  "loc": "5:0-43"
+                  "loc": "4:0-43"
                 },
                 {
                   "moduleId": "./src/root.js",
@@ -1423,7 +1423,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "./pages/giphy.js",
-                  "loc": "25:13-24"
+                  "loc": "15:13-24"
                 }
               ],
               "providedExports": [
@@ -1431,77 +1431,7 @@
               ],
               "optimizationBailout": [],
               "depth": 4,
-              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '9fr 1fr 1fr 1fr',\n  borderBottom: '1px solid gainsboro'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIcon.displayName = \"ButtonIcon\";\n\nconst Components = () => {\n  const {\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 37\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 38\n    },\n    __self: this\n  }, React.createElement(SearchBar, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 39\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 40\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 44\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 50\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 52\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 56\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 59\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 66\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 78\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 79\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
-            },
-            {
-              "id": "./src/pages/home.js",
-              "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "name": "./src/pages/home.js",
-              "index": 33,
-              "index2": 29,
-              "size": 2765,
-              "cacheable": true,
-              "built": false,
-              "optional": false,
-              "prefetched": false,
-              "chunks": [
-                "main"
-              ],
-              "issuer": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-              "issuerId": "./src/root.js",
-              "issuerName": "./src/root.js",
-              "issuerPath": [
-                {
-                  "id": 0,
-                  "identifier": "multi /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-public-path.js /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/webpack/hot/poll.js?1000 /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
-                  "name": "multi ./node_modules/fusion-cli/entries/server-public-path.js (webpack)/hot/poll.js?1000 ./node_modules/fusion-cli/entries/server-entry.js"
-                },
-                {
-                  "id": "./node_modules/fusion-cli/entries/server-entry.js",
-                  "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
-                  "name": "./node_modules/fusion-cli/entries/server-entry.js"
-                },
-                {
-                  "id": "./src/main.js",
-                  "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
-                  "name": "./src/main.js"
-                },
-                {
-                  "id": "./src/root.js",
-                  "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-                  "name": "./src/root.js"
-                }
-              ],
-              "failed": false,
-              "errors": 0,
-              "warnings": 0,
-              "assets": [],
-              "reasons": [
-                {
-                  "moduleId": "./src/root.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-                  "module": "./src/root.js",
-                  "moduleName": "./src/root.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "./pages/home.js",
-                  "loc": "4:0-35"
-                },
-                {
-                  "moduleId": "./src/root.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-                  "module": "./src/root.js",
-                  "moduleName": "./src/root.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "./pages/home.js",
-                  "loc": "16:13-17"
-                }
-              ],
-              "providedExports": [
-                "default"
-              ],
-              "optimizationBailout": [],
-              "depth": 4,
-              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js\";\nimport React from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nconst Center = styled('div', {\n  fontFamily: 'HelveticaNeue-Light, Arial',\n  display: 'flex',\n  alignItems: 'center',\n  justifyContent: 'center',\n  height: '100%'\n});\nCenter.displayName = \"Center\";\nconst FusionStyle = styled('div', {\n  fontSize: '80px',\n  color: 'rgba(0,0,0,.8)',\n  paddingRight: '30px',\n  display: 'flex'\n});\nFusionStyle.displayName = \"FusionStyle\";\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst Circle = styled('div', {\n  height: '180px',\n  width: '180px',\n  marginTop: '20px',\n  backgroundColor: 'white',\n  ':hover': {\n    backgroundColor: '#f0f8fa'\n  },\n  border: '10px solid #4db5d9',\n  borderRadius: '50%',\n  display: 'flex',\n  justifyContent: 'center',\n  alignItems: 'center'\n});\nCircle.displayName = \"Circle\";\nconst GettingStartedLink = styled('a', {\n  textDecoration: 'none',\n  color: '#4db5d9',\n  fontSize: '18px',\n  display: 'flex',\n  justifyContent: 'center',\n  alignItems: 'center',\n  textAlign: 'center',\n  height: '100%'\n});\nGettingStartedLink.displayName = \"GettingStartedLink\";\n\nconst Home = () => React.createElement(FullHeightDiv, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 50\n  },\n  __self: this\n}, React.createElement(\"style\", {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 51\n  },\n  __self: this\n}, `\n        html,body,#root{height:100%;}\n        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}\n        body{margin:0;}\n        button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}\n        input::-webkit-inner-spin-button,input::-webkit-outer-spin-button,input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}\n        `), React.createElement(Center, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 60\n  },\n  __self: this\n}, React.createElement(FusionStyle, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 61\n  },\n  __self: this\n}, \"Fusion.js\"), React.createElement(Center, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 62\n  },\n  __self: this\n}, React.createElement(Circle, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 63\n  },\n  __self: this\n}, React.createElement(GettingStartedLink, {\n  href: \"https://fusionjs.com/docs/overview\",\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 64\n  },\n  __self: this\n}, \"Let's Get Started\")))));\n\nexport default Home;"
+              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',\n  border: '1px solid gainsboro',\n  marginBottom: '8px'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n});\nButtonIcon.displayName = \"ButtonIcon\";\nconst ButtonIconClose = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer',\n  marginRight: '-12px'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIconClose.displayName = \"ButtonIconClose\";\n\nconst Components = () => {\n  const {\n    setSearch,\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 47\n    },\n    __self: this\n  }, React.createElement(ButtonIconClose, {\n    onClick: () => setSearch(''),\n    style: {\n      color: searchKey === '' ? 'white' : 'hotpink'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 48\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-times fa-xs\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 52\n    },\n    __self: this\n  })), React.createElement(SearchBar, {\n    autoFocus: true,\n    clear: true,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 54\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 55\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 59\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 61\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 65\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 67\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 71\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    noResultsMessage: searchKey === '' ? '' : `No results found for: ${searchKey}`,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 74\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 84\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 96\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 97\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
             },
             {
               "id": "./src/pages/pageNotFound.js",
@@ -1554,7 +1484,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "./pages/pageNotFound.js",
-                  "loc": "6:0-51"
+                  "loc": "5:0-51"
                 },
                 {
                   "moduleId": "./src/root.js",
@@ -1563,7 +1493,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "./pages/pageNotFound.js",
-                  "loc": "32:13-25"
+                  "loc": "22:13-25"
                 }
               ],
               "providedExports": [
@@ -1577,9 +1507,9 @@
               "id": "./src/root.js",
               "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
               "name": "./src/root.js",
-              "index": 31,
+              "index": 32,
               "index2": 34,
-              "size": 942,
+              "size": 732,
               "cacheable": true,
               "built": false,
               "optional": false,
@@ -1619,7 +1549,7 @@
                   "moduleName": "./src/main.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "./root.js",
-                  "loc": "5:0-29"
+                  "loc": "6:0-29"
                 },
                 {
                   "moduleId": "./src/main.js",
@@ -1628,7 +1558,7 @@
                   "moduleName": "./src/main.js",
                   "type": "harmony import specifier",
                   "userRequest": "./root.js",
-                  "loc": "7:22-26"
+                  "loc": "8:22-26"
                 }
               ],
               "providedExports": [
@@ -1636,7 +1566,59 @@
               ],
               "optimizationBailout": [],
               "depth": 3,
-              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js\";\nimport React from 'react';\nimport { Route, Switch } from 'fusion-plugin-react-router';\nimport Home from './pages/home.js';\nimport GiphySearch from './pages/giphy.js';\nimport PageNotFound from './pages/pageNotFound.js';\nconst root = React.createElement(Switch, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 9\n  },\n  __self: this\n}, React.createElement(Route, {\n  exact: true,\n  path: \"/\",\n  component: Home,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 10\n  },\n  __self: this\n}), React.createElement(Route, {\n  exact: true,\n  path: \"/giphy-search\",\n  component: GiphySearch,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 11\n  },\n  __self: this\n}), React.createElement(Route, {\n  component: PageNotFound,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 12\n  },\n  __self: this\n}));\nexport default root;"
+              "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js\";\nimport React from 'react';\nimport { Route, Switch } from 'fusion-plugin-react-router';\nimport GiphySearch from './pages/giphy.js';\nimport PageNotFound from './pages/pageNotFound.js';\nconst root = React.createElement(Switch, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 8\n  },\n  __self: this\n}, React.createElement(Route, {\n  exact: true,\n  path: \"/\",\n  component: GiphySearch,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 9\n  },\n  __self: this\n}), React.createElement(Route, {\n  component: PageNotFound,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 10\n  },\n  __self: this\n}));\nexport default root;"
+            },
+            {
+              "id": "@fortawesome/fontawesome-pro/js/all.js",
+              "identifier": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/@fortawesome/fontawesome-pro/js/all.js\"",
+              "name": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/@fortawesome/fontawesome-pro/js/all.js\"",
+              "index": 31,
+              "index2": 28,
+              "size": 42,
+              "built": false,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "main"
+              ],
+              "issuer": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
+              "issuerId": "./src/main.js",
+              "issuerName": "./src/main.js",
+              "issuerPath": [
+                {
+                  "id": 0,
+                  "identifier": "multi /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-public-path.js /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/webpack/hot/poll.js?1000 /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
+                  "name": "multi ./node_modules/fusion-cli/entries/server-public-path.js (webpack)/hot/poll.js?1000 ./node_modules/fusion-cli/entries/server-entry.js"
+                },
+                {
+                  "id": "./node_modules/fusion-cli/entries/server-entry.js",
+                  "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
+                  "name": "./node_modules/fusion-cli/entries/server-entry.js"
+                },
+                {
+                  "id": "./src/main.js",
+                  "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
+                  "name": "./src/main.js"
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": "./src/main.js",
+                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
+                  "module": "./src/main.js",
+                  "moduleName": "./src/main.js",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "@fortawesome/fontawesome-pro/js/all.js",
+                  "loc": "5:0-48"
+                }
+              ],
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 3
             },
             {
               "id": "@giphy/react-components",
@@ -1702,7 +1684,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "@giphy/react-components",
-                  "loc": "34:17-30"
+                  "loc": "43:17-30"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -1711,7 +1693,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "@giphy/react-components",
-                  "loc": "50:25-34"
+                  "loc": "76:27-36"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -1720,7 +1702,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "@giphy/react-components",
-                  "loc": "107:28-32"
+                  "loc": "135:28-32"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -1729,7 +1711,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "@giphy/react-components",
-                  "loc": "134:29-49"
+                  "loc": "163:29-49"
                 }
               ],
               "providedExports": null,
@@ -2129,7 +2111,7 @@
                   "moduleName": "./src/main.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-core",
-                  "loc": "10:23-34"
+                  "loc": "11:23-34"
                 }
               ],
               "providedExports": null,
@@ -2190,7 +2172,7 @@
                   "moduleName": "./src/main.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-react-router",
-                  "loc": "9:15-21"
+                  "loc": "10:15-21"
                 },
                 {
                   "moduleId": "./src/pages/pageNotFound.js",
@@ -2226,7 +2208,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-react-router",
-                  "loc": "7:33-39"
+                  "loc": "6:33-39"
                 },
                 {
                   "moduleId": "./src/root.js",
@@ -2235,7 +2217,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-react-router",
-                  "loc": "13:23-28"
+                  "loc": "12:23-28"
                 },
                 {
                   "moduleId": "./src/root.js",
@@ -2244,16 +2226,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-react-router",
-                  "loc": "22:24-29"
-                },
-                {
-                  "moduleId": "./src/root.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-                  "module": "./src/root.js",
-                  "moduleName": "./src/root.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "fusion-plugin-react-router",
-                  "loc": "31:24-29"
+                  "loc": "21:24-29"
                 }
               ],
               "providedExports": null,
@@ -2314,7 +2287,7 @@
                   "moduleName": "./src/main.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "8:15-24"
+                  "loc": "9:15-24"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2350,61 +2323,16 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "21:19-25"
+                  "loc": "22:19-25"
                 },
                 {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "3:0-55"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
+                  "moduleId": "./src/pages/giphy.js",
+                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js",
+                  "module": "./src/pages/giphy.js",
+                  "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "4:15-21"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "12:20-26"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "19:22-28"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "24:15-21"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "fusion-plugin-styletron-react",
-                  "loc": "39:27-33"
+                  "loc": "28:24-30"
                 }
               ],
               "providedExports": null,
@@ -2465,7 +2393,7 @@
                   "moduleName": "./src/main.js",
                   "type": "harmony import specifier",
                   "userRequest": "fusion-react",
-                  "loc": "7:18-21"
+                  "loc": "8:18-21"
                 }
               ],
               "providedExports": null,
@@ -2715,8 +2643,8 @@
               "id": "react",
               "identifier": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/react/index.js\"",
               "name": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/react/index.js\"",
-              "index": 32,
-              "index2": 28,
+              "index": 33,
+              "index2": 29,
               "size": 42,
               "built": false,
               "optional": false,
@@ -2770,7 +2698,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "34:6-16"
+                  "loc": "43:6-16"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2779,7 +2707,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "36:28-36"
+                  "loc": "45:28-36"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2788,7 +2716,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "37:32-40"
+                  "loc": "46:32-40"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2797,7 +2725,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "38:9-14"
+                  "loc": "47:9-14"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2806,7 +2734,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "44:5-10"
+                  "loc": "53:5-10"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2815,7 +2743,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "50:5-10"
+                  "loc": "59:5-10"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2824,7 +2752,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "56:6-11"
+                  "loc": "69:5-10"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2833,7 +2761,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "66:5-10"
+                  "loc": "76:7-12"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2842,7 +2770,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "73:7-12"
+                  "loc": "84:6-11"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2851,7 +2779,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "83:5-10"
+                  "loc": "94:5-10"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2860,7 +2788,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "90:7-12"
+                  "loc": "101:7-12"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2869,7 +2797,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "100:5-10"
+                  "loc": "111:5-10"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2878,7 +2806,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "107:8-13"
+                  "loc": "118:7-12"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2887,7 +2815,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "118:6-11"
+                  "loc": "128:5-10"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2896,7 +2824,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "134:9-14"
+                  "loc": "135:8-13"
                 },
                 {
                   "moduleId": "./src/pages/giphy.js",
@@ -2905,79 +2833,25 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "141:5-10"
+                  "loc": "147:6-11"
                 },
                 {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "react",
-                  "loc": "2:0-26"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
+                  "moduleId": "./src/pages/giphy.js",
+                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js",
+                  "module": "./src/pages/giphy.js",
+                  "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "51:19-24"
+                  "loc": "163:9-14"
                 },
                 {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
+                  "moduleId": "./src/pages/giphy.js",
+                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js",
+                  "module": "./src/pages/giphy.js",
+                  "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "57:3-8"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "react",
-                  "loc": "69:12-17"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "react",
-                  "loc": "75:3-8"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "react",
-                  "loc": "81:17-22"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "react",
-                  "loc": "87:3-8"
-                },
-                {
-                  "moduleId": "./src/pages/home.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-                  "module": "./src/pages/home.js",
-                  "moduleName": "./src/pages/home.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "react",
-                  "loc": "93:3-8"
+                  "loc": "170:5-10"
                 },
                 {
                   "moduleId": "./src/pages/pageNotFound.js",
@@ -3022,7 +2896,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "7:13-18"
+                  "loc": "6:13-18"
                 },
                 {
                   "moduleId": "./src/root.js",
@@ -3031,7 +2905,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "13:3-8"
+                  "loc": "12:3-8"
                 },
                 {
                   "moduleId": "./src/root.js",
@@ -3040,16 +2914,7 @@
                   "moduleName": "./src/root.js",
                   "type": "harmony import specifier",
                   "userRequest": "react",
-                  "loc": "22:4-9"
-                },
-                {
-                  "moduleId": "./src/root.js",
-                  "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-                  "module": "./src/root.js",
-                  "moduleName": "./src/root.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "react",
-                  "loc": "31:4-9"
+                  "loc": "21:4-9"
                 }
               ],
               "providedExports": null,
@@ -3120,7 +2985,7 @@
                   "moduleName": "./src/pages/giphy.js",
                   "type": "harmony import specifier",
                   "userRequest": "react-resize-observer",
-                  "loc": "118:26-40"
+                  "loc": "147:26-40"
                 }
               ],
               "providedExports": null,
@@ -4413,7 +4278,7 @@
           "name": "./src/main.js",
           "index": 27,
           "index2": 35,
-          "size": 398,
+          "size": 447,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -4474,7 +4339,7 @@
           ],
           "optimizationBailout": [],
           "depth": 2,
-          "source": "import App from 'fusion-react';\nimport Router from 'fusion-plugin-react-router';\nimport Styletron from 'fusion-plugin-styletron-react';\nimport { RenderToken } from 'fusion-core';\nimport root from './root.js';\nexport default (() => {\n  const app = new App(root);\n  app.register(Styletron);\n  app.register(Router);\n  true && app.register(RenderToken, () => \"<div id='root'></div>\");\n  return app;\n});"
+          "source": "import App from 'fusion-react';\nimport Router from 'fusion-plugin-react-router';\nimport Styletron from 'fusion-plugin-styletron-react';\nimport { RenderToken } from 'fusion-core';\nimport '@fortawesome/fontawesome-pro/js/all.js';\nimport root from './root.js';\nexport default (() => {\n  const app = new App(root);\n  app.register(Styletron);\n  app.register(Router);\n  true && app.register(RenderToken, () => '<div id=\"root\"></div>');\n  return app;\n});"
         },
         {
           "id": "./src/pages/giphy.js",
@@ -4482,7 +4347,7 @@
           "name": "./src/pages/giphy.js",
           "index": 34,
           "index2": 32,
-          "size": 3887,
+          "size": 4641,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -4527,7 +4392,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony side effect evaluation",
               "userRequest": "./pages/giphy.js",
-              "loc": "5:0-43"
+              "loc": "4:0-43"
             },
             {
               "moduleId": "./src/root.js",
@@ -4536,7 +4401,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "./pages/giphy.js",
-              "loc": "25:13-24"
+              "loc": "15:13-24"
             }
           ],
           "providedExports": [
@@ -4544,77 +4409,7 @@
           ],
           "optimizationBailout": [],
           "depth": 4,
-          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '9fr 1fr 1fr 1fr',\n  borderBottom: '1px solid gainsboro'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIcon.displayName = \"ButtonIcon\";\n\nconst Components = () => {\n  const {\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 37\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 38\n    },\n    __self: this\n  }, React.createElement(SearchBar, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 39\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 40\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 44\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 50\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 52\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 56\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 59\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 66\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 78\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 79\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
-        },
-        {
-          "id": "./src/pages/home.js",
-          "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-          "name": "./src/pages/home.js",
-          "index": 33,
-          "index2": 29,
-          "size": 2765,
-          "cacheable": true,
-          "built": false,
-          "optional": false,
-          "prefetched": false,
-          "chunks": [
-            "main"
-          ],
-          "issuer": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-          "issuerId": "./src/root.js",
-          "issuerName": "./src/root.js",
-          "issuerPath": [
-            {
-              "id": 0,
-              "identifier": "multi /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-public-path.js /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/webpack/hot/poll.js?1000 /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
-              "name": "multi ./node_modules/fusion-cli/entries/server-public-path.js (webpack)/hot/poll.js?1000 ./node_modules/fusion-cli/entries/server-entry.js"
-            },
-            {
-              "id": "./node_modules/fusion-cli/entries/server-entry.js",
-              "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
-              "name": "./node_modules/fusion-cli/entries/server-entry.js"
-            },
-            {
-              "id": "./src/main.js",
-              "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
-              "name": "./src/main.js"
-            },
-            {
-              "id": "./src/root.js",
-              "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-              "name": "./src/root.js"
-            }
-          ],
-          "failed": false,
-          "errors": 0,
-          "warnings": 0,
-          "assets": [],
-          "reasons": [
-            {
-              "moduleId": "./src/root.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-              "module": "./src/root.js",
-              "moduleName": "./src/root.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "./pages/home.js",
-              "loc": "4:0-35"
-            },
-            {
-              "moduleId": "./src/root.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-              "module": "./src/root.js",
-              "moduleName": "./src/root.js",
-              "type": "harmony import specifier",
-              "userRequest": "./pages/home.js",
-              "loc": "16:13-17"
-            }
-          ],
-          "providedExports": [
-            "default"
-          ],
-          "optimizationBailout": [],
-          "depth": 4,
-          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js\";\nimport React from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nconst Center = styled('div', {\n  fontFamily: 'HelveticaNeue-Light, Arial',\n  display: 'flex',\n  alignItems: 'center',\n  justifyContent: 'center',\n  height: '100%'\n});\nCenter.displayName = \"Center\";\nconst FusionStyle = styled('div', {\n  fontSize: '80px',\n  color: 'rgba(0,0,0,.8)',\n  paddingRight: '30px',\n  display: 'flex'\n});\nFusionStyle.displayName = \"FusionStyle\";\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst Circle = styled('div', {\n  height: '180px',\n  width: '180px',\n  marginTop: '20px',\n  backgroundColor: 'white',\n  ':hover': {\n    backgroundColor: '#f0f8fa'\n  },\n  border: '10px solid #4db5d9',\n  borderRadius: '50%',\n  display: 'flex',\n  justifyContent: 'center',\n  alignItems: 'center'\n});\nCircle.displayName = \"Circle\";\nconst GettingStartedLink = styled('a', {\n  textDecoration: 'none',\n  color: '#4db5d9',\n  fontSize: '18px',\n  display: 'flex',\n  justifyContent: 'center',\n  alignItems: 'center',\n  textAlign: 'center',\n  height: '100%'\n});\nGettingStartedLink.displayName = \"GettingStartedLink\";\n\nconst Home = () => React.createElement(FullHeightDiv, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 50\n  },\n  __self: this\n}, React.createElement(\"style\", {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 51\n  },\n  __self: this\n}, `\n        html,body,#root{height:100%;}\n        html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}\n        body{margin:0;}\n        button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}\n        input::-webkit-inner-spin-button,input::-webkit-outer-spin-button,input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}\n        `), React.createElement(Center, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 60\n  },\n  __self: this\n}, React.createElement(FusionStyle, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 61\n  },\n  __self: this\n}, \"Fusion.js\"), React.createElement(Center, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 62\n  },\n  __self: this\n}, React.createElement(Circle, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 63\n  },\n  __self: this\n}, React.createElement(GettingStartedLink, {\n  href: \"https://fusionjs.com/docs/overview\",\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 64\n  },\n  __self: this\n}, \"Let's Get Started\")))));\n\nexport default Home;"
+          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js\";\nimport React, { useContext, useState } from 'react';\nimport { styled } from 'fusion-plugin-styletron-react';\nimport { Grid // our UI Component to display the results\n, SearchBar // the search bar the user will type into\n, SearchContext // the context that wraps and connects our components\n, SearchContextManager // the context manager, includes the Context.Provider\n} from '@giphy/react-components';\nimport ResizeObserver from 'react-resize-observer';\nconst FullHeightDiv = styled('div', {\n  height: '100%',\n  backgroundColor: '#FFFFFF'\n});\nFullHeightDiv.displayName = \"FullHeightDiv\";\nconst SearchDiv = styled('div', {\n  display: 'grid',\n  gridTemplateColumns: '30px 8fr 1fr 1fr 1fr',\n  border: '1px solid gainsboro',\n  marginBottom: '8px'\n});\nSearchDiv.displayName = \"SearchDiv\";\nconst ButtonIcon = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer'\n});\nButtonIcon.displayName = \"ButtonIcon\";\nconst ButtonIconClose = styled('button', {\n  backgroundColor: 'transparent',\n  border: 'none',\n  cursor: 'pointer',\n  marginRight: '-12px'\n}); // define the components in a separate function so we can\n// use the context hook. You could also use the render props pattern\n\nButtonIconClose.displayName = \"ButtonIconClose\";\n\nconst Components = () => {\n  const {\n    setSearch,\n    fetchGifs,\n    searchKey\n  } = useContext(SearchContext); // eslint-disable-next-line cup/no-undef\n\n  const [width, setWidth] = useState(window.innerWidth);\n  const [columns, setColumns] = useState(1);\n  return React.createElement(FullHeightDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 46\n    },\n    __self: this\n  }, React.createElement(SearchDiv, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 47\n    },\n    __self: this\n  }, React.createElement(ButtonIconClose, {\n    onClick: () => setSearch(''),\n    style: {\n      color: searchKey === '' ? 'white' : 'hotpink'\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 48\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-times fa-xs\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 52\n    },\n    __self: this\n  })), React.createElement(SearchBar, {\n    autoFocus: true,\n    clear: true,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 54\n    },\n    __self: this\n  }), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(1),\n    style: {\n      color: columns === 1 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 55\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-list fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 59\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(2),\n    style: {\n      color: columns === 2 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 61\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th-large fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 65\n    },\n    __self: this\n  })), React.createElement(ButtonIcon, {\n    onClick: () => setColumns(3),\n    style: {\n      color: columns === 3 ? 'hotpink' : ''\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 67\n    },\n    __self: this\n  }, React.createElement(\"i\", {\n    className: \"fad fa-th fa-lg\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 71\n    },\n    __self: this\n  }))), React.createElement(Grid, {\n    key: searchKey,\n    fetchGifs: fetchGifs,\n    noResultsMessage: searchKey === '' ? '' : `No results found for: ${searchKey}`,\n    width: width,\n    columns: columns,\n    gutter: 6,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 74\n    },\n    __self: this\n  }), React.createElement(ResizeObserver, {\n    onResize: ({\n      width\n    }) => {\n      setWidth(width);\n    },\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 84\n    },\n    __self: this\n  }));\n}; // the search experience consists of the manager and its child components that use SearchContext\n\n\nconst GiphySearch = props => {\n  return React.createElement(SearchContextManager, {\n    apiKey: 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6',\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 96\n    },\n    __self: this\n  }, React.createElement(Components, {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 97\n    },\n    __self: this\n  }));\n};\n\nexport default GiphySearch;"
         },
         {
           "id": "./src/pages/pageNotFound.js",
@@ -4667,7 +4462,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony side effect evaluation",
               "userRequest": "./pages/pageNotFound.js",
-              "loc": "6:0-51"
+              "loc": "5:0-51"
             },
             {
               "moduleId": "./src/root.js",
@@ -4676,7 +4471,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "./pages/pageNotFound.js",
-              "loc": "32:13-25"
+              "loc": "22:13-25"
             }
           ],
           "providedExports": [
@@ -4690,9 +4485,9 @@
           "id": "./src/root.js",
           "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
           "name": "./src/root.js",
-          "index": 31,
+          "index": 32,
           "index2": 34,
-          "size": 942,
+          "size": 732,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -4732,7 +4527,7 @@
               "moduleName": "./src/main.js",
               "type": "harmony side effect evaluation",
               "userRequest": "./root.js",
-              "loc": "5:0-29"
+              "loc": "6:0-29"
             },
             {
               "moduleId": "./src/main.js",
@@ -4741,7 +4536,7 @@
               "moduleName": "./src/main.js",
               "type": "harmony import specifier",
               "userRequest": "./root.js",
-              "loc": "7:22-26"
+              "loc": "8:22-26"
             }
           ],
           "providedExports": [
@@ -4749,7 +4544,59 @@
           ],
           "optimizationBailout": [],
           "depth": 3,
-          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js\";\nimport React from 'react';\nimport { Route, Switch } from 'fusion-plugin-react-router';\nimport Home from './pages/home.js';\nimport GiphySearch from './pages/giphy.js';\nimport PageNotFound from './pages/pageNotFound.js';\nconst root = React.createElement(Switch, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 9\n  },\n  __self: this\n}, React.createElement(Route, {\n  exact: true,\n  path: \"/\",\n  component: Home,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 10\n  },\n  __self: this\n}), React.createElement(Route, {\n  exact: true,\n  path: \"/giphy-search\",\n  component: GiphySearch,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 11\n  },\n  __self: this\n}), React.createElement(Route, {\n  component: PageNotFound,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 12\n  },\n  __self: this\n}));\nexport default root;"
+          "source": "var _jsxFileName = \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js\";\nimport React from 'react';\nimport { Route, Switch } from 'fusion-plugin-react-router';\nimport GiphySearch from './pages/giphy.js';\nimport PageNotFound from './pages/pageNotFound.js';\nconst root = React.createElement(Switch, {\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 8\n  },\n  __self: this\n}, React.createElement(Route, {\n  exact: true,\n  path: \"/\",\n  component: GiphySearch,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 9\n  },\n  __self: this\n}), React.createElement(Route, {\n  component: PageNotFound,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 10\n  },\n  __self: this\n}));\nexport default root;"
+        },
+        {
+          "id": "@fortawesome/fontawesome-pro/js/all.js",
+          "identifier": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/@fortawesome/fontawesome-pro/js/all.js\"",
+          "name": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/@fortawesome/fontawesome-pro/js/all.js\"",
+          "index": 31,
+          "index2": 28,
+          "size": 42,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
+          "issuerId": "./src/main.js",
+          "issuerName": "./src/main.js",
+          "issuerPath": [
+            {
+              "id": 0,
+              "identifier": "multi /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-public-path.js /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/webpack/hot/poll.js?1000 /Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
+              "name": "multi ./node_modules/fusion-cli/entries/server-public-path.js (webpack)/hot/poll.js?1000 ./node_modules/fusion-cli/entries/server-entry.js"
+            },
+            {
+              "id": "./node_modules/fusion-cli/entries/server-entry.js",
+              "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/entries/server-entry.js",
+              "name": "./node_modules/fusion-cli/entries/server-entry.js"
+            },
+            {
+              "id": "./src/main.js",
+              "identifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
+              "name": "./src/main.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/main.js",
+              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/main.js",
+              "module": "./src/main.js",
+              "moduleName": "./src/main.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "@fortawesome/fontawesome-pro/js/all.js",
+              "loc": "5:0-48"
+            }
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 3
         },
         {
           "id": "@giphy/react-components",
@@ -4815,7 +4662,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "@giphy/react-components",
-              "loc": "34:17-30"
+              "loc": "43:17-30"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -4824,7 +4671,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "@giphy/react-components",
-              "loc": "50:25-34"
+              "loc": "76:27-36"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -4833,7 +4680,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "@giphy/react-components",
-              "loc": "107:28-32"
+              "loc": "135:28-32"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -4842,7 +4689,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "@giphy/react-components",
-              "loc": "134:29-49"
+              "loc": "163:29-49"
             }
           ],
           "providedExports": null,
@@ -5242,7 +5089,7 @@
               "moduleName": "./src/main.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-core",
-              "loc": "10:23-34"
+              "loc": "11:23-34"
             }
           ],
           "providedExports": null,
@@ -5303,7 +5150,7 @@
               "moduleName": "./src/main.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-react-router",
-              "loc": "9:15-21"
+              "loc": "10:15-21"
             },
             {
               "moduleId": "./src/pages/pageNotFound.js",
@@ -5339,7 +5186,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-react-router",
-              "loc": "7:33-39"
+              "loc": "6:33-39"
             },
             {
               "moduleId": "./src/root.js",
@@ -5348,7 +5195,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-react-router",
-              "loc": "13:23-28"
+              "loc": "12:23-28"
             },
             {
               "moduleId": "./src/root.js",
@@ -5357,16 +5204,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-react-router",
-              "loc": "22:24-29"
-            },
-            {
-              "moduleId": "./src/root.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-              "module": "./src/root.js",
-              "moduleName": "./src/root.js",
-              "type": "harmony import specifier",
-              "userRequest": "fusion-plugin-react-router",
-              "loc": "31:24-29"
+              "loc": "21:24-29"
             }
           ],
           "providedExports": null,
@@ -5427,7 +5265,7 @@
               "moduleName": "./src/main.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-styletron-react",
-              "loc": "8:15-24"
+              "loc": "9:15-24"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5463,61 +5301,16 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-styletron-react",
-              "loc": "21:19-25"
+              "loc": "22:19-25"
             },
             {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "fusion-plugin-styletron-react",
-              "loc": "3:0-55"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
+              "moduleId": "./src/pages/giphy.js",
+              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js",
+              "module": "./src/pages/giphy.js",
+              "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-plugin-styletron-react",
-              "loc": "4:15-21"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "fusion-plugin-styletron-react",
-              "loc": "12:20-26"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "fusion-plugin-styletron-react",
-              "loc": "19:22-28"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "fusion-plugin-styletron-react",
-              "loc": "24:15-21"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "fusion-plugin-styletron-react",
-              "loc": "39:27-33"
+              "loc": "28:24-30"
             }
           ],
           "providedExports": null,
@@ -5578,7 +5371,7 @@
               "moduleName": "./src/main.js",
               "type": "harmony import specifier",
               "userRequest": "fusion-react",
-              "loc": "7:18-21"
+              "loc": "8:18-21"
             }
           ],
           "providedExports": null,
@@ -5828,8 +5621,8 @@
           "id": "react",
           "identifier": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/react/index.js\"",
           "name": "external \"/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/react/index.js\"",
-          "index": 32,
-          "index2": 28,
+          "index": 33,
+          "index2": 29,
           "size": 42,
           "built": false,
           "optional": false,
@@ -5883,7 +5676,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "34:6-16"
+              "loc": "43:6-16"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5892,7 +5685,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "36:28-36"
+              "loc": "45:28-36"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5901,7 +5694,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "37:32-40"
+              "loc": "46:32-40"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5910,7 +5703,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "38:9-14"
+              "loc": "47:9-14"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5919,7 +5712,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "44:5-10"
+              "loc": "53:5-10"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5928,7 +5721,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "50:5-10"
+              "loc": "59:5-10"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5937,7 +5730,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "56:6-11"
+              "loc": "69:5-10"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5946,7 +5739,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "66:5-10"
+              "loc": "76:7-12"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5955,7 +5748,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "73:7-12"
+              "loc": "84:6-11"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5964,7 +5757,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "83:5-10"
+              "loc": "94:5-10"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5973,7 +5766,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "90:7-12"
+              "loc": "101:7-12"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5982,7 +5775,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "100:5-10"
+              "loc": "111:5-10"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -5991,7 +5784,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "107:8-13"
+              "loc": "118:7-12"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -6000,7 +5793,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "118:6-11"
+              "loc": "128:5-10"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -6009,7 +5802,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "134:9-14"
+              "loc": "135:8-13"
             },
             {
               "moduleId": "./src/pages/giphy.js",
@@ -6018,79 +5811,25 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "141:5-10"
+              "loc": "147:6-11"
             },
             {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "react",
-              "loc": "2:0-26"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
+              "moduleId": "./src/pages/giphy.js",
+              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js",
+              "module": "./src/pages/giphy.js",
+              "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "51:19-24"
+              "loc": "163:9-14"
             },
             {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
+              "moduleId": "./src/pages/giphy.js",
+              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/giphy.js",
+              "module": "./src/pages/giphy.js",
+              "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "57:3-8"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "69:12-17"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "75:3-8"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "81:17-22"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "87:3-8"
-            },
-            {
-              "moduleId": "./src/pages/home.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/pages/home.js",
-              "module": "./src/pages/home.js",
-              "moduleName": "./src/pages/home.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "93:3-8"
+              "loc": "170:5-10"
             },
             {
               "moduleId": "./src/pages/pageNotFound.js",
@@ -6135,7 +5874,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "7:13-18"
+              "loc": "6:13-18"
             },
             {
               "moduleId": "./src/root.js",
@@ -6144,7 +5883,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "13:3-8"
+              "loc": "12:3-8"
             },
             {
               "moduleId": "./src/root.js",
@@ -6153,16 +5892,7 @@
               "moduleName": "./src/root.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "22:4-9"
-            },
-            {
-              "moduleId": "./src/root.js",
-              "moduleIdentifier": "/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/node_modules/fusion-cli/build/loaders/babel-loader.js??ref--4-0!/Users/flavio/go/src/github.com/flavioespinoza/fusion-giphy/src/root.js",
-              "module": "./src/root.js",
-              "moduleName": "./src/root.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "31:4-9"
+              "loc": "21:4-9"
             }
           ],
           "providedExports": null,
@@ -6233,7 +5963,7 @@
               "moduleName": "./src/pages/giphy.js",
               "type": "harmony import specifier",
               "userRequest": "react-resize-observer",
-              "loc": "118:26-40"
+              "loc": "147:26-40"
             }
           ],
           "providedExports": null,

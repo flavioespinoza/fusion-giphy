@@ -1,0 +1,36 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var fusion_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fusion-react */ "./node_modules/fusion-react/dist/browser.es2017.es.js");
+/* harmony import */ var fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fusion-plugin-react-router */ "./node_modules/fusion-plugin-react-router/dist/browser.es2017.es.js");
+/* harmony import */ var fusion_plugin_styletron_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! fusion-plugin-styletron-react */ "./node_modules/fusion-plugin-styletron-react/dist-browser-esm/index.js");
+/* harmony import */ var fusion_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! fusion-core */ "./node_modules/fusion-core/dist/browser.es2017.es.js");
+/* harmony import */ var _fortawesome_fontawesome_pro_js_all_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome-pro/js/all.js */ "./node_modules/@fortawesome/fontawesome-pro/js/all.js");
+/* harmony import */ var _fortawesome_fontawesome_pro_js_all_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_pro_js_all_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./root.js */ "./src/root.js");
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  const app = new fusion_react__WEBPACK_IMPORTED_MODULE_0__["default"](_root_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+  app.register(fusion_plugin_styletron_react__WEBPACK_IMPORTED_MODULE_2__["default"]);
+  app.register(fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+   false && false;
+  return app;
+});
+
+/***/ })
+
+})
+//# sourceMappingURL=main.11ef4d463122e928648a.hot-update.js.map
