@@ -4,17 +4,13 @@ import {Route, Switch} from 'fusion-plugin-react-router';
 import GiphySearch from './pages/giphy.js';
 import PageNotFound from './pages/pageNotFound.js';
 
-const root = (
-  <Switch>
-    <Route
-      exact
-      path="/"
-      component={() => (
-        <GiphySearch apiKey={'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6'} />
-      )}
-    />
-    <Route component={PageNotFound} />
-  </Switch>
-);
+const Root = ({apiKey}) => {
+  return (
+    <Switch>
+      <Route exact path="/" component={() => <GiphySearch apiKey={apiKey} />} />
+      <Route component={PageNotFound} />
+    </Switch>
+  );
+};
 
-export default root;
+export default Root;
