@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@giphy/react-components": "^3.0.4",
+    "dotenv": "^10.0.0",
     "fusion-cli": "^2.6.0",
     "fusion-core": "^2.0.9",
     "fusion-plugin-react-helmet-async": "^2.1.5",
