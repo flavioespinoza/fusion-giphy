@@ -6,7 +6,13 @@ import PageNotFound from './pages/pageNotFound.js';
 
 const root = (
   <Switch>
-    <Route exact path="/" component={GiphySearch} />
+    <Route
+      exact
+      path="/"
+      component={() => (
+        <GiphySearch apiKey={'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6'} />
+      )}
+    />
     <Route component={PageNotFound} />
   </Switch>
 );

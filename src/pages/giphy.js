@@ -90,7 +90,7 @@ const Components = () => {
 };
 
 // the search experience consists of the manager and its child components that use SearchContext
-const GiphySearch = ({apiKey = 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6'}) => {
+const GiphySearch = ({apiKey}) => {
   return (
     <SearchContextManager apiKey={apiKey}>
       <Components />
