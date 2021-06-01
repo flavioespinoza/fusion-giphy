@@ -18,12 +18,13 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-resize-observer": "^1.1.1",
+    "react-test-renderer": "^17.0.2",
     "styletron-react": "^5.2.2"
   },
   "scripts": {
     "dev": "fusion dev",
     "lint": "eslint .",
-    "test": "fusion test",
+    "test": "fusion test --updateSnapshot",
     "build": "fusion build",
     "build-production": "fusion build --production",
     "start": "fusion start"
