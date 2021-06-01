@@ -18,7 +18,7 @@ You must have the following tech installed on your local development environment
 
 **Git**: <https://git-scm.com/downloads>
 
-**Yarn**: <https://classic.yarnpkg.com/en/docs/install/#mac-stable>
+**Yarn**: <https://classic.yarnpkg.com/en/docs/install>
 
 ## Getting Started
 
