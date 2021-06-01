@@ -98,11 +98,12 @@ Tests are implemented using Fusion's [Component Testing](https://fusionjs.com/do
 yarn test
 ```
 
-## Todo
+- [ ] [Unit Testing](https://fusionjs.com/docs/testing/unit/)
+- [ ] [Snapshot Testing](https://fusionjs.com/docs/testing/snapshot/)
+- [ ] [Simulation Testing](https://fusionjs.com/docs/testing/simulation/)
+- [ ] [Integration Testing](https://fusionjs.com/docs/testing/integration/)
 
-Add tests for the following:
+### Deployment
 
-[Unit Testing](https://fusionjs.com/docs/testing/unit/)
-[Snapshot Testing](https://fusionjs.com/docs/testing/snapshot/)
-[Simulation Testing](https://fusionjs.com/docs/testing/simulation/)
-[Integration Testing](https://fusionjs.com/docs/testing/integration/)
+- [ ] Add automated CI/CD via Digital Ocean:
+  - [App Platform](https://www.digitalocean.com/products/app-platform/)
