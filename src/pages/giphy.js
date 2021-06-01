@@ -8,6 +8,9 @@ import {
   SearchContextManager, // the context manager, includes the Context.Provider
 } from '@giphy/react-components';
 import ResizeObserver from 'react-resize-observer';
+import {MyToken} from '../plugins/my-plugin.js';
+import {useService} from 'fusion-react';
+import Head from '../components/Head';
 
 const FullHeightDiv = styled('div', {
   height: '100%',
@@ -41,8 +44,11 @@ const Components = () => {
   // eslint-disable-next-line cup/no-undef
   const [width, setWidth] = useState(window.innerWidth);
   const [columns, setColumns] = useState(1);
+  const console = useService(MyToken);
   return (
     <FullHeightDiv>
+      <button onClick={() => console.log('hello')}>Click me</button>
+      <Head />
       <SearchDiv>
         <ButtonIconClose
           onClick={() => setSearch('')}

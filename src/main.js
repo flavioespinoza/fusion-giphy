@@ -2,18 +2,25 @@
 import React from 'react';
 import App from 'fusion-react';
 import Router from 'fusion-plugin-react-router';
+import HelmetPlugin from 'fusion-plugin-react-helmet-async';
 import Styletron from 'fusion-plugin-styletron-react';
 import {RenderToken} from 'fusion-core';
-import '@fortawesome/fontawesome-pro/js/all.js';
 import Root from './root.js';
+import {MyPlugin, MyToken} from './plugins/my-plugin.js';
 
-// @fix : get this to work with process.env.GIPHY_API_KEY
+/**
+ * @param {{let:typeof$String}} description
+ * */
 let apiKey = 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6';
 
 export default () => {
   const app = new App(<Root apiKey={apiKey} />);
+  app.register(HelmetPlugin);
   app.register(Styletron);
   app.register(Router);
-  __NODE__ && app.register(RenderToken, () => '<div id="root"></div>');
+  app.register(MyToken, MyPlugin);
+  if (__NODE__) {
+    app.register(RenderToken, () => '<div id="root"></div>');
+  }
   return app;
 };
