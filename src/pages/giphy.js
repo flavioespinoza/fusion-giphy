@@ -8,8 +8,6 @@ import {
   SearchContextManager, // the context manager, includes the Context.Provider
 } from '@giphy/react-components';
 import ResizeObserver from 'react-resize-observer';
-import {MyToken} from '../plugins/my-plugin.js';
-import {useService} from 'fusion-react';
 import Head from '../components/Head';
 
 const FullHeightDiv = styled('div', {
@@ -44,10 +42,8 @@ const Components = () => {
   // eslint-disable-next-line cup/no-undef
   const [width, setWidth] = useState(window.innerWidth);
   const [columns, setColumns] = useState(1);
-  const console = useService(MyToken);
   return (
     <FullHeightDiv>
-      <button onClick={() => console.log('hello')}>Click me</button>
       <Head />
       <SearchDiv>
         <ButtonIconClose
@@ -98,7 +94,7 @@ const Components = () => {
 // the search experience consists of the manager and its child components that use SearchContext
 const GiphySearch = ({apiKey}) => {
   return (
-    <SearchContextManager apiKey={apiKey}>
+    <SearchContextManager apiKey={apiKey} options={{rating: 'G', lang: 'en'}}>
       <Components />
     </SearchContextManager>
   );
