@@ -98,12 +98,15 @@ Tests are implemented using Fusion's [Component Testing](https://fusionjs.com/do
 yarn test
 ```
 
-- [ ] [Unit Testing](https://fusionjs.com/docs/testing/unit/)
-- [ ] [Snapshot Testing](https://fusionjs.com/docs/testing/snapshot/)
-- [ ] [Simulation Testing](https://fusionjs.com/docs/testing/simulation/)
-- [ ] [Integration Testing](https://fusionjs.com/docs/testing/integration/)
+- [ ] Complete [Component Testing](https://fusionjs.com/docs/testing/component/)
+- [ ] Add [Unit Testing](https://fusionjs.com/docs/testing/unit/)
+- [ ] Add [Snapshot Testing](https://fusionjs.com/docs/testing/snapshot/)
+- [ ] Add [Simulation Testing](https://fusionjs.com/docs/testing/simulation/)
+- [ ] Add [Integration Testing](https://fusionjs.com/docs/testing/integration/)
 
-### Deployment
+## Things to Add before Production
 
+- [ ] Complete config for GIPHY API Key using Fusion's createToken and createPlugin methods
 - [ ] Add automated CI/CD via Digital Ocean:
   - [App Platform](https://www.digitalocean.com/products/app-platform/)
+- [ ] Peer Review and discussion about application architecture, code, testing, UI/UX
