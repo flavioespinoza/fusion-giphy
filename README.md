@@ -1,8 +1,12 @@
 # fusion-giphy
 
+> Web application that serves the singular purpose of searching and displaying GIF images via the `GIPHY Search API`.
+>
+> Built using Uber's `Fusion.JS` framework (UI and styling), and the `GIPHY SDK for Web` which implements custom hooks based on React's useContext (state management).
+
 ## Overview
 
-- Utilizes GIPHY image search API and shows the results in a 1, 2, or 3-column scrollable view.
+- Utilizes the GIPHY image search API and shows the results in a 1, 2, or 3-column scrollable view.
 - Users enter queries (such as "kittens") into a search box, automatically triggering the API request and populating the screen.
 - Implements endless scrolling, automatically requesting and displaying more images when the user scrolls to the bottom of the view.
 
