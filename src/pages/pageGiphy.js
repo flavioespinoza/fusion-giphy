@@ -94,10 +94,7 @@ const Components = () => {
 // the search experience consists of the manager and its child components that use SearchContext
 const PageGiphy = ({apiKey, rating, lang}) => {
   return (
-    <SearchContextManager
-      apiKey={apiKey}
-      options={{rating: rating, lang: lang}}
-    >
+    <SearchContextManager apiKey={apiKey} options={{rating, lang}}>
       <Components />
     </SearchContextManager>
   );
