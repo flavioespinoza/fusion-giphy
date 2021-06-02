@@ -8,9 +8,6 @@ import {RenderToken} from 'fusion-core';
 import Root from './root.js';
 import {ConfigPlugin, ConfigToken} from './plugins/config-plugin.js';
 
-/**
- * @param {{let:typeof$String}} description
- * */
 let apiKey = 'CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6';
 
 export default () => {

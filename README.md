@@ -104,9 +104,8 @@ yarn test
 - [ ] Add [Simulation Testing](https://fusionjs.com/docs/testing/simulation/)
 - [ ] Add [Integration Testing](https://fusionjs.com/docs/testing/integration/)
 
-## Things to Add before Production
+## Things to Add Before Production
 
-- [ ] Complete config for GIPHY API Key using Fusion's createToken and createPlugin methods
-- [ ] Add automated CI/CD via Digital Ocean:
+- [ ] Add automated `CI/CD` via Digital Ocean:
   - [App Platform](https://www.digitalocean.com/products/app-platform/)
 - [ ] Peer Review and discussion about application architecture, code, testing, UI/UX
