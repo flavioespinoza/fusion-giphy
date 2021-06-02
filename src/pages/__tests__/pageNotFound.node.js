@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import PageNotFound from '../pageNotFound';
 
-it('renders correctly', () => {
+it('PageNotFound renders correctly', () => {
   const tree = renderer
     .create(
       <PageNotFound>

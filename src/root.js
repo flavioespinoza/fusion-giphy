@@ -1,14 +1,31 @@
 // @flow
 import React from 'react';
 import {Route, Switch} from 'fusion-plugin-react-router';
-import GiphySearch from './pages/giphy.js';
+import PageGiphy from './pages/pageGiphy.js';
 import PageNotFound from './pages/pageNotFound.js';
+import {useService} from 'fusion-react';
+import {ConfigToken} from './plugins/config-plugin.js';
 
-const Root = props => {
-  const {apiKey} = props;
+const Root = () => {
+  const {apiKey, rating, lang} = useService(ConfigToken);
+
   return (
     <Switch>
-      <Route exact path="/" component={() => <GiphySearch apiKey={apiKey} />} />
+      <Route
+        exact
+        path="/"
+        component={() => {
+          return (
+            <PageGiphy
+              {...{
+                apiKey,
+                rating,
+                lang,
+              }}
+            />
+          );
+        }}
+      />
       <Route component={PageNotFound} />
     </Switch>
   );

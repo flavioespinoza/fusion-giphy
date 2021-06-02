@@ -1,6 +1,7 @@
 // @flow
 import React, {useContext, useState} from 'react';
-import {useService} from 'fusion-react';
+
+
 import {styled} from 'fusion-plugin-styletron-react';
 import {
   Grid, // our UI Component to display the results
@@ -10,7 +11,6 @@ import {
 } from '@giphy/react-components';
 import ResizeObserver from 'react-resize-observer';
 import Head from '../components/Head';
-import {ConfigToken} from '../plugins/config-plugin';
 
 const FullHeightDiv = styled('div', {
   height: '100%',
@@ -94,8 +94,7 @@ const Components = () => {
 };
 
 // the search experience consists of the manager and its child components that use SearchContext
-const GiphySearch = () => {
-  const {apiKey, rating, lang} = useService(ConfigToken);
+const PageGiphy = ({apiKey, rating, lang}) => {
   return (
     <SearchContextManager
       apiKey={apiKey}
@@ -106,4 +105,4 @@ const GiphySearch = () => {
   );
 };
 
-export default GiphySearch;
+export default PageGiphy;
