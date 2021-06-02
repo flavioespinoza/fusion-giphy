@@ -1,7 +1,5 @@
 // @flow
 import React, {useContext, useState} from 'react';
-
-
 import {styled} from 'fusion-plugin-styletron-react';
 import {
   Grid, // our UI Component to display the results
