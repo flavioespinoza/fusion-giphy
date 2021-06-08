@@ -3,6 +3,7 @@
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
 
+// createContext Helps Us Avoid Prop Drilling
 const DeveloperContext = React.createContext();
 
 const HookDiv = styled('div', {
@@ -35,6 +36,8 @@ function Hooks() {
   const [color, setColor] = React.useState('gainsboro');
   const [user, setUser] = React.useState(null);
   const inputRef = React.useRef('');
+
+  // useContext Helps Us Avoid Prop Drilling
   const developer = React.useContext(DeveloperContext);
 
   function addYear() {
