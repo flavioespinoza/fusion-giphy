@@ -5844,6 +5844,13 @@ json-stringify-safe@~5.0.1:
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
+json-view-for-react@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/json-view-for-react/-/json-view-for-react-2.0.1.tgz#9aabff6214333f76e5864d5ca87bac7f7b50f4d8"
+  integrity sha512-LJqdl/u8LTIqncmy7R4PyKG0Cb7sXR5DtRxYCfRL3/8uZdGEl7Kxu3q+DXszltrYKPAkRrhIk3kaLiw3VrJ7sQ==
+  dependencies:
+    prop-types "^15.7.2"
+
 json3@^3.3.2:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.3.tgz#7fc10e375fc5ae42c4705a5cc0aa6f62be305b81"
