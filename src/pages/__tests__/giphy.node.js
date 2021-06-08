@@ -9,9 +9,7 @@ test('item exists', () => {
     rating: 'testRating',
     lang: 'testLang',
   };
-  const output = shallow(
-    <PageGiphy {...mockData} />
-  );
+  const output = shallow(<PageGiphy {...mockData} />);
   const outputProps = output.props();
   expect(outputProps.apiKey).toEqual('testApiKey');
   expect(outputProps.options).toEqual({

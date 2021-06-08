@@ -9,7 +9,7 @@ import Root from './root.js';
 import {ConfigPlugin, ConfigToken} from './plugins/config-plugin.js';
 
 export default () => {
-  const app = new App(<Root />);
+  const app = new App((<Root />));
   app.register(HelmetPlugin);
   app.register(Styletron);
   app.register(Router);
