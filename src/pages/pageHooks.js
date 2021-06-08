@@ -3,6 +3,8 @@
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
 
+const DeveloperContext = React.createContext();
+
 const HookDiv = styled('div', {
   backgroundColor: 'white',
   color: 'black',
@@ -13,7 +15,7 @@ const HookDiv = styled('div', {
 
 const HookButton = styled('button', {
   textTransform: 'uppercase',
-  padding: '0.6em',
+  padding: '0.7em',
   margin: '0.2em',
   color: 'white',
   backgroundColor: 'hotpink',
@@ -23,10 +25,18 @@ const HookButton = styled('button', {
   cursor: 'pointer',
 });
 
-export default function PageHooks() {
+const HookInput = styled('input', {
+  padding: '0.6em',
+  margin: '0.2em',
+});
+
+function Hooks() {
   const [years, setYears] = React.useState(8);
   const [color, setColor] = React.useState('gainsboro');
   const [user, setUser] = React.useState(null);
+  const inputRef = React.useRef('');
+  const developer = React.useContext(DeveloperContext);
+
   function addYear() {
     setYears(prev => prev + 1);
   }
@@ -49,6 +59,7 @@ export default function PageHooks() {
       setColor('hotpink');
     }
   }
+  // Fetch Data from an API
   React.useEffect(() => {
     fetch('https://randomuser.me/api/?results=100')
       .then(res => res.json())
@@ -64,11 +75,20 @@ export default function PageHooks() {
           setUser({message: `No ${nat} citizens in response data`});
         }
       })
-      .catch(error => console.log(error));
+      .catch(error => console.error(error));
   }, []);
+  // useRef to Reference React Elements
+  function handleClearInput(e) {
+    e.preventDefault();
+    inputRef.current.value = '';
+    inputRef.current.focus();
+  }
   return (
     <HookDiv>
-      <h1>I have coded in javascript for {years} years!</h1>
+      <h1>
+        My name is {developer.name} I have coded in javascript for {years}{' '}
+        years!
+      </h1>
       <div style={{margin: '12px 0'}}>
         <HookButton onClick={addYear}>Add Year</HookButton>
         <HookButton onClick={() => changeColor('gold')}>
@@ -78,9 +98,24 @@ export default function PageHooks() {
           Change Background to Navy
         </HookButton>
       </div>
+      <form style={{marginBottom: 12}}>
+        <HookInput type="text" ref={inputRef} />
+        <HookButton onClick={handleClearInput}>Clear</HookButton>
+      </form>
       <div>
         Current user: <pre>{JSON.stringify(user, null, 2)}</pre>
       </div>
     </HookDiv>
   );
 }
+
+const PageHooks = () => {
+  const [developer] = React.useState({name: 'Flavio'});
+  return (
+    <DeveloperContext.Provider value={developer}>
+      <Hooks />
+    </DeveloperContext.Provider>
+  );
+};
+
+export default PageHooks;
