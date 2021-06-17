@@ -1,4 +1,3 @@
-
 /**
  * Determine if a string is balanced.
  * 
