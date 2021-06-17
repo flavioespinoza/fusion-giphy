@@ -11,7 +11,7 @@
  * 
  * console.log(balanced('[*()999]{}{[(22)(--)]()8}')); // true
  * console.log(balanced('[*(()999]{}{[(22)(--)]()8}')); // false
- * console.log(balanced('[(])')); // false
+ * console.log(balanced('[*(]999)')); // false
  * */
 
 export default function balanced(str) {
