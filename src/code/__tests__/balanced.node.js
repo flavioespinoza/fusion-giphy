@@ -1,7 +1,7 @@
 // @flow
 import balanced from '../balanced'
 
-test('balanced string of (){}[]', () => {
+test('valid parentheses', () => {
   expect(balanced('[()]{}{[()()]()}')).toEqual(true);
   expect(balanced('[(()]{}{[()()]()}')).toEqual(false);
   expect(balanced('[(])')).toEqual(false);
