@@ -1,7 +1,7 @@
 /**
  * Determine if a string is balanced.
  * 
- * @param {string} str A string of open and closed parenthesis, square brackets, and curly brackets
+ * @param {string} s A string of open and closed parenthesis, square brackets, and curly brackets
  * @returns {boolean} True or false.
  * 
  * @example
@@ -14,8 +14,8 @@
  * console.log(balanced('[*(]999)')); // false
  * */
 
-export default function balanced(str) {
-  if (typeof str !== 'string') throw new Error('1st argument must be a string');
+export default function balanced(s) {
+  if (typeof s !== 'string') throw new Error('1st argument must be a string');
   const stack = [];
   const chars = [];
   const map = {
@@ -28,7 +28,7 @@ export default function balanced(str) {
   const valid = new Set([...open, ...closed]);
 
   // Create an array of characters from the 1st argument.
-  const split = str.split('');
+  const split = s.split('');
 
   // Push only valid characters on to the chars array.
   for (let i = 0; i < split.length; i++) {
@@ -46,7 +46,8 @@ export default function balanced(str) {
     if (open.has(chars[i])) {
       stack.push(chars[i]);
     } else {
-      // If the last item to be added to the stack does not equal the character at index of i return false.
+      // If the last item to be added to the stack does not equal 
+      // the character at index of i return false.
       if (map[stack.pop()] !== chars[i]) {
         return false;
       }
