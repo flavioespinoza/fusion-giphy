@@ -96,6 +96,7 @@ const PageGiphy = ({apiKey, rating, lang}) => {
   return (
     <SearchContextManager apiKey={apiKey} options={{rating, lang}}>
       <Components />
+      {/* other components */}
     </SearchContextManager>
   );
 };

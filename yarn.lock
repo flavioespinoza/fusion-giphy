@@ -8948,6 +8948,11 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^2.0.1"
 
+unique-by-set@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/unique-by-set/-/unique-by-set-1.0.7.tgz#416b4f750280ad54026ead68226596d221d6aecd"
+  integrity sha512-GYwY+eVCFFSwJGwspspn3IWwOCSgVsABM32jsCNzmLH3Z391KIaIuRdfmHWnjiVK3UBOrJyPZPaQc7+5XM5dZQ==
+
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"

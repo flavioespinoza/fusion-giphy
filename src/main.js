@@ -17,5 +17,8 @@ export default () => {
   if (__NODE__) {
     app.register(RenderToken, () => '<div id="root"></div>');
   }
+  if (__BROWSER__) {
+    // browser only stuff
+  }
   return app;
 };

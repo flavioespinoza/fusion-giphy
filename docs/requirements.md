@@ -259,6 +259,6 @@ You should choose the image type you think best suits your application.
 
 ## Notes
 
-More documentation about the search endpoint can be found here: https://developers.giphy.com/docs/#operation--gifs-search-get
+More documentation about the search endpoint can be found here: <https://developers.giphy.com/docs/#operation--gifs-search-get>
 
 If you have any problems with the Uber-specified API key (i.e. `CdRKiCMbTnt9CkZTZ0lGukSczk6iT4Z6`), feel free to create an account and generate your own as described in the “Get an API key” section of the GIPHY Developer documentation at: <https://developers.giphy.com/docs/>

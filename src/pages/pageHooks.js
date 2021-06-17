@@ -2,6 +2,7 @@
 // @flow
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
+import Stack from '../components/Stack';
 
 // createContext Helps Us Avoid Prop Drilling
 const DeveloperContext = React.createContext();
@@ -92,6 +93,7 @@ function Hooks() {
         My name is {developer.name} I have coded in javascript for {years}{' '}
         years!
       </h1>
+      <Stack />
       <div style={{margin: '12px 0'}}>
         <HookButton onClick={addYear}>Add Year</HookButton>
         <HookButton onClick={() => changeColor('gold')}>
