@@ -43,7 +43,7 @@ export default function balanced(s) {
     if (open.has(chars[i])) {
       stack.push(chars[i]);
     } else {
-      // If the last item to be added to the stack does not equal 
+      // If the last item to be added to the stack does not deep-equal 
       // the character at index of i return false.
       if (map[stack.pop()] !== chars[i]) {
         return false;
@@ -52,7 +52,9 @@ export default function balanced(s) {
   }
 
   // If the string is balanced then all characters pushed onto the stack will be removed.
-  // This will result in the length of the stack to equal 0, hence true, else false
+  // Hence, the length of the stack to equal 0.
+
+  // If length of stack deep-equals 0 return true
   return stack.length === 0;
 }
 
