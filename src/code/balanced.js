@@ -52,9 +52,9 @@ export default function balanced(s) {
   }
 
   // If the string is balanced then all characters pushed onto the stack will be removed.
-  // Hence, the length of the stack to equal 0.
+  // Hence, the length of the stack will be 0.
 
-  // If length of stack deep-equals 0 return true
+  // If length of stack deep-equals 0 return true.
   return stack.length === 0;
 }
 
