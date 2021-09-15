@@ -4,7 +4,7 @@ function fizzBuzz(n) {
     // this also allows n to remain a Number for all math calculations.
     let result = `${n}`;
     if (n % 3 === 0) {
-        // if mod 3 remove template literal n
+        // if mod 3 has no remainder remove template literal n
         let temp = result.replace(`${n}`, '');
         // add fizz to temp
         temp += `fizz `;
@@ -12,7 +12,7 @@ function fizzBuzz(n) {
         result = temp;
     }
     if (n % 5 === 0) {
-        // if mod 5 remove template literal n
+        // if mod 5 has no remainder remove template literal n
         let temp = result.replace(`${n}`, '');
         // add buzz to temp
         temp += `buzz`;
@@ -20,10 +20,10 @@ function fizzBuzz(n) {
         result = temp;
     }
     // trim off any whitespace: "fizz " => "fizz"
-    let trim = result.trim();
-    console.log(trim);
-    // check if trim worked
-    console.log(trim.length);
+    return result.trim();
 }
 
-fizzBuzz(15);
+console.log(fizzBuzz(33)); // fizz
+console.log(fizzBuzz(55)); // buzz
+console.log(fizzBuzz(15)); // fizz buzz
+console.log(fizzBuzz(16)); // 16

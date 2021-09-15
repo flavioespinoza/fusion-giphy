@@ -1,17 +1,18 @@
-const nums = [2,7,11,15]
-let target = 9
-
-// Output: [0,1]
-// Output: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-function twoSum(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[j] === target - nums[i]) {
-                return [i, j]
-            }
-        }
-    } 
+function twoSum(array, targetSum) {
+  const map = {};
+  const set = new Set([...array]);
+  for (let i = 0; i < array.length; i++) {
+    let x = targetSum - array[i];
+    map[x] = array[i];
+  }
+  for (const key in map) {
+    if (set.has(Number(key)) && Number(key) !== map[key]) {
+      return [Number(key), map[key]];
+    }
+  }
+  return [];
 }
 
-console.log(twoSum(nums, target));
+console.log(twoSum([3, 5, -4, 8, 11, 1, -1, 6], 10));  // => [11, -1]
+console.log(twoSum([-7, -5, -3, -1, 0, 1, 5, 5], -5)); // => [0, 5]
+console.log(twoSum([3, 5, -4, 8, 11, 1, -1, 6], 15));  // => []
