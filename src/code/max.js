@@ -20,7 +20,7 @@ function findMax(values) {
  *                       500 > 444
  *                       500 > 80
  * */
-console.log(findMax([1, 123, 500, 115, 444, 88])); // => 501
+console.log(findMax([1, 123, 500, 115, 444, 88])); // => 500
 
 /**
  * @example

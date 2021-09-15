@@ -14,7 +14,6 @@ function coinType(denom) {
 }
 
 function makeChange(n, denoms, coins = []) {
-  // Write your code here.
   let totalCoins = 0;
   let cents = dollarsToCents(n);
   let pop = denoms.pop();
