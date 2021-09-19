@@ -34,7 +34,7 @@ function makeChange(n, denoms, coins = []) {
   for (let i = 0; i < coins.length; i++) {
     totalCoins += coins[i].count;
   }
-  return totalCoins;
+  return { totalCoins, coins };
 }
 
 console.log(JSON.stringify(makeChange(1.26, [1, 5, 10, 25]), null, 2));

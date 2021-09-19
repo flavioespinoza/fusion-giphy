@@ -3,21 +3,15 @@ function fizzBuzz(n) {
     // the template literal allows string.replace() and string.trim() to work on the initial value of result.
     // this also allows n to remain a Number for all math calculations.
     let result = `${n}`;
+    // if mod 3 has no remainder
     if (n % 3 === 0) {
-        // if mod 3 has no remainder remove template literal n
-        let temp = result.replace(`${n}`, '');
-        // add fizz to temp
-        temp += `fizz `;
-        // set result to temp
-        result = temp;
+        // remove template literal n and append "fizz "
+        result = result.replace(`${n}`, '') + 'fizz ';
     }
+    // if mod 5 has no remainder
     if (n % 5 === 0) {
-        // if mod 5 has no remainder remove template literal n
-        let temp = result.replace(`${n}`, '');
-        // add buzz to temp
-        temp += `buzz`;
-        // set result to temp
-        result = temp;
+        // remove template literal n and append "buzz"
+        result = result.replace(`${n}`, '') + 'buzz'
     }
     // trim off any whitespace: "fizz " => "fizz"
     return result.trim();
