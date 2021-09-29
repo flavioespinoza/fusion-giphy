@@ -46,3 +46,5 @@ function getArrayDepth(input) {
 
 let depth = getArrayDepth(deep);
 console.log(deep.flat(depth - 1)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+

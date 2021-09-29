@@ -24,6 +24,15 @@ function addOneLinear(array) {
   return result;
 }
 
+
+function addOneArrayFrom(array) {
+  let numberString = Array.from(array).map(String).join('');
+  let addOne = Number(numberString) + 1;
+  return Array.from(addOne.toString()).map(Number);
+}
+
+console.log(addOneArrayFrom([9,9,9]));
+
 function addOne(array) {
   let result = new Array(array.length).fill(0);
   let carry = 1;
@@ -46,6 +55,8 @@ function addOne(array) {
   }
   return result;
 }
+
+
 
 const arrays = [
   [1, 2, 4],
