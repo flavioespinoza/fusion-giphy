@@ -1,5 +1,5 @@
 class Node {
-  constructor(value, left = {}, right = {}) {
+  constructor(value, left = null, right = null) {
     this.value = value;
     this.left = left;
     this.right = right;
@@ -8,7 +8,7 @@ class Node {
 
 function create_tree(mapping, head_value) {
   let head = new Node(head_value);
-  let nodes = { 0: head };
+  let nodes = { [head_value]: head };
   for (const [key, value] of Object.entries(mapping)) {
     nodes[value[0]] = new Node(value[0]);
     nodes[value[1]] = new Node(value[1]);
@@ -36,7 +36,6 @@ let mapping3 = {
   1: [0, 2],
   5: [4, 6],
 
-  
 };
 // This tree is:
 //  head3 = 3
@@ -45,6 +44,7 @@ let mapping3 = {
 //      /\    / \
 //     0  2  4   6
 
+
 let mapping4 = { 3: [1, 5], 1: [0, 4] };
 
 let head0 = create_tree(mapping0, 0);
@@ -52,21 +52,25 @@ let head0 = create_tree(mapping0, 0);
 //  head0 = 0
 //        /   \
 //       1     2
+
 let head1 = create_tree(mapping1, 0);
-console.log(JSON.stringify(head1, null, 2));
+console.log('head_1', JSON.stringify(head1, null, 2));
 // This tree is:
 //  head1 = 0
 //        /   \
 //       1     2
 //      /\    / \
 //     3  4  5   6
+
 let head2 = create_tree(mapping2, 3);
+console.log('head_2', JSON.stringify(head2, null, 2))
 // This tree is:
 //  head2 = 3
 //        /   \
 //       1     4
 //      /\    / \
 //     0  2  5   6
+
 let head3 = create_tree(mapping3, 3);
 // This tree is:
 //  head3 = 3
@@ -74,6 +78,7 @@ let head3 = create_tree(mapping3, 3);
 //       1     5
 //      /\    / \
 //     0  2  4   6
+
 let head4 = create_tree(mapping4, 3);
 // This tree is:
 //  head4 = 3
