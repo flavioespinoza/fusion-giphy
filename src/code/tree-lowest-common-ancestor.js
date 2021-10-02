@@ -7,82 +7,89 @@ class Node {
 }
 
 function create_tree(mapping, head_value) {
-  let head = new Node(head_value);
-  let nodes = { [head_value]: head };
+  const head = new Node(head_value);
+  const nodes = { [head_value]: head };
   for (const [key, value] of Object.entries(mapping)) {
     nodes[value[0]] = new Node(value[0]);
     nodes[value[1]] = new Node(value[1]);
   }
   for (const [key, value] of Object.entries(mapping)) {
-    if (!nodes[key]) {
-      break;
-    }
     nodes[key].left = nodes[value[0]];
     nodes[key].right = nodes[value[1]];
   }
   return head;
 }
 
-// The mapping we're going to use for constructing a tree.
-// {0: [1, 2]} means that 0's left child is 1, and its right
-// child is 2.
-let mapping0 = { 0: [1, 2] };
-let mapping1 = { 0: [1, 2], 1: [3, 4], 2: [5, 6] };
-let mapping2 = { 3: [1, 4], 1: [0, 2], 4: [5, 6] };
+function path_to_x(root, x) {
+  if (!root) return null;
+  if (root.value === x) return [root.value];
 
-let mapping3 = {
-  3: [1, 5],
+  let left_path = path_to_x(root.left, x);
+  if (left_path) {
+    left_path.push(root.value);
+    return left_path;
+  }
 
-  1: [0, 2],
-  5: [4, 6],
+  let right_path = path_to_x(root.right, x);
+  if (right_path) {
+    right_path.push(root.value);
+    return right_path;
+  }
 
+  return null;
+}
+
+function lca(root, j, k) {
+  let path_to_j = path_to_x(root, j);
+  let path_to_k = path_to_x(root, k);
+  if (!path_to_j || !path_to_k) return null;
+  let res = null;
+  while (path_to_j.length && path_to_k.length) {
+    let j_pop = path_to_j.pop();
+    let k_pop = path_to_k.pop();
+    if (j_pop === k_pop) {
+      res = j_pop;
+    } else {
+      break;
+    }
+  }
+  return res;
+}
+
+const mapping1 = { 
+  0: [1, 2], 
+  1: [3, 4], 
+  2: [5, 6] 
 };
+const head1 = create_tree(mapping1, 0);
 // This tree is:
-//  head3 = 3
-//        /   \
-//       1     5
-//      /\    / \
-//     0  2  4   6
+// head1 = 0
+//        / \
+//       1   2
+//      /\   /\
+//     3  4 5  6
 
-
-let mapping4 = { 3: [1, 5], 1: [0, 4] };
-
-let head0 = create_tree(mapping0, 0);
+const mapping2 = { 
+  5: [1, 4], 
+  1: [3, 8], 
+  4: [9, 2], 
+  3: [6, 7] 
+};
+const head2 = create_tree(mapping2, 5);
 // This tree is:
-//  head0 = 0
-//        /   \
-//       1     2
-
-let head1 = create_tree(mapping1, 0);
-console.log('head_1', JSON.stringify(head1, null, 2));
-// This tree is:
-//  head1 = 0
-//        /   \
-//       1     2
-//      /\    / \
-//     3  4  5   6
-
-let head2 = create_tree(mapping2, 3);
-console.log('head_2', JSON.stringify(head2, null, 2))
-// This tree is:
-//  head2 = 3
+//  head2 = 5
 //        /   \
 //       1     4
 //      /\    / \
-//     0  2  5   6
+//     3  8  9  2
+//    /\
+//   6  7
 
-let head3 = create_tree(mapping3, 3);
-// This tree is:
-//  head3 = 3
-//        /   \
-//       1     5
-//      /\    / \
-//     0  2  4   6
-
-let head4 = create_tree(mapping4, 3);
-// This tree is:
-//  head4 = 3
-//        /   \
-//       1     5
-//      /\
-//     0  4
+// console.log(lca(head1, 1, 5)); // should return 0
+// console.log(lca(head1, 3, 1)); // should return 1
+// console.log(lca(head1, 1, 4)); // should return 1
+// console.log(lca(head1, 0, 5)); // should return 0
+// console.log(lca(head2, 4, 7)); // should return 5
+// console.log(lca(head2, 3, 3)); // should return 3
+console.log(lca(head2, 8, 7)); // should return 1
+// console.log(lca(head2, 3, 0)); // should return null
