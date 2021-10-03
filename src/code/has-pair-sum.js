@@ -12,10 +12,10 @@ function hasPairSum(arr, target) {
 
 let input;
 
-input = [0, 1, 2, 4, 4]; // fail
+input = [0, 1, 2, 4, 4]; // fail if you can use numbers only once
 console.log(hasPairSum(input, 5)); // [ [4, 4], [4, 4] ]
 
-input = [1, 2, 4, 4, 4]; // fail
+input = [1, 2, 4, 4, 4]; // fail if you can use numbers only once
 console.log(hasPairSum(input, 8)); // [ [4, 4], [4, 4] ]
 
 input = [1, 2, 4, 4];
