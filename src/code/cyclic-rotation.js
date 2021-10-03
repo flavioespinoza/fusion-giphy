@@ -21,3 +21,26 @@
 //     K = 4
 // the function should return [1, 2, 3, 4]
 
+// https://app.codility.com/demo/results/trainingC4D4RY-BT5/
+
+function cyclicRotation(array, k) {
+  if (k === 0 || array.length === k || array.length === 1) {
+    return array;
+  }
+  const res = [];
+  for (let i = 0; i < array.length; i++) {
+    const modIdx = (k + i) % array.length;
+    res[modIdx] = array[i];
+  }
+  return res;
+}
+
+let test;
+test = cyclicRotation([3, 8, 9, 7, 6], 3);
+console.log(test); // [9, 7, 6, 3, 8]
+
+test = cyclicRotation([0, 0, 0], 1);
+console.log(test); // [0, 0, 0]
+
+test = cyclicRotation([1, 2, 3, 4], 4);
+console.log(test); // [1, 2, 3, 4]
