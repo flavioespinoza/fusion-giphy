@@ -65,7 +65,7 @@ P.s. Solution provided by Nicolas laverde peña.
 
     <table id="matrix"></table>
     <h3 id="alert" class="warning">
-      Columns and Rows must have a minimum value of 2.
+      Columns and Rows must have a minimum value of 1.
     </h3>
   </body>
   <script>
@@ -74,6 +74,7 @@ P.s. Solution provided by Nicolas laverde peña.
     // get form element and add event listener for submit
     const form = document.getElementById('form');
     // get alert element for warnings and errors
+    
     const alert = document.getElementById('alert');
     // on submit call handler function to capture form data
     form.addEventListener('submit', handleSubmit);
