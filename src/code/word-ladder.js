@@ -1,6 +1,6 @@
 let beginWord = 'hit';
 let endWord = 'cog';
-let wordList = ['hot', 'dot', 'dog', 'lot', 'log', 'cog'];
+let wordList = ['hot', 'dot', 'dog', 'cot', 'log', 'cog'];
 
 console.log(wordLadder(beginWord, endWord, wordList));
 
@@ -13,17 +13,17 @@ console.log(wordLadder(beginWord, endWord, wordList));
 function wordLadder(beginWord, endWord, wordList) {
   let len = 1;
   
-  let queue = [beginWord]; // [ 'hit' ], [ 'hot' ], [ 'dot', 'lot' ], [ 'dog', 'log' ], [ 'cog' ]
+  let queue = [beginWord]; // [ 'hit' ], [ 'hot' ], [ 'dot', 'cot' ], [ 'dot', 'cot' ], [ 'dog', 'cog' ]
   
   const available = Array.from(new Set([...wordList.join('')]));  // [ 'h', 'o', 't', 'd', 'g', 'l', 'c' ]
   
-  const dict = new Set(wordList);  // Set { 'hot', 'dot', 'dog', 'lot', 'log', 'cog' }
+  const dict = new Set(wordList);  // Set { 'hot', 'dot', 'dog', 'cot', 'log', 'cog' }
   
   const seen = new Set(queue);  // Set { hit }
   
   while (queue.length) {
     const next = [];
-    console.log(queue);  
+
     for (let word of queue) {
       if (word === endWord) { // cog
         return len;
@@ -50,9 +50,9 @@ function wordLadder(beginWord, endWord, wordList) {
     console.log(seen); 
     // Set { 'hit', 'hot' }
     // Set { 'hit', 'hot', 'dot' }
-    // Set { 'hit', 'hot', 'dot', 'lot' }
-    // Set { 'hit', 'hot', 'dot', 'lot', 'dog', 'log' }
-    // Set { 'hit', 'hot', 'dot', 'lot', 'dog', 'log', 'cog' }
+    // Set { 'hit', 'hot', 'dot', 'cot' }
+    // Set { 'hit', 'hot', 'dot', 'cot', 'dog', 'log' }
+    // Set { 'hit', 'hot', 'dot', 'cot', 'dog', 'log', 'cog' }
 
     queue = next;
 
