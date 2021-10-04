@@ -6,13 +6,15 @@ async function add() {
   // or
   // x = 0 + Promise.resolve(1);
   x += await 1
-  console.log(x);
+  console.log(x); // 1
 }
 
 add()
-x += 1;
-console.log(x);
 
-// => 1
-// => 1
+x++;
+console.log(x); // 1
+
+++x
+console.log(x); // 2
+
 /// [demo]
