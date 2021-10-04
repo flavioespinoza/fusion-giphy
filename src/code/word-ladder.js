@@ -4,7 +4,6 @@ let wordList = ['hot', 'dot', 'dog', 'cot', 'log', 'cog'];
 
 console.log(wordLadder(beginWord, endWord, wordList));
 
-
 // Time Complexity: O(M^2 × N), where M is the length of each word and N is the total number of words in the input word list.
 function wordLadder(beginWord, endWord, wordList) {
   let len = 1;
@@ -43,17 +42,7 @@ function wordLadder(beginWord, endWord, wordList) {
       }
     }
 
-    console.log(seen); 
-    // Set { 'hit', 'hot' }
-    // Set { 'hit', 'hot', 'dot' }
-    // Set { 'hit', 'hot', 'dot', 'cot' }
-    // Set { 'hit', 'hot', 'dot', 'cot', 'dog', 'log' }
-    // Set { 'hit', 'hot', 'dot', 'cot', 'dog', 'log', 'cog' }
-
     queue = next;
-
-    
-
     len++;
   }
   return 0;
