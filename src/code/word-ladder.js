@@ -23,7 +23,7 @@ function wordLadder(beginWord, endWord, wordList) {
   
   while (queue.length) {
     const next = [];
-
+    console.log(queue); // [ 'hit' ], [ 'hot' ], [ 'dot', 'lot' ], [ 'dog', 'log' ], [ 'cog' ]
     for (let word of queue) {
       if (word === endWord) {
         return len;
@@ -57,6 +57,9 @@ function wordLadder(beginWord, endWord, wordList) {
     // Set { 'hit', 'hot', 'dot', 'lot', 'dog', 'log', 'cog' }
 
     queue = next;
+
+    
+
     len++;
   }
   return 0;
