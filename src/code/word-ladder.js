@@ -4,12 +4,8 @@ let wordList = ['hot', 'dot', 'dog', 'cot', 'log', 'cog'];
 
 console.log(wordLadder(beginWord, endWord, wordList));
 
-/**
- * @param {string} beginWord
- * @param {string} endWord
- * @param {string[]} wordList
- * @return {number}
- */
+
+// Time Complexity: O(M^2 × N), where M is the length of each word and N is the total number of words in the input word list.
 function wordLadder(beginWord, endWord, wordList) {
   let len = 1;
   
