@@ -1,0 +1,123 @@
+<!-- 
+Similar Example: https://www.w3resource.com/javascript-exercises/javascript-dom-exercise-7.php
+
+number of height: 4
+number of width: 5
+"Submit"
+
+Print this:
+1 8  9 16 17
+2 7 10 15 18
+3 6 11 14 19
+4 5 12 13 20    
+
+P.s. Solution provided by Nicolas laverde peña.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+      }
+      .tdPadding > tbody > tr > td {
+        padding: 10px;
+      }
+      .label {
+        padding: 12px;
+      }
+      .button {
+        cursor: pointer;
+      }
+      .warning {
+        background-color: hotpink;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="height" class="label"
+        >Columns
+        <input type="text" name="height" id="height" value="4" />
+      </label>
+      <label for="width" class="label"
+        >Rows
+        <input
+          type="text"
+          name="width"
+          id="width"
+          value="5"
+          style="margin-bottom: 30px"
+        />
+      </label>
+      <input class="button" type="submit" value="Submit" />
+    </form>
+
+    <table id="matrix"></table>
+    <h3 id="alert" class="warning">
+      Columns and Rows must have a minimum value of 2.
+    </h3>
+  </body>
+  <script>
+    // create a form with inputs [width(columns), height(rows)] and submit with id="form"
+
+    // get form element and add event listener for submit
+    const form = document.getElementById('form');
+    // get alert element for warnings and errors
+    const alert = document.getElementById('alert');
+    // on submit call handler function to capture form data
+    form.addEventListener('submit', handleSubmit);
+
+    function handleSubmit(e) {
+      // prevent default event so page will not automatically refresh
+      e.preventDefault();
+
+      // capture form data
+      const formData = new FormData(e.target);
+
+      // set constants { width, height } from form data object
+      const { width, height } = Object.fromEntries(formData);
+
+      if (!height || !width) {
+        alert.style.display = 'block';
+      } else {
+        alert.style.display = 'none';
+      }
+
+      // create a table element
+      const table = document.getElementById('matrix');
+
+      // clear the table each time a user clicks on submit button
+      // otherwise the table will append to a new table to itself with every click
+      table.innerHTML = null;
+
+      table.setAttribute('border', '1');
+      table.setAttribute('class', 'tdPadding');
+
+      for (let x = 0; x < height; x++) {
+        let currentRow = [];
+        let r = table.insertRow(x);
+        for (let y = 0; y < width; y++) {
+          let c = r.insertCell(y);
+          if (y % 2 === 0) {
+            currentRow.push(height * y + 1 + x);
+            c.innerHTML = height * y + 1 + x;
+          } else {
+            currentRow.push(height * (y + 1) - x);
+            c.innerHTML = height * (y + 1) - x;
+          }
+        }
+      }
+    }
+  </script>
+</html>
