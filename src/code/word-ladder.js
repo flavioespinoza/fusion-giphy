@@ -1,10 +1,16 @@
+let beginWord = 'hit';
+let endWord = 'cog';
+let wordList = ['hot', 'dot', 'dog', 'lot', 'log', 'cog'];
+
+console.log(wordLadder(beginWord, endWord, wordList));
+
 /**
  * @param {string} beginWord
  * @param {string} endWord
  * @param {string[]} wordList
  * @return {number}
  */
-const ladderLength = function(beginWord, endWord, wordList) {
+function wordLadder(beginWord, endWord, wordList) {
   let len = 1;
   
   let queue = [beginWord];
@@ -42,7 +48,7 @@ const ladderLength = function(beginWord, endWord, wordList) {
         }
       }
     }
-    
+
     console.log(seen); 
     // Set { 'hit', 'hot' }
     // Set { 'hit', 'hot', 'dot' }
@@ -55,9 +61,3 @@ const ladderLength = function(beginWord, endWord, wordList) {
   }
   return 0;
 };
-
-let beginWord = 'hit';
-let endWord = 'cog';
-let wordList = ['hot', 'dot', 'dog', 'lot', 'log', 'cog'];
-
-console.log(ladderLength(beginWord, endWord, wordList));
