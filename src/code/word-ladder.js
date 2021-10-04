@@ -13,7 +13,7 @@ console.log(wordLadder(beginWord, endWord, wordList));
 function wordLadder(beginWord, endWord, wordList) {
   let len = 1;
   
-  let queue = [beginWord];
+  let queue = [beginWord]; // [ 'hit' ], [ 'hot' ], [ 'dot', 'lot' ], [ 'dog', 'log' ], [ 'cog' ]
   
   const available = Array.from(new Set([...wordList.join('')]));  // [ 'h', 'o', 't', 'd', 'g', 'l', 'c' ]
   
@@ -23,16 +23,14 @@ function wordLadder(beginWord, endWord, wordList) {
   
   while (queue.length) {
     const next = [];
-    console.log(queue); // [ 'hit' ], [ 'hot' ], [ 'dot', 'lot' ], [ 'dog', 'log' ], [ 'cog' ]
+    console.log(queue);  
     for (let word of queue) {
-      if (word === endWord) {
+      if (word === endWord) { // cog
         return len;
       }
 
-      const arr = word.split('');
-      console.log(arr);
-      // ['h', 'o', 't']
-
+      const arr = word.split(''); // ['h', 'i', 't'], ['h', 'o', 't'], etc...
+      
       for (let i = 0; i < arr.length; i++) {
         for (let d = 0; d < available.length; d++) {
           arr[i] = available[d]; // 126 combinations vs 468 if you use the entire alphabet
