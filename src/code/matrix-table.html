@@ -118,20 +118,60 @@ P.s. Solution provided by Nicolas laverde peña.
       table.setAttribute('border', '1');
       table.setAttribute('class', 'tdPadding');
 
+      const log = {
+        even: [],
+        odd: [],
+      };
+
+      // create outer for loop, where x is the index and length is the height
       for (let x = 0; x < height; x++) {
-        let currentRow = [];
-        let r = table.insertRow(x);
+        // create current row as empty array
+        const currentRow = [];
+
+        // set variable r equal to table.insertRow at index x
+        const row = table.insertRow(x);
+
+        // create inner for loop where y is the index and length = width
         for (let y = 0; y < width; y++) {
-          let c = r.insertCell(y);
+          // create a cell equal to row.insertCell at index y;
+          const cell = row.insertCell(y);
+
+          // if index y is even
           if (y % 2 === 0) {
-            currentRow.push(height * y + 1 + x);
-            c.innerHTML = height * y + 1 + x;
-          } else {
-            currentRow.push(height * (y + 1) - x);
-            c.innerHTML = height * (y + 1) - x;
+            // create let named "value" = (height * y) + 1 + x;
+            let value = height * y + 1 + x;
+            log.even.push(
+              `x${x} y${y}`,
+              '(height * y) + 1 + x',
+              `(${height} * ${y}) + ${1} + ${x} = ${value}`,
+              `--------------`,
+            );
+            // console.log(`x${x} y${y}`, value);
+            // push value onto current row
+            currentRow.push(value);
+            // set cell inner HTML equal to value
+            cell.innerHTML = value;
+          }
+          // if index y is odd
+          else {
+            // create let named "value" = height * (y + 1) - x;
+            let value = height * (y + 1) - x;
+            log.odd.push(
+              `x${x} y${y}`,
+              `height * (y + 1) - x`,
+              `${height} * (${y} + ${1}) - ${x} = ${value}`,
+              `--------------`,
+            );
+
+            // push value onto current row
+            currentRow.push(value);
+            // set cell inner HTML equal to value
+            cell.innerHTML = value;
           }
         }
       }
+      // console.log(JSON.stringify(log, null, 2));
+      console.log(log)
     }
   </script>
 </html>
