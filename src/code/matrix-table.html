@@ -69,12 +69,25 @@ P.s. Solution provided by Nicolas laverde peña.
     </h3>
   </body>
   <script>
+    // Time: O(n^2)
+    // 1. Define an array as matrix.
+    // 2. Start a loop for all rows, define currentRow
+    // 3. Iterate through rows first
+    // 4. Start a loop for all columns.
+    // 5. Calculate values for the first column
+    // 5. Then calculate values for the first row
+    //    a. for even columns: rows * colIndex + 1 => 4 * 2 + 1 = 9
+    //    b. then for odd columns: rows * (colIndex + 1) => 4 * (1 + 1) = 8
+    // 7. Then calculate the rest of the cells
+    //    a. for even columns: matrix[rowIndex - 1][colIndex] + 1 => matrix[0][2] + 1 = 10
+    //    b. then for odd columns: matrix[rowIndex - 1][colIndex] - 1 => matrix[0][1] - 1 = 7
+
     // create a form with inputs [width(columns), height(rows)] and submit with id="form"
 
     // get form element and add event listener for submit
     const form = document.getElementById('form');
     // get alert element for warnings and errors
-    
+
     const alert = document.getElementById('alert');
     // on submit call handler function to capture form data
     form.addEventListener('submit', handleSubmit);
