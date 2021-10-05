@@ -4,7 +4,7 @@
  * type Fetcher = (prefix: string, callback: FetcherCallback) => void
  * type FetcherComposer = (Fetcher[]) => Fetcher
  * */
-function combineFetchersGoogle(array) {
+function combineFetchers(array) {
   const result = [];
   const get = async (prefix, callback) => {
     for (const fetcher of array) {
@@ -38,12 +38,12 @@ function gonnaGetACallback(prefix: string): string[] {
 
 (async function() {
   try {
-    const getFetchersAndArticles = await combineFetchersGoogle([
+    const fetchUsersAndArticles = await combineFetchers([
       fetchUsers,
       fetchArticles,
     ]);
-    const res2 = await getFetchersAndArticles('to', gonnaGetACallback);
-    console.log(res2); // [ 'Tom Jones', 'Tom Peters', 'To be or not to be' ]
+    const res = await fetchUsersAndArticles('to', gonnaGetACallback);
+    console.log(res); // [ 'Tom Jones', 'Tom Peters', 'To be or not to be' ]
   } catch (err) {
     throw err;
   }
