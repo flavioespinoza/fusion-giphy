@@ -33,7 +33,7 @@
 //   console.log(results); // [‘To be or not to be’, ‘Tom Jones’, ‘Tom Peters’]    
 // });
 
-// function combineFetchersFail(array) {
+// function combineFetchersGoogle(array) {
 //   const result = [];
 //   const get = async (prefix, callback) => {
 //      for (const fetcher of array) {
@@ -43,11 +43,4 @@
 //     return result;
 //   }
 //   return get;
-// }
-
-
-// function combineFetchers(array) {
-//   const fetchOne = array[2];
-//   const fetchTwo = array[1];
-  
 // }
