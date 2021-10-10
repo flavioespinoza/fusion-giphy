@@ -19,7 +19,25 @@ function matrixRotate(matrix) {
     }
   }
 
+  // 2a. cycle columns N - 1 times
+  // for (let i = 0; i < matrix.length; i++) {
+  //   const temp = cyclicRotation(matrix[i], N - 1);
+  //   matrix[i] = temp;
+  // }
+
   return matrix;
+}
+
+function cyclicRotation(array, k) {
+  if (k === 0 || array.length === k || array.length === 1) {
+    return array;
+  }
+  const res = [];
+  for (let i = 0; i < array.length; i++) {
+    const modIdx = (k + i) % array.length;
+    res[modIdx] = array[i];
+  }
+  return res;
 }
 
 function arraySwap(array) {
@@ -52,7 +70,7 @@ function matrixCreate(height, width) {
 let matrix;
 
 matrix = matrixCreate(4, 4);
-console.log(matrix);
+// console.log(matrix);
 
 let x = [
   [1, 2, 3, 4],
@@ -63,9 +81,3 @@ let x = [
 
 let rotate = matrixRotate(matrix);
 console.log(matrix);
-
-let output = [
-  [8, 5, 7],
-  [1, 6, 3],
-  [2, 4, 9],
-];

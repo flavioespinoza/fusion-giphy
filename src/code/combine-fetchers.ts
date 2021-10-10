@@ -26,7 +26,7 @@ function fetchArticles(prefix: string, callback: (prefix: string) => void) {
 
 function gonnaGetACallback(prefix: string): string[] {
   let data = [];
-  const key = prefix.split('_');;
+  const key = prefix.split('_');
   if (key[0] === 'users') {
     data = ['Tom Jones', 'Tom Peters'];
   }
