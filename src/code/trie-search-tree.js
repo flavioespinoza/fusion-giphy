@@ -51,7 +51,7 @@ class Trie {
 }
 
 // Do not edit the line below.
-exports.multiStringSearch = multiStringSearch;
+// exports.multiStringSearch = multiStringSearch;
 
 let test;
 
@@ -61,7 +61,7 @@ test = {
   smallStrings: ['ca', 'cat', 'cattle'],
 };
 
-console.log(multiStringSearch(test)); // [ true, true, false ]
+// console.log(multiStringSearch(test)); // [ true, true, false ]
 
 const trie_data = {
   root: {
@@ -83,4 +83,27 @@ const trie_data = {
   },
 };
 
-const dict = ['at', 'cat', 'cattle'];
+const dict = ['john smith', 'john bob', 'joe bob', 'fred joe', 'fred bob'];
+
+function preProcessSearchStrings(array) {
+  const trie = new Trie();
+
+  for (const string of array) {
+    // insert strings into trie data structure
+    trie.insert(string);
+  }
+
+  return trie;
+}
+
+const trie = preProcessSearchStrings(dict);
+
+console.log(JSON.stringify(trie, null, 2));
+
+function handleChange(e) {
+  e.preventDefault();
+  console.log(e.target)
+}
+
+
+
