@@ -92,19 +92,19 @@ console.log(twoSum_3([1, 4, 3, 4], 8)); // true
  * */
 function twoSum(nums, target) {
   const indices = [...nums];
-  while(nums.length > 0) {
+  while (nums.length > 0) {
     const int = nums.shift();
     const compliment = target - int;
     if (nums.indexOf(compliment) !== -1) {
-        const first = indices.indexOf(int);
-        const second = indices.indexOf(compliment, first + 1);
-        return [first, second];
-    };
+      const first = indices.indexOf(int);
+      const second = indices.indexOf(compliment, first + 1);
+      return [first, second];
+    }
   }
   return [];
 }
-console.log(twoSum([9, 2, 3, 1], 8));   // []
-console.log(twoSum([9, 2, 3, -1], 8));  // [0, 3]
-console.log(twoSum([4, 2, 1, 4], 8));   // [0, 3]
-console.log(twoSum([2, 1, 4, 4], 8));   // [2, 3]
-console.log(twoSum([2, 4, 3, 4], 8));   // [1, 3]
+console.log(twoSum([9, 2, 3, 1], 8)); // []
+console.log(twoSum([9, 2, 3, -1], 8)); // [0, 3]
+console.log(twoSum([4, 2, 1, 4], 8)); // [0, 3]
+console.log(twoSum([2, 1, 4, 4], 8)); // [2, 3]
+console.log(twoSum([2, 4, 3, 4], 8)); // [1, 3]
