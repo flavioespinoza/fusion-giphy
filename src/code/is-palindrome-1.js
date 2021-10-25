@@ -1,47 +1,86 @@
-// if odd find index of center char
-// arr_1 is values to the left
-// arr_2 is values to the right reversed
-// check if arrays match
-// if even find index of center - 1
-// arr_1 is values to the left
-// arr_2 is values to the right reversed
-
-// check if arrays match
-function isEven(n) {
-  return n % 2 == 0;
-}
-
 function isPalindrome(string) {
- // brute force
- // time O(n) | space O(n)
- // check if length is 1
- if (string.length === 1) {
-   return true;
- }
- // check if length is odd or even
- if (isEven(string.length)) {
-   const mid = string.length / 2;
-   const a_string = string.slice(0, mid);
-   const b_string = string.replace(a_string, '');
-   const r_string = b_string.split('').reverse().join('');
-   if (a_string === r_string) {
-     return true;
-   }
- } else {
-   const mid = Math.floor(string.length / 2);
-   const a_string = string.slice(0, mid);
-   const b_string = string.slice(mid + 1, string.length);
-   const r_string = b_string.split('').reverse().join('');
-   if (a_string === r_string) {
-     return true;
-   }
- }
- return false;
+  // 2 pointers
+  let left = 0;
+  let right = string.length - 1;
+  while (left < right) {
+    let charLeft = string[left];
+    let charRight = string[right];
+    if (charLeft !== charRight) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+}
+const tieFighters = {
+  fighter: '|-o-|',
+  bomber: '|-=oø=-|',
+  interceptor: '|-=8=o=8=-|',
+  heavy_bomber: '|-=o=8=-|',
+  experimental: 'ø-=|=-o',
+  raptor: 'ø',
+  droid: 'oø',
+  t_wing: 'oø=--|',
+  empty: '',
+};
+
+const result = [];
+
+for (const [type, drawing] of Object.entries(tieFighters)) {
+  result.push({
+    drawing,
+    is_palindrome: isPalindrome(drawing),
+    type,
+  });
 }
 
-function isPalindrome(string) {
-  // mas eleganté
-	return string === string.split('').reverse().join('');;
-}
+console.log(JSON.stringify(result, null, 2));
 
-
+const output = [
+  {
+    drawing: '|-o-|',
+    is_palindrome: true,
+    type: 'fighter',
+  },
+  {
+    drawing: '|-=oø=-|',
+    is_palindrome: false,
+    type: 'bomber',
+  },
+  {
+    drawing: '|-=8=o=8=-|',
+    is_palindrome: true,
+    type: 'interceptor',
+  },
+  {
+    drawing: '|-=o=8=-|',
+    is_palindrome: false,
+    type: 'heavy_bomber',
+  },
+  {
+    drawing: 'ø-=|=-o',
+    is_palindrome: false,
+    type: 'experimental',
+  },
+  {
+    drawing: 'ø',
+    is_palindrome: true,
+    type: 'raptor',
+  },
+  {
+    drawing: 'oø',
+    is_palindrome: false,
+    type: 'droid',
+  },
+  {
+    drawing: 'oø=--|',
+    is_palindrome: false,
+    type: 't_wing',
+  },
+  {
+    drawing: '',
+    is_palindrome: true,
+    type: 'empty',
+  },
+]; 
