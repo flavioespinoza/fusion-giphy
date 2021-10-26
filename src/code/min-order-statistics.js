@@ -23,10 +23,8 @@ input = [7, 0, 25, 6, 16, 17, 0];
 k = 3;
 console.log(NthSmallest(input, k)); // 6
 
-// BST - Binary Search Tree
-// time complexity of all cases(searching , inserting, deleting) in BST is log(n)
 
-// Ordered Map Method (a.k.a Map STL in C++)
+// Ordered Map Method
 function orderedMapFrequency(array) {
   const map = {};
   for (let i = 0; i < array.length; i++) {
@@ -49,9 +47,6 @@ function kSmallest(arr, k) {
     }
   }
 }
-
-let sort_;
-let expected;
 
 input = [7, 10, 4, 3, 20, 15];
 k = 3;
