@@ -1,3 +1,6 @@
+// Given an non-sorted array of unique positive integers
+// find the min value at index of k - 1
+
 let input;
 let k;
 
@@ -25,10 +28,17 @@ function kSmallest(array, k) {
     // when the value of frequencies is greater-than-or-equal-to 
     // the value of k return the key
     if (frequencies >= k) {
-      console.log(frequencies)
-      console.log(k)
-      console.log(key)
-      console.log(sorted);
+      console.log(sorted); // [ '0', '4', '7' ] [ '3', '5', '7', '10' ] [ '1', '5' ] [ '0', '6' ]
+      const last = sorted[sorted.length - 1];
+      if (key === last) {
+        /**
+         * @example
+         * Notice how the last element of sorted equals the key of the map.
+         * Basically the iteration stops when the k-th value has been pushed onto the sorted array
+         * */
+        console.log(key);   // 7, 10, 5, 6
+        console.log(last);  // 7, 10, 5, 6
+      }
       return key;
     }
   }
