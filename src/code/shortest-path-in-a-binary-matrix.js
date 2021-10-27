@@ -5,9 +5,7 @@
  * @url https://leetcode.com/problems/shortest-path-in-binary-matrix/discuss/313252/javascript-solution-bfs
  * @example 
  * This is actually the question of finding shortest path between source and destination in a 2D-array.
- * Instead of moving on 4 directions, we need to move to 8 directions for this question.
- * 
- * C_i and C_i + 1 are different and share an edge or corner
+ * We can only move in 4 directions [up, down, left, right]
  * 
  * We need keep tracking cells that have been visited. 
  * Usually we can create a same size 2D-array to mark visited cell, 
@@ -16,9 +14,13 @@
  * 
  * */
 function shortestPath(array) {
+  // if there is a value at the array at coords x=0, y=0 return -1;
+  if (array[0][0]) {
+    console.log(array[0, 0]);
+    return -1;
+  }
   
-  if (array[0][0]) return -1;
-  
+  // init que[{coord: [0, 0], dist: 1}]
   const que = [{ coord: [0, 0], dist: 1 }];
 
   // @note : all directions if there was no constraint [ left, right, up, down, left-up, up-right, down-right, down-left ]
@@ -30,7 +32,6 @@ function shortestPath(array) {
     [0, 1],
     [0, -1],
   ];
-
   // height and width of matrix
   const H = array.length;
 
@@ -52,7 +53,7 @@ function shortestPath(array) {
     if (x === H - 1 && y === H - 1) {
       return dist;
     }
-    // for of const [moveX, moveY] of direction
+    // for (const [moveX, moveY] of direction)
     for (const [moveX, moveY] of directions) {
       // nextX and nextY
       const nextX = moveX + x;
@@ -61,7 +62,7 @@ function shortestPath(array) {
       if (isValidCoord(nextX, nextY) && array[nextX][nextY] === 0) {
         // push({ coord: [nextX, nextY], dist++})
         que.push({ coord: [nextX, nextY], dist: dist + 1 });
-          // flip 0 to 1 to keep track of visited
+        // flip 0 to 1 to keep track of visited
         array[nextX][nextY] = 1;
       }
     }
@@ -69,16 +70,15 @@ function shortestPath(array) {
   return -1;
 }
 
+let input;
+let expected;
 
-
-const input = [
+input = [
   [0,1,0,0,0],
   [0,1,0,1,0],
   [0,1,0,1,0],
   [0,1,0,1,0],
   [0,0,0,1,0]
 ]
-
-const expected = 17;
-
+expected = 17;
 console.log(shortestPath(input)); // 17
