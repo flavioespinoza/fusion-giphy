@@ -28,7 +28,7 @@ edgePairs = [
   ['k', 'i'],
   ['m', 'k'],
   ['k', 'l'],
-  ['o', 'n'],
+  ['o', ''],
 ];
 
 // console.log(buildGraphAdjacencyList(edgePairs));
