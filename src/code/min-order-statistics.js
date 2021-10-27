@@ -9,15 +9,20 @@ let k;
 // linear since it's two non-nested for-loops in succession
 function kSmallest(array, k) {
   const sorted = [];
-  // ordered Map of frequencies
+  // ordered hash map of frequencies
+  // where the key equals the value of array[i]
+  // and the value equals the occurrences of the key
+  // @note : because we use the value at array[i] as a key the map automatically sorts the array by the integer value
+  // @note : this only works for an array of unique positive integers
   const map = {};
   // loop 1
   for (let i = 0; i < array.length; i++) {
     if (!map[array[i]]) {
       map[array[i]] = 1;
     } else {
-      map[array[i]]++;
+      map[array[i]];
     }
+    console.log(map)
   }
   // keep track of value frequencies
   let frequencies = 0;
@@ -35,15 +40,19 @@ function kSmallest(array, k) {
       const last = sorted[sorted.length - 1];
       if (key === last) {
         // @note : the iteration stops when the k-th value has been pushed onto the sorted array
-        console.log(sorted); // [ '0', '4', '7' ] [ '3', '5', '7', '10' ] [ '1', '5' ] [ '0', '6' ]
-        // @note : note how the last element of sorted equals the key of the map
-        console.log(key);   // 7, 10, 5, 6
-        console.log(last);  // 7, 10, 5, 6
+        console.log(sorted); // [ '0', '1', '2' ] [ '0', '4', '7' ] [ '3', '5', '7', '10' ] [ '1', '5' ] [ '0', '6' ]
+        // @note : the last element of sorted array equals the key of the map
+        console.log(key);   // 2, 7, 10, 5, 6
+        console.log(last);  // 2, 7, 10, 5, 6
       }
       return key;
     }
   }
 }
+
+input = [5, 4, 3, 2, 1, 0];
+k = 3;
+console.log(kSmallest(input, k)); // 2
 
 input = [7, 10, 4, 0, 20, 15];
 k = 3;
