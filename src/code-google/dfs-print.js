@@ -13,6 +13,14 @@ const depthFirstValidPath = (graph, source) => {
   return res;
 }
 
+function buildArray(length) {
+  const res = [];
+  for (let i = 0; i < length; i++) {
+    res.push(i + 1);
+  }
+  return res;
+}
+
 function buildDirectedGraph(edges) {
   const graph = {};
 
@@ -37,7 +45,7 @@ console.log(restrictedGraph);
 
 const valid = depthFirstValidPath(restrictedGraph, 1);
 
-const array = [ 10, 9, 4, 3, 2, 1, 8, 7, 6, 5 ];
+const array = buildArray(9);
 
 const other = array.filter((x) => { 
   return valid.indexOf(x) < 0;
