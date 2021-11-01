@@ -17,42 +17,44 @@
  * (1, 2), (1,5), (4,2), (4,5)
  * */
 
-const _x = new Map();
-const _y = new Map();
+const _x = {};
+const set = new Set();
 
 function add(x, y) {
   // handle x data
-  if (!_x.has(x)) {
-    _x.set(x, new Set());
+  if (!(x in _x)) {
+    _x[x] = new Set();
+    _x[x].add(y);
+    return false;
   }
-  let _xSet = _x.get(x)
-  _xSet.add(y);
-  _x.set(x, _xSet);
+  _x[x].add(y);
+  _ySameX = [..._x[x]];
 
-  // handle y data
-  if (!_y.has(y)) {
-    _y.set(y, new Set());
-  }
-  let _ySet = _y.get(y)
-  _ySet.add(x);
-  _y.set(y, _ySet);
-
-  _xSame = [..._x.get(x)];
-
-  console.log(x)
-  for (const y2 of _xSame) {
+  for (const y2 of _ySameX) {
+    // 4
     let square = Math.abs(y - y2); // 3
-    console.log(square)
-    let x2;
-  }
+    console.log(square);
 
+    let x2 = x + square;
+
+    if (x in _x && x2 in _x) {
+      console.log([x, x2]);
+      console.log([y, y2]);
+      console.log(_x[x2]);
+      if (_x[x].has(y) && _x[x2].has(y2)) {
+        console.log(x, y)
+        return true;
+      }
+    }
+  }
+  return false
 }
 
 /**
  * @example
  * (1,2), (1,5), (4,5), (4,2)
  *
- * Map { 1 => Set { 2, 5 }, 3 => Set { 5 }, 4 => Set { 5, 2 } }
+ * Map { 1 => Set { 2, 5 }, 4 => Set { 5, 2 } }
  * */
 console.log(add(1, 2));
 console.log(add(1, 5));
@@ -60,5 +62,4 @@ console.log(add(4, 5));
 console.log(add(4, 2));
 
 console.log(_x);
-console.log(_y);
-
+console.log(set);
