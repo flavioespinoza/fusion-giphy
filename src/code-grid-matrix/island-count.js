@@ -1,17 +1,22 @@
 function islandCount(grid) {
   const visited = new Set();
+  const groups = {};
+
   let count = 0;
   for (let r = 0; r < grid.length; r++) {
     for (c = 0; c < grid[0].length; c++) {
       if (explore(grid, r, c, visited)) {
+        console.log(r, c)
         count++;
+        groups[count] = [[r, c]]
       }
+     
     }
   }
   return count;
 }
 
-function explore(grid, r, c, visited) {
+function explore(grid, r, c, visited, key) {
   const rowInbounds = 0 <= r && r < grid.length;
   const colInbounds = 0 <= c && c < grid.length;
   if (!rowInbounds || !colInbounds) return false;
@@ -31,12 +36,12 @@ function explore(grid, r, c, visited) {
 }
 
 const grid = [
-  ['W', 'L', 'W', 'W', 'W'],
-  ['W', 'L', 'W', 'W', 'W'],
-  ['W', 'W', 'W', 'L', 'W'],
-  ['W', 'W', 'L', 'L', 'W'],
-  ['L', 'W', 'W', 'L', 'L'],
+  ['W', 'W', 'W', 'W', 'W'],
   ['L', 'L', 'W', 'W', 'W'],
+  ['W', 'W', 'L', 'W', 'W'],
+  ['W', 'W', 'L', 'W', 'W'],
+  ['W', 'W', 'W', 'W', 'L'],
+  ['W', 'W', 'W', 'L', 'L'],
 ];
 
 console.log(islandCount(grid));

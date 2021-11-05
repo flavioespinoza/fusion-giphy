@@ -35,12 +35,11 @@ let a = 'Google is the best!';
 console.log(reverseWordsInString(a));
 // best! the is Google
 
-let b = 'Is there     whitespaces?';
+let b = 'Is there     whitespace?';
 console.log(reverseWordsInString(b))
-// whitespaces?----there is
+// whitespace?    there is
 
 
 let c = "this      string     has a     lot of   whitespace";
-console.log(reverseWordsInString(c))
-// whitespaces?----there is
-
+console.log(reverseWordsInString(c));
+// whitespace   of lot     a has     string      this 

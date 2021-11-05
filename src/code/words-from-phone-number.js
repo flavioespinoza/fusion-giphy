@@ -22,6 +22,4 @@ function wordsFromPhoneNumber(phoneNumber, words) {
 let phoneNumber = '3662277';
 let words = ['foo', 'bar', 'baz', 'foobar', 'emo', 'cap', 'car', 'cat'];
 
-console.log(wordsFromPhoneNumber(phoneNumber, words));
-
-let output = ['foo', 'bar', 'foobar', 'emo', 'cap', 'car'];
+console.log(wordsFromPhoneNumber(phoneNumber, words)); // ['foo', 'bar', 'foobar', 'emo', 'cap', 'car'];
