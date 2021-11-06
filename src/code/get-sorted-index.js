@@ -17,8 +17,11 @@ function getSortedIndex(array, value) {
   let high = array.length;
   while (low < high) {
     let mid = (low + high) >>> 1;
-    if (array[mid] < value) low = mid + 1;
-    else high = mid;
+    if (array[mid] < value) {
+      low = mid + 1;
+    } else {
+      high = mid;
+    }
   }
   return low;
 }
@@ -26,4 +29,4 @@ function getSortedIndex(array, value) {
 module.exports = {
   getSortedIndexOfObject,
   getSortedIndex,
-}
+};
