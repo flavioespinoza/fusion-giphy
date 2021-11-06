@@ -2,16 +2,30 @@ const buildGraph = require('./build-graph-adjacency-list');
 
 function shortestPath(edges, startNode, endNode) {
   const graph = buildGraph(edges);
+  console.log(graph);
+  let x = {
+    w: ['x', 'v'],
+    x: ['w', 'y'],
+    y: ['x', 'z'],
+    z: ['y', 'v'],
+    v: ['z', 'w'],
+  };
+
   // crete a set to keep track of nodes already seen - this will prevent infinite loops
   const visited = new Set();
   // initiate the que with an array of the startNode and the initial distance equal to 0
-  const que = [[startNode, 0 /** 0 is the initial distance - the value that will be returned */]];
+  const que = [
+    [
+      startNode,
+      0 /** 0 is the initial distance - the value that will be returned */,
+    ],
+  ];
 
   // while the que has items on it
   while (que.length > 0) {
     // destructure the current node and current distance from the first item in the que
     const [currentNode, currentDistance] = que.shift();
-    
+
     // if the current node is the same as the end node then return the current distance
     if (currentNode === endNode) return currentDistance;
 
@@ -32,13 +46,18 @@ function shortestPath(edges, startNode, endNode) {
 }
 
 let edges = [
-  ['w', 'x'],
-  ['x', 'y'],
-  ['z', 'y'],
-  ['z', 'v'],
-  ['w', 'v'],
+  ['I', 'C'],
+  ['C', 'B'],
+  ['B', 'I'],
+  ['I', 'A'],
+  ['A', 'D'],
+  ['D', 'E'],
+  ['E', 'A'],
+  ['E', 'B'],
+  ['E', 'F'],
+  ['C', 'F'],
 ];
 
-console.log(shortestPath(edges, 'w', 'z')); // 2
+console.log(shortestPath(edges, 'I', 'F')); // 2
 
 module.exports = shortestPath;
