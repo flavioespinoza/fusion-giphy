@@ -1,0 +1,667 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/flavio/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.1/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * Darcula theme
+ *
+ * Adapted from a theme based on:
+ * IntelliJ Darcula Theme (https://github.com/bulenkov/Darcula)
+ *
+ * @author Alexandre Paradis <service.paradis@gmail.com>
+ * @version 1.0
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #a9b7c6;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    color: inherit;
+    background: rgba(33,66,131,.85);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    color: inherit;
+    background: rgba(33,66,131,.85);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2b2b2b;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+	color: #808080;
+}
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+	color: #cc7832;
+}
+
+.token.operator,
+.token.punctuation,
+.token.attr-name {
+    color: #a9b7c6;
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+    color: #e8bf6a;
+}
+
+.token.entity,
+.token.number,
+.token.symbol {
+    color: #6897bb;
+}
+
+.token.property,
+.token.constant,
+.token.variable {
+    color: #9876aa;
+}
+
+.token.string,
+.token.char {
+	color: #6a8759;
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+    color: #a5c261;
+}
+.token.attr-value .punctuation:first-child {
+    color: #a9b7c6;
+}
+
+.token.url {
+	color: #287bde;
+	text-decoration: underline;
+}
+
+.token.function {
+	color: #ffc66d;
+}
+
+.token.regex {
+    background: #364135;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.inserted {
+    background: #294436;
+}
+
+.token.deleted {
+    background: #484a4a;
+}
+
+/*code.language-css .token.punctuation {
+	color: #cc7832;
+}*/
+
+code.language-css .token.property,
+code.language-css .token.property + .token.punctuation {
+	color: #a9b7c6;
+}
+
+code.language-css .token.id {
+	color: #ffc66d;
+}
+
+code.language-css .token.selector > .token.class,
+code.language-css .token.selector > .token.attribute,
+code.language-css .token.selector > .token.pseudo-class,
+code.language-css .token.selector > .token.pseudo-element {
+	color: #ffc66d;
+}
+
+/* highlight */
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+  }
+  pre[data-line] .line-highlight-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+  }
+  
+  pre[data-line] .line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em;
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	pointer-events: none;
+	line-height: inherit;
+	white-space: pre;
+  }
+  
+  pre[data-line] .line-highlight:before, 
+  pre[data-line] .line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: .4em;
+	left: .6em;
+	min-width: 1em;
+	padding: 0 .5em;
+	background-color: hsla(24, 20%, 50%,.4);
+	color: hsl(24, 20%, 95%);
+	font: bold 65%/1.5 sans-serif;
+	text-align: center;
+	vertical-align: .3em;
+	border-radius: 999px;
+	text-shadow: none;
+	box-shadow: 0 1px white;
+  }
+  
+  pre[data-line] .line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+  }html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+html body code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #de245c;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  border: 1px solid #dfdfdf;
+  padding: 0.2em 0;
+}
+html body {
+  text-decoration: none;
+}
+html body :not(pre) > code[class*="language-"],
+html body pre[class*="language-"] {
+  background: #2b2b2b;
+}
+html body :not(pre) > code[class*="language-"] code,
+html body pre[class*="language-"] code {
+  color: white !important;
+}
+html body .markdown-preview .mume-header {
+  border-bottom: 1px solid gainsboro;
+}
+html body .markdown-preview h2 {
+  margin-bottom: 0.25em;
+}
+html body .markdown-preview h3 {
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+html body .markdown-preview h4 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+html body .markdown-preview h5 {
+  margin-top: 1.25em;
+  margin-bottom: 0.25em;
+  opacity: 0.7;
+}
+html body .markdown-preview ul {
+  margin-bottom: 12px;
+}
+html body .markdown-preview li.task-list-item {
+  margin-left: 24px;
+}
+html body .markdown-preview blockquote {
+  padding: 0 2px;
+  border-left: 5px solid orange;
+}
+html body .markdown-preview blockquote p {
+  background-color: #f1f1f1;
+  padding: 4px 12px;
+  margin-bottom: 1em;
+  font-weight: 800px;
+}
+html body .markdown-preview .bt {
+  border-top: 1px solid orange;
+  padding-top: 12px;
+}
+html body .markdown-preview .bb {
+  border-bottom: 1px solid orange;
+  padding-bottom: 12px;
+}
+html body .md-header {
+  padding-top: 6px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid orange;
+  border-top: 1px solid #a9a9a9;
+}
+html body .md-header h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+html body .md-theory {
+  padding-left: 24px;
+  padding-top: 6px;
+  color: crimson;
+}
+html body .md-theory strong {
+  color: crimson;
+}
+html body .md-block-quote li {
+  margin-left: 40px;
+}
+html body .md-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+html body .md-label {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+a html body .md-label {
+  margin-bottom: 0;
+}
+html body .md-pink {
+  color: hotpink;
+  font-weight: bold;
+}
+html body .md-label-output {
+  margin-left: 3em;
+  margin-bottom: -0.35em;
+}
+html body .md-label-output--multi-line {
+  margin-bottom: 0.15em;
+}
+html body .md-key {
+  background-color: orange;
+  color: black;
+  padding: 0 0.5em 0.15em;
+}
+html body .bold {
+  font-weight: bold;
+}
+html body .md-label-header {
+  padding-top: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid orange;
+}
+html body .md-label-header p {
+  margin-bottom: -24px;
+}
+html body .md-label-header-todo,
+html body .md-label-header-strategy {
+  margin-left: 24px;
+}
+html body .md-strategy {
+  margin-left: 24px;
+}
+html body a {
+  text-decoration: underline;
+}
+html body a.md-link-bold {
+  font-weight: bold;
+}
+html body .language-json,
+html body .language-yaml,
+html body .language-js,
+html body .language-javascript,
+html body .language-ts,
+html body .language-typescript,
+html body .language-bash,
+html body .language-shell {
+  padding: 1em;
+  margin: 0.25em 0 1.25em;
+  overflow: auto;
+}
+html body li .language-json,
+html body li .language-yaml,
+html body li .language-js,
+html body li .language-javascript,
+html body li .language-ts,
+html body li .language-typescript,
+html body li .language-bash,
+html body li .language-shell {
+  padding: 1em;
+  margin: 0.25em 0 1.25em;
+  overflow: auto;
+}
+html body .line-highlight {
+  background: rgba(255, 105, 180, 0.1) !important;
+  border-bottom: 1px dashed hotpink;
+  border-top: 1px dashed hotpink;
+  left: 0;
+  line-height: inherit;
+  margin-top: 0.75em;
+  padding: inherit 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  white-space: pre;
+  z-index: 0;
+}
+html body .md-output {
+  margin-left: 3em;
+}
+html body .md-output--emphasis {
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+}
+html body .mb4 {
+  margin-bottom: 0.25em;
+}
+html body .copy-paste-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -0.25em;
+  background-color: transparent;
+}
+html body .md-cmd-block {
+  position: relative;
+  overflow: hidden;
+}
+html body .md-cmd-block .copy-clip-icon {
+  position: absolute;
+  right: 0.125em;
+  top: 0.525em;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  z-index: 100;
+  padding: 0.15em;
+}
+html body .md-img--wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+html body .md-img {
+  position: relative;
+  margin: 0 auto;
+}
+html body .md-title__main {
+  border-bottom: 1px solid #ebe0e0;
+}
+html body .md-alert {
+  border: 0.25em solid hotpink;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+html body .redline {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+}
+html body .mt-12 {
+  margin-top: 0.5em;
+}
+html body .mb-12 {
+  margin-bottom: 0.5em;
+}
+html body .md-code-chunk {
+  background-color: orange;
+  padding: 2px 8px 6px;
+}
+html body iframe .tabs.bartabs {
+  display: none;
+}
+html body span.token.comment {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #2387af;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="code">Code</h1>
+
+<p>Lesson 1 - Iterations</p>
+<ul>
+<li>BinaryGap - <a href="https://codility.com/demo/results/trainingU2FQPQ-7Y4/">https://codility.com/demo/results/trainingU2FQPQ-7Y4/</a></li>
+</ul>
+<p>Lesson 2 - Arrays</p>
+<ul>
+<li>OddOccurrencesInArray - <a href="https://codility.com/demo/results/trainingFN5RVT-XQ4/">https://codility.com/demo/results/trainingFN5RVT-XQ4/</a></li>
+<li>CyclicRotation - <a href="https://codility.com/demo/results/trainingSH2W5R-RP5/">https://codility.com/demo/results/trainingSH2W5R-RP5/</a></li>
+</ul>
+<p>Lesson 3 - Time Complexity</p>
+<ul>
+<li>FrogJmp - <a href="https://codility.com/demo/results/training6KKWUD-BXJ/">https://codility.com/demo/results/training6KKWUD-BXJ/</a></li>
+<li>PermMissingElem - <a href="https://codility.com/demo/results/training58W4YJ-VHA/">https://codility.com/demo/results/training58W4YJ-VHA/</a></li>
+<li>TapeEquilibrum - <a href="https://codility.com/demo/results/trainingHMJHCT-9BX/">https://codility.com/demo/results/trainingHMJHCT-9BX/</a></li>
+</ul>
+<p>Lesson 4 - Couting Elements</p>
+<ul>
+<li>MissingInteger - <a href="https://codility.com/demo/results/trainingPBJ5G7-2QB/">https://codility.com/demo/results/trainingPBJ5G7-2QB/</a></li>
+<li>FrogRiverOne - <a href="https://codility.com/demo/results/trainingVKFWNJ-84P/">https://codility.com/demo/results/trainingVKFWNJ-84P/</a></li>
+<li>PermCheck - <a href="https://codility.com/demo/results/trainingN4XJDP-QJ6/">https://codility.com/demo/results/trainingN4XJDP-QJ6/</a></li>
+<li>MaxCounters - <a href="https://codility.com/demo/results/trainingQ3KEC6-S4T/">https://codility.com/demo/results/trainingQ3KEC6-S4T/</a></li>
+</ul>
+<p>Lesson 5 - Prefix Sums</p>
+<ul>
+<li>CountDiv - <a href="https://codility.com/demo/results/trainingGBF99N-YHX/">https://codility.com/demo/results/trainingGBF99N-YHX/</a></li>
+<li>PassingCars - <a href="https://codility.com/demo/results/trainingAR78MG-6TF/">https://codility.com/demo/results/trainingAR78MG-6TF/</a></li>
+<li>GenomicRangeQuery - <a href="https://codility.com/demo/results/trainingZ47Q2A-CUW/">https://codility.com/demo/results/trainingZ47Q2A-CUW/</a></li>
+<li>MinAvgTwoSlice - <a href="https://codility.com/demo/results/trainingU6BWPU-ADW/">https://codility.com/demo/results/trainingU6BWPU-ADW/</a></li>
+</ul>
+<p>Lesson 6 - Sorting</p>
+<ul>
+<li>Triangle - <a href="https://codility.com/demo/results/training5FCWC6-F95/">https://codility.com/demo/results/training5FCWC6-F95/</a></li>
+<li>Distinct - <a href="https://codility.com/demo/results/trainingWPEYF6-TC9/">https://codility.com/demo/results/trainingWPEYF6-TC9/</a></li>
+<li>MaxProductOfThree - <a href="https://codility.com/demo/results/trainingR637FP-8XS/">https://codility.com/demo/results/trainingR637FP-8XS/</a></li>
+<li>NumberOfDiscIntersections - <a href="https://codility.com/demo/results/trainingDQZTYA-ZGD/">https://codility.com/demo/results/trainingDQZTYA-ZGD/</a></li>
+</ul>
+<p>Lesson 7 - Stacks and Queues</p>
+<ul>
+<li>Brackets - <a href="https://codility.com/demo/results/trainingRQ4V9Q-PWX/">https://codility.com/demo/results/trainingRQ4V9Q-PWX/</a></li>
+<li>Fish - <a href="https://codility.com/demo/results/trainingYGH5E7-N5G/">https://codility.com/demo/results/trainingYGH5E7-N5G/</a></li>
+<li>StoneWall - <a href="https://codility.com/demo/results/trainingYYWY68-ZVH/">https://codility.com/demo/results/trainingYYWY68-ZVH/</a></li>
+<li>Nesting - <a href="https://codility.com/demo/results/trainingV9B3AN-2QW/">https://codility.com/demo/results/trainingV9B3AN-2QW/</a></li>
+</ul>
+<p>Lesson 8 - Leader</p>
+<ul>
+<li>EquiLeader - <a href="https://codility.com/demo/results/trainingV5AZPJ-J9X/">https://codility.com/demo/results/trainingV5AZPJ-J9X/</a></li>
+<li>Dominator - <a href="https://codility.com/demo/results/trainingKNH5G4-FX9/">https://codility.com/demo/results/trainingKNH5G4-FX9/</a></li>
+</ul>
+<p>Lesson 9 - Maximum slice problem</p>
+<ul>
+<li>MaxDoubleSliceSum - <a href="https://codility.com/demo/results/trainingUY3GP9-J3Q/">https://codility.com/demo/results/trainingUY3GP9-J3Q/</a></li>
+<li>MaxProfit - <a href="https://codility.com/demo/results/training34TMJW-JT9/">https://codility.com/demo/results/training34TMJW-JT9/</a></li>
+<li>MaxSliceSum - <a href="https://codility.com/demo/results/trainingTXHJSZ-DXF/">https://codility.com/demo/results/trainingTXHJSZ-DXF/</a></li>
+</ul>
+<p>Lesson 10 - Prime and composite numbers</p>
+<ul>
+<li>MinPerimeterRectangle - <a href="https://codility.com/demo/results/trainingW4XUWT-EXR/">https://codility.com/demo/results/trainingW4XUWT-EXR/</a></li>
+<li>CountFactors - <a href="https://codility.com/demo/results/trainingGU5FEX-WD4/">https://codility.com/demo/results/trainingGU5FEX-WD4/</a></li>
+<li>Flags - <a href="https://codility.com/demo/results/training97DBAE-GKV/">https://codility.com/demo/results/training97DBAE-GKV/</a></li>
+<li>Peaks - <a href="https://codility.com/demo/results/training7GBTZ2-BNT/">https://codility.com/demo/results/training7GBTZ2-BNT/</a></li>
+</ul>
+<p>Lesson 11 - Sieve of Eratosthenes</p>
+<ul>
+<li>CountSemiprimes - <a href="https://codility.com/demo/results/trainingGFFQAS-GK8/">https://codility.com/demo/results/trainingGFFQAS-GK8/</a></li>
+<li>CountNonDivisible - <a href="https://codility.com/demo/results/trainingUMCZ3V-9Q5/">https://codility.com/demo/results/trainingUMCZ3V-9Q5/</a></li>
+</ul>
+<p>Lesson 12 - Euclidean algorithm</p>
+<ul>
+<li>ChocolatesByNumber - <a href="https://codility.com/demo/results/trainingSXZ3KT-MV4/">https://codility.com/demo/results/trainingSXZ3KT-MV4/</a></li>
+<li>CommonPrimeDivisors - <a href="https://codility.com/demo/results/training9X2VFQ-6HC/">https://codility.com/demo/results/training9X2VFQ-6HC/</a></li>
+</ul>
+<p>Lesson 13 - Fibonacci numbers</p>
+<ul>
+<li>FibFrog - <a href="https://codility.com/demo/results/trainingUZV28E-F7P/">https://codility.com/demo/results/trainingUZV28E-F7P/</a></li>
+<li>Ladder - <a href="https://codility.com/demo/results/trainingZXRA9N-33G/">https://codility.com/demo/results/trainingZXRA9N-33G/</a></li>
+</ul>
+<p>Lesson 14 - Binary search algorithm</p>
+<ul>
+<li>MinMaxDivision - <a href="https://codility.com/demo/results/trainingHA5ZGD-H6G/">https://codility.com/demo/results/trainingHA5ZGD-H6G/</a></li>
+<li>NailingPlanks - <a href="https://codility.com/demo/results/trainingEW83KS-F3M/">https://codility.com/demo/results/trainingEW83KS-F3M/</a></li>
+</ul>
+<p>Lesson 15 - Caterpillar method</p>
+<ul>
+<li>AbsDistinct - <a href="https://codility.com/demo/results/training4FP643-CE7/">https://codility.com/demo/results/training4FP643-CE7/</a></li>
+<li>CountDistinctSlices - <a href="https://codility.com/demo/results/training3J563K-4GU/">https://codility.com/demo/results/training3J563K-4GU/</a></li>
+<li>CountTriangles - <a href="https://codility.com/demo/results/trainingSREAJE-B4Q/">https://codility.com/demo/results/trainingSREAJE-B4Q/</a></li>
+<li>MinAbsSumOfTwo - <a href="https://codility.com/demo/results/trainingPWSPFF-2X9/">https://codility.com/demo/results/trainingPWSPFF-2X9/</a></li>
+</ul>
+<p>Lesson 16 - Greedy algorithms</p>
+<ul>
+<li>MaxNonoverlappingSegments - <a href="https://codility.com/demo/results/training2XWCQT-MHR/">https://codility.com/demo/results/training2XWCQT-MHR/</a></li>
+<li>TieRopes - <a href="https://codility.com/demo/results/trainingG9UHPH-8EX/">https://codility.com/demo/results/trainingG9UHPH-8EX/</a></li>
+</ul>
+<p>Lesson 17 - Dynamic programming</p>
+<ul>
+<li>NumberSolitaire - <a href="https://codility.com/demo/results/trainingXKAYAB-KGV/">https://codility.com/demo/results/trainingXKAYAB-KGV/</a></li>
+<li>MinAbsSum - <a href="https://codility.com/demo/results/trainingQ7CF2B-9XJ/">https://codility.com/demo/results/trainingQ7CF2B-9XJ/</a></li>
+</ul>
+<p>Lesson 99 - Future training</p>
+<ul>
+<li>StrSymmetryPoint - <a href="https://codility.com/demo/results/training5SAKFX-JZ9/">https://codility.com/demo/results/training5SAKFX-JZ9/</a></li>
+<li>TreeHeight - <a href="https://codility.com/demo/results/training5M9QX5-CXQ/">https://codility.com/demo/results/training5M9QX5-CXQ/</a></li>
+<li>ArrayInversionCount - <a href="https://codility.com/demo/results/trainingZH3YMZ-D8H/">https://codility.com/demo/results/trainingZH3YMZ-D8H/</a> <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong> WIP</li>
+<li>PolygonConcavityIndex - <a href="https://codility.com/demo/results/trainingDRRKK2-Z57/">https://codility.com/demo/results/trainingDRRKK2-Z57/</a></li>
+</ul>
+<p>Challenges</p>
+<ul>
+<li>PrefixSet - <a href="https://codility.com/demo/results/trainingMACGW7-JXB/">https://codility.com/demo/results/trainingMACGW7-JXB/</a></li>
+<li>NumberOfDiscIntersections - <a href="https://codility.com/demo/results/trainingDQZTYA-ZGD/">https://codility.com/demo/results/trainingDQZTYA-ZGD/</a></li>
+<li>CountPalindromicSlices - <a href="https://codility.com/demo/results/training4WWPKZ-9YD/">https://codility.com/demo/results/training4WWPKZ-9YD/</a> <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong> WIP</li>
+<li>MinAbsSum - <a href="https://codility.com/demo/results/trainingQ7CF2B-9XJ/">https://codility.com/demo/results/trainingQ7CF2B-9XJ/</a></li>
+<li>Minfuds - <a href="https://codility.com/demo/results/trainingJE6X26-DKQ/">https://codility.com/demo/results/trainingJE6X26-DKQ/</a> <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong> WIP</li>
+<li>BallSwitchBoard - <a href="https://codility.com/demo/results/training9RCK8F-JBP/">https://codility.com/demo/results/training9RCK8F-JBP/</a> <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong> WIP</li>
+<li>HamiltonianRoutesCount - <a href="https://codility.com/programmers/task/hamiltonian_routes_count/">https://codility.com/programmers/task/hamiltonian_routes_count/</a></li>
+<li>GasStations - <a href="https://codility.com/programmers/task/gas_stations/">https://codility.com/programmers/task/gas_stations/</a></li>
+<li>ShortestAdjSeq - <a href="https://codility.com/programmers/task/shortest_adj_seq/">https://codility.com/programmers/task/shortest_adj_seq/</a></li>
+<li>SpaceCrews - <a href="https://codility.com/programmers/task/space_crews/">https://codility.com/programmers/task/space_crews/</a></li>
+<li>MinRouterPeripherality - <a href="https://codility.com/programmers/task/min_router_peripherality/">https://codility.com/programmers/task/min_router_peripherality/</a></li>
+<li>NumberOfZeros - <a href="https://codility.com/programmers/task/number_of_zeros/">https://codility.com/programmers/task/number_of_zeros/</a></li>
+<li>DoubleMedian - <a href="https://codility.com/programmers/task/double_median/">https://codility.com/programmers/task/double_median/</a></li>
+<li>KSparseBinaryCount - <a href="https://codility.com/programmers/task/k_sparse_binary_count/">https://codility.com/programmers/task/k_sparse_binary_count/</a></li>
+<li>PowerFib - <a href="https://codility.com/programmers/task/power_fib/">https://codility.com/programmers/task/power_fib/</a></li>
+<li>ArrayClosestAscenders - <a href="https://codility.com/programmers/task/array_closest_ascenders/">https://codility.com/programmers/task/array_closest_ascenders/</a></li>
+<li>HitTheNumber - <a href="https://codility.com/programmers/task/hit_the_number/">https://codility.com/programmers/task/hit_the_number/</a></li>
+<li>StoneWall - <a href="https://codility.com/demo/results/trainingYYWY68-ZVH/">https://codility.com/demo/results/trainingYYWY68-ZVH/</a></li>
+<li>TorusLot - <a href="https://codility.com/programmers/task/torus_lot/">https://codility.com/programmers/task/torus_lot/</a></li>
+<li>CartesianSequence - <a href="https://codility.com/programmers/task/cartesian_sequence/">https://codility.com/programmers/task/cartesian_sequence/</a></li>
+<li>TilingsCount - <a href="https://codility.com/programmers/task/tilings_count/">https://codility.com/programmers/task/tilings_count/</a></li>
+<li>Cannonballs - <a href="https://codility.com/programmers/task/cannonballs/">https://codility.com/programmers/task/cannonballs/</a></li>
+<li>WireBurnouts - <a href="https://codility.com/programmers/task/wire_burnouts/">https://codility.com/programmers/task/wire_burnouts/</a></li>
+<li>FallingDisks - <a href="https://codility.com/programmers/task/falling_disks/">https://codility.com/programmers/task/falling_disks/</a></li>
+<li>Hydro - GroceryStore - <a href="https://codility.com/programmers/task/grocery_store/">https://codility.com/programmers/task/grocery_store/</a></li>
+<li>FindThree - <a href="https://codility.com/programmers/task/find_three/">https://codility.com/programmers/task/find_three/</a></li>
+<li>Clocks - <a href="https://codility.com/programmers/task/clocks/">https://codility.com/programmers/task/clocks/</a></li>
+<li>Ber - PrefixSuffixSet - <a href="https://codility.com/programmers/task/prefix_suffix_set/">https://codility.com/programmers/task/prefix_suffix_set/</a></li>
+<li>Flags - <a href="https://codility.com/demo/results/training97DBAE-GKV/">https://codility.com/demo/results/training97DBAE-GKV/</a></li>
+<li>PrefixMaxProduct - <a href="https://codility.com/programmers/task/prefix_max_product/">https://codility.com/programmers/task/prefix_max_product/</a></li>
+<li>FloodedIsland - <a href="https://codility.com/programmers/task/flooded_island/">https://codility.com/programmers/task/flooded_island/</a></li>
+<li>CountBoundedSlices - <a href="https://codility.com/programmers/task/count_bounded_slices/">https://codility.com/programmers/task/count_bounded_slices/</a></li>
+<li>TripPlanning - <a href="https://codility.com/programmers/task/trip_planning/">https://codility.com/programmers/task/trip_planning/</a></li>
+<li>BoatAlignment - <a href="https://codility.com/programmers/task/boat_alignment/">https://codility.com/programmers/task/boat_alignment/</a></li>
+<li>MaxDistanceMonotonic - <a href="https://codility.com/programmers/task/max_distance_monotonic/">https://codility.com/programmers/task/max_distance_monotonic/</a></li>
+<li>AscendingPaths - <a href="https://codility.com/programmers/task/ascending_paths/">https://codility.com/programmers/task/ascending_paths/</a></li>
+<li>MaxSliceSwap - <a href="https://codility.com/programmers/task/max_slice_swap/">https://codility.com/programmers/task/max_slice_swap/</a></li>
+<li>CuttingTheCake - <a href="https://codility.com/programmers/task/cutting_the_cake/">https://codility.com/programmers/task/cutting_the_cake/</a></li>
+<li>PrisonEscape - <a href="https://codility.com/programmers/task/prison_escape/">https://codility.com/programmers/task/prison_escape/</a></li>
+<li>BreakTheRope - <a href="https://codility.com/programmers/task/break_the_rope/">https://codility.com/programmers/task/break_the_rope/</a></li>
+<li>TreeTrip - <a href="https://codility.com/programmers/task/tree_trip/">https://codility.com/programmers/task/tree_trip/</a></li>
+<li>TrekAndSwim - <a href="https://codility.com/programmers/task/trek_and_swim/">https://codility.com/programmers/task/trek_and_swim/</a></li>
+<li>SqlSegmentSum - <a href="https://codility.com/programmers/task/sql_segments_sum/">https://codility.com/programmers/task/sql_segments_sum/</a></li>
+<li>SpeedCameras - <a href="https://codility.com/programmers/task/speed_cameras/">https://codility.com/programmers/task/speed_cameras/</a></li>
+</ul>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#code">Code</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
