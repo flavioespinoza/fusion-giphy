@@ -13,6 +13,7 @@ function isPalindrome(string) {
   }
   return true;
 }
+
 const tieFighters = {
   fighter: '|-o-|',
   bomber: '|-=oø=-|',
