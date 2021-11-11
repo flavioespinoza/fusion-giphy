@@ -21,20 +21,22 @@ function reverseNumber(n) {
   return isNegative ? -result : result;
 }
 
-// integer
-console.log(reverseNumber(-123)); // -321
-console.log(reverseNumber(0)); // 0
-console.log(reverseNumber(1)); // 1
-console.log(reverseNumber(11)); // 11
-console.log(reverseNumber(12)); // 21
-console.log(reverseNumber(453)); // 354
-console.log(reverseNumber(1234)); // 4321
-console.log(reverseNumber(4563)); // 3654
-console.log(reverseNumber(123456789)); // 987654321
 
-// float
-console.log(reverseNumber(-123.45)); // -321
-console.log(reverseNumber(123.45)); // 321
 
-// string
-console.log(reverseNumber('123')); // Error: First argument must be a number.
+// // integer
+// console.log(reverseNumber(-123)); // -321
+// console.log(reverseNumber(0)); // 0
+// console.log(reverseNumber(1)); // 1
+// console.log(reverseNumber(11)); // 11
+// console.log(reverseNumber(12)); // 21
+// console.log(reverseNumber(453)); // 354
+// console.log(reverseNumber(1234)); // 4321
+// console.log(reverseNumber(4563)); // 3654
+// console.log(reverseNumber(123456789)); // 987654321
+
+// // float
+// console.log(reverseNumber(-123.45)); // -321
+// console.log(reverseNumber(123.45)); // 321
+
+// // string
+// console.log(reverseNumber('123')); // Error: First argument must be a number.

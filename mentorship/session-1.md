@@ -1,66 +1,94 @@
+# Flavio's Background Info
+
 architecture > 2011 start coding (front end focus on JS, HTML/CSS) >> 9 YOE
 
-fundamental knowledge:
+## Fundamental Knowledge Required
 
 - phone screen w GG 2 weeks ago
 
 coding interview (DS, Algo)
 
-1. problem solving: pick the right data structure & algo < ideal/optimal (running time + space complexity) < brute force
+### 1. Problem solving
 
-- big O complexity (bigocheatsheet.com)
+- pick the right data structure & algo (running time + space complexity)
+- ideal/optimal **`>`** brute force
 
-2. implementation (coding skills): JS
+- big O complexity: [cheat sheet](https://bigocheatsheet.com)
 
-- clean code, short + concise + easy to understand/ maintain
+### 2. Implementation (coding skills)
 
-Data structures & Algo:
+- clean code, short **`+`** concise **`+`** easy to understand and maintain
+
+## Data structures & Algo
 
 Arrays (excellent)
+Sets  (excellent)
+Maps  (excellent)
 
-Matrixes and linked lists (problems)
+Stacks  (good)
+Queues  (good)
 
-Strings and Binary Search (good)
+Trees (ok)
+Graph (ok)
 
-Heaps, (problem)
-Sets, (excellent)
-Maps, (excellent)
-Stacks, (good)
-Queues, (good)
-
+Strings and Binary Search (problem)
+Matrixes and Linked Lists (problem)
 Intervals (problem)
-
-Trees (good)
-Graph (good)
+Heaps (problem)
 
 Recursion/Backtracking (good, but don't know where to use it or where NOT to use it)
 Dynamic Programming (problem)
 Greedy (problem)
 
-Upcoming interviews: Sportify, Uber, Overview.ai
-3 months
+## Interview Strategy
 
-2 lists of companies
+Planed approach to prepare for Google or FANG interview
 
-1. dont care about (not start up companies): standard itnerview => ds + algo
-asana
-snapchat
-...
-=> competing offers
+### Past interviews
 
-2. target companies:
+- Spotify
+- Uber
+- Overview.ai
+
+### Preparation Schedule
+
+- **`3`** months of study and preparation
+
+#### Lists of companies
+
+**Don't care about**:
+
+Non start-up companies: standard interview => ds + algo
+
+- Asana
+- Snapchat
+- ...etc
+
+**`IMPORTANT`**: Helps when negotiating competing offers
+
+**Target companies**:
+
+- Google
+
+## Practice Problems
+
+### Longest Substring
 
 <https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/>
 
-Given a string s, return the length of the longest substring that contains at most two distinct characters.
+Given a string **`s`**, return the **`length`**:`number` of the `longest substring`
 
-Example 1:
+- Distinct characters **`<=`** 2.
 
-Input: s = "eceba"
-Output: 3
+**Example 1**:
+
+Input: `s` = `"eceba"`
+
+Output: `3`
+
 Explanation: The substring is "ece" which its length is 3.
 
-Example 2:
+**Example 2**:
 
 Input: s = "cc aabbb"
 Input: s = "ccaa bbb"
@@ -69,14 +97,11 @@ Input: s = "ccaa bbbccc"
 Output: 5
 Explanation: The substring is "aabbb" which its length is 5.
 
-// Strategy ------------
-// set "longestSubString" = "";
-// set "lastSeen" = {}
+#### Manual Solution
 
-function longestSubString(string) {
-  
-}
+Illustration of thought process
 
+```shell
 Input: s = "eceba" => ece, eb, ba
               ^^^
 
@@ -85,9 +110,14 @@ Input: s = "eceba" => ece, eb, ba
 
 start = 0
 end = 1
+```
 
-Arrays
-problems to get exposed to the topics:
+## Homework 1
+
+Problems to get exposed to the topics
+
+**Arrays**:
+
 <https://www.interviewbit.com/problems/add-one-to-number/>
 <https://www.interviewbit.com/problems/wave-array/>
 <https://www.interviewbit.com/problems/hotel-bookings-possible/>
@@ -96,7 +126,7 @@ problems to get exposed to the topics:
 <https://www.interviewbit.com/problems/remove-duplicates-from-sorted-list/>
 <https://www.interviewbit.com/problems/merge-two-sorted-lists/>
 
-Patterns problems:
+**Patterns problems**:
 
 Sliding window
 <https://leetcode.com/problems/longest-substring-without-repeating-characters/>
@@ -108,16 +138,19 @@ Closing window (2 pointers)
 <https://leetcode.com/problems/4sum/>
 <https://leetcode.com/problems/trapping-rain-water>
 
-Maximum sum subarray
+**Maximum sum subarray**:
+
 <https://www.interviewbit.com/problems/flip/>
 <https://www.interviewbit.com/problems/max-sum-contiguous-subarray/>
 
 Sum subarray = k
 <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>
 
-Monotonic Queue
+**Monotonic Queue**:
+
 <https://leetcode.com/problems/next-greater-element-i/>
 <https://leetcode.com/problems/largest-rectangle-in-histogram/>
 
-Bucketing (aka Counting sort)
+**Bucketing (aka Counting sort)**:
+
 <https://leetcode.com/problems/top-k-frequent-words/>
