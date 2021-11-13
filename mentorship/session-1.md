@@ -129,7 +129,7 @@ Problems to get exposed to the topics
 <https://www.interviewbit.com/problems/remove-duplicates-from-sorted-list/>
 <https://www.interviewbit.com/problems/merge-two-sorted-lists/>
 
-**Patterns problems**:
+**Patterns**:
 
 Sliding window
 <https://leetcode.com/problems/longest-substring-without-repeating-characters/>
@@ -149,11 +149,11 @@ Closing window (2 pointers)
 Sum subarray = k
 <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>
 
-**Monotonic Queue**:
+**Monotonic queue**:
 
 <https://leetcode.com/problems/next-greater-element-i/>
 <https://leetcode.com/problems/largest-rectangle-in-histogram/>
 
 **Bucketing (aka Counting sort)**:
 
-<https://leetcode.com/problems/top-k-frequent-words/>
+[Top k frequent words](https://leetcode.com/problems/top-k-frequent-words/) | [My solution](bucketing-count-sort/top-k-frequent-words.js)
