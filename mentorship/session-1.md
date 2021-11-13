@@ -118,8 +118,10 @@ Problems to get exposed to the topics
 
 **Arrays**:
 
-<https://www.interviewbit.com/problems/add-one-to-number/>
-<https://www.interviewbit.com/problems/wave-array/>
+[Add one to number](https://leetcode.com/problems/plus-one/) | [My solution](arrays/plus-one.js)
+
+[Wave array](https://www.interviewbit.com/problems/wave-array/) | [My solution](arrays/wave-array.js)
+
 <https://www.interviewbit.com/problems/hotel-bookings-possible/>
 <https://www.interviewbit.com/problems/first-missing-integer/>
 <https://www.interviewbit.com/problems/partition-list/>
