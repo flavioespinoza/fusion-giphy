@@ -122,8 +122,9 @@ Problems to get exposed to the topics
 
 [Wave array](https://www.interviewbit.com/problems/wave-array/) | [My solution](arrays/wave-array.js)
 
+[First missing integer](https://www.interviewbit.com/problems/first-missing-integer/) | [My solution](arrays/first-missing-integer.js)
+
 <https://www.interviewbit.com/problems/hotel-bookings-possible/>
-<https://www.interviewbit.com/problems/first-missing-integer/>
 <https://www.interviewbit.com/problems/partition-list/>
 <https://www.interviewbit.com/problems/remove-duplicates-from-sorted-list/>
 <https://www.interviewbit.com/problems/merge-two-sorted-lists/>
