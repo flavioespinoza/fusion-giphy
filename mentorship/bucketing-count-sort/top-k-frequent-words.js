@@ -1,22 +1,23 @@
 function topKFrequent(words, k) {
-  // build a hash map to track counts
+  const results = [];
+  // create hash map to track counts
   const map = {};
   for (const word of words) {
-    if (!map[word]) {
+    if (!(word in map)) {
       map[word] = 1;
     } else {
       map[word]++;
     }
   }
-  // create array of map keys
+  // create an array of keys
   const keys = Object.keys(map);
-  // sort the keys using count difference or local-compare keys
-  keys.sort((aKey, bKey) => {
-    const diff = map[bKey] - map[aKey];
-    if (diff === 0) return aKey.localeCompare(bKey);
+  // sort keys using count difference or keyA locale-compare keyB
+  keys.sort((keyA, keyB) => {
+    const diff = map[keyB] - map[keyA];
+    if (diff === 0) return keyA.localeCompare(keyB);
     else return diff;
   });
-  // return slice k keys
+  // return results array
   return keys.slice(0, k);
 }
 
