@@ -1,5 +1,4 @@
 function topKFrequent(words, k) {
-  const results = [];
   // create hash map to track counts
   const map = {};
   for (const word of words) {
@@ -28,7 +27,7 @@ words = ['i', 'love', 'leetcode', 'i', 'love', 'coding'];
 console.log(topKFrequent(words, 2)); // [ 'i', 'love' ]
 
 words = ['the', 'day', 'is', 'sunny', 'the', 'the', 'the', 'sunny', 'is', 'is'];
-console.log(topKFrequent(words, 4));
+console.log(topKFrequent(words, 4)); // [ 'the', 'is', 'sunny', 'day' ]
 
 words = ['i', 'love', 'leetcode', 'i', 'love', 'coding'];
-console.log(topKFrequent(words, 3));
+console.log(topKFrequent(words, 3)); // [ 'i', 'love', 'coding' ]
