@@ -13,7 +13,7 @@
 
 [Hotel bookings possible](https://www.interviewbit.com/problems/hotel-bookings-possible/) | [My solution](arrays/hotel-bookings-possible.js)
 
-<https://www.interviewbit.com/problems/partition-list/>
+[Partition list](https://www.interviewbit.com/problems/partition-list/)
 
 ## Linked Lists
 
