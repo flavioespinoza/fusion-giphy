@@ -20,10 +20,28 @@ Linked List
 
 Patterns problems:
 
-Sliding window
+## Sliding window
 
 How to recognize the pattern: Any subarray/substring problem where there’s a constraint (e.g. no repeating characters, product less than k, etc.) might be solvable with Sliding Window.
-Key Point: In order to use Sliding Window, we just need to keep track of whether we currently meet the constraint.
+
+**Key Point**: In order to use Sliding Window, we just need to keep track of whether we currently meet the constraint.
+
+### Template
+
+```js
+slidingWindow(s) {
+  // Define variables to keep track of the constraint and the final result.
+  
+  // Main routine
+  for (let i = 0, j = 0; j < s.length(); j++) {
+    // Keep track of the constraint as we open the window to the right.
+
+    // Inner while loop to close the window from the left once we’ve violated the constraint
+
+    // Compute the result
+  }
+}
+```
 
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
@@ -44,55 +62,41 @@ function lengthOfLongestSubstring(s) {
 }
 ```
 
-
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 
-```java
-class Solution {
-  public int lengthOfLongestSubstringTwoDistinct(String s) {
-    int[] counts = new int[128]; // => constant space => O(1)
+```js
+function lengthOfLongestSubstringTwoDistinct(s) {
+  // ASCII: 128 characters | Constant Space O(1)
+  const counts = new Array(128).fill(0);
 
-    int max = 0;
-    int distinct = 0;
+  let max = 0;
+  let distinct = 0;
 
-    for (int left = 0, right = 0; right < s.length(); right++) {
+  for (let left = 0, right = 0; right < s.length; right++) {
 
-      if (counts[s.charAt(right)] == 0) {
-        distinct++;
-      }
-
-      counts[s.charAt(right)]++;
-
-      while (distinct > 2) {
-        counts[s.charAt(left)]--;
-
-        if (counts[s.charAt(left)] == 0) {
-          distinct--;
-        };
-
-        left++;
-      }
-
-      max = Math.max(max, right - left + 1);
+    if (counts[s.charCodeAt(right)] === 0) {
+      distinct++;
     }
 
-    return max;
+    counts[s.charCodeAt(right)]++;
+
+    while (distinct > 2) {
+      counts[s.charCodeAt(left)]--;
+
+      if (counts[s.charCodeAt(left)] === 0) {
+        distinct--;
+      };
+
+      left++;
+    }
+
+    max = Math.max(max, right - left + 1);
   }
+
+  return max;
 }
 ```
 
-slidingWindow() {
-// Define variables to keep track of the constraint and the final result.
-
-// Main routine
-for (int i = 0, j = 0; j < s.length(); j++) {
-// Keep track of the constraint as we open the window to the right.
-  
- // Inner while loop to close the window from the left once we’ve violated the constraint
-  
- // Compute the result
-}
-}
 
 Given a string s, return the length of the longest substring that contains at most two distinct characters.
 
