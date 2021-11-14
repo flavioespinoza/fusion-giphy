@@ -20,7 +20,6 @@ function topKFrequent(words, k) {
   return keys.slice(0, k);
 }
 
-
 let words;
 
 words = ['i', 'love', 'leetcode', 'i', 'love', 'coding'];

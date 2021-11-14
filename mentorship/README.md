@@ -1,35 +1,35 @@
 
 # Homework 1
 
+- resource: [javascript-algorithms](https://mgechev.github.io/javascript-algorithms/index.html)
+
 ## Arrays
 
 [Add one to number](https://leetcode.com/problems/plus-one/) | [My solution](arrays/plus-one.js)
 
 [Wave array](https://www.interviewbit.com/problems/wave-array/) | [My solution](arrays/wave-array.js)
 
-[First missing integer](https://www.interviewbit.com/problems/first-missing-integer/) | [My solution](arrays/first-missing-integer.js)
+[First missing positive](https://leetcode.com/problems/first-missing-positive/) | [My solution](arrays/first-missing-positive.js)
 
-<https://www.interviewbit.com/problems/hotel-bookings-possible/>
+[Hotel bookings possible](https://www.interviewbit.com/problems/hotel-bookings-possible/) | [My solution](arrays/hotel-bookings-possible.js)
 
 <https://www.interviewbit.com/problems/partition-list/>
 
-[Remove duplicates from sorted list](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [My Solution](arrays/remove-duplicates-from-sorted-list.js)
+## Linked Lists
 
-<img src="arrays/remove-duplicates-from-sorted-list.jpg" style="width: 250px; margin-bottom: 24px;" />
+[Remove duplicates from sorted list](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [My solution](arrays/remove-duplicates-from-sorted-list.js) | [Times](arrays/remove-duplicates-from-sorted-list.jpg)
 
-[Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [My Solution](arrays/merge-two-sorted-lists.js)
-
-<img src="arrays/merge-two-sorted-lists.jpg" style="width: 250px; margin-bottom: 24px;"  />
+[Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [My solution](arrays/merge-two-sorted-lists.js) | [Times](arrays/merge-two-sorted-lists.jpg)
 
 ## Patterns
 
-**Sliding window**:
+**Sliding window**
 
 <https://leetcode.com/problems/longest-substring-without-repeating-characters/>
 <https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/>
 <https://leetcode.com/problems/subarray-product-less-than-k/>
 
-**Closing window (2 pointers)**:
+**Closing window (2 pointers)**
 
 <https://leetcode.com/problems/3sum/>
 <https://leetcode.com/problems/4sum/>
@@ -40,7 +40,8 @@
 <https://www.interviewbit.com/problems/flip/>
 <https://www.interviewbit.com/problems/max-sum-contiguous-subarray/>
 
-Sum subarray = k
+**Sum subarray = k**
+
 <https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>
 
 ## Monotonic Queue
@@ -50,4 +51,4 @@ Sum subarray = k
 
 ## Bucketing (a.k.a. Counting Sort)
 
-[Top k frequent words](https://leetcode.com/problems/top-k-frequent-words/) | [My Solution](bucketing-count-sort/top-k-frequent-words.js)
+[Top k frequent words](https://leetcode.com/problems/top-k-frequent-words/) | [My solution](bucketing-count-sort/top-k-frequent-words.js)

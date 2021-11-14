@@ -1,24 +1,21 @@
 function firstMissingPositive(nums) {
-  // set vars
-  const array = [0];
-
-  // build array ignoring negative numbers
+  // set "array" = [0]
+  let array = [0];
+  // loop through (n of nums) 
+  // ignore negative numbers
+  // set array[n] = n
   for (const n of nums) {
     if (n < 0) continue;
     array[n] = n;
   }
-
-  // loop with i = 1 to skip over first item
+  // for loop with i = 1 (skip over zero index)
+  // if !array[i] return i
   for (let i = 1; i < array.length; i++) {
-    if (!array[i]) {
-      // if array at index i is empty;
-      return i;
-    }
+    if (!array[i]) return i;
   }
-
-  // if no empty slots return last element + 1
+  // return last item of the array + 1
   return array.pop() + 1;
-}
+};
 
 let input;
 
