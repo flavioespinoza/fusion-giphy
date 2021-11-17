@@ -29,21 +29,36 @@ How to recognize the pattern: Any subarray/substring problem where there’s a c
 ### Template
 
 ```js
-slidingWindow(s) {
+slidingWindow(string) {
   // Define variables to keep track of the constraint and the final result.
-  
+
   // Main routine
-  for (let i = 0, j = 0; j < s.length(); j++) {
+  for (let left = 0, right = 0; j < string.length(); right++) {
     // Keep track of the constraint as we open the window to the right.
 
     // Inner while loop to close the window from the left once we’ve violated the constraint
 
     // Compute the result
   }
+  // return result
 }
 ```
 
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+
+```js
+const lengthOfLongestSubstring = function(s) {
+  const map = {};
+  let l = 0;
+  return s.split('').reduce((p, v, c) => {
+    if (map[v] >= l) l = map[v] + 1;
+    map[v] = c;
+    const u = c - l + 1;
+    return Math.max(u, p);
+  }, 0);
+};
+```
 
 ```js
 function lengthOfLongestSubstring(s) {
@@ -79,7 +94,7 @@ function lengthOfLongestSubstringTwoDistinct(s) {
       counts[s.charCodeAt(left)]--;
       if (counts[s.charCodeAt(left)] === 0) {
         distinct--;
-      };
+      }
       left++;
     }
     max = Math.max(max, right - left + 1);
@@ -87,7 +102,6 @@ function lengthOfLongestSubstringTwoDistinct(s) {
   return max;
 }
 ```
-
 
 Given a string s, return the length of the longest substring that contains at most two distinct characters.
 
@@ -113,17 +127,6 @@ return s.split('').reduce((p, v, c) => {
 if (map[v] >= left) left = map[v] + 1;
 map[v] = c;
 const u = c - left + 1;
-return Math.max(u, p);
-}, 0);
-};
-
-const lengthOfLongestSubstring = function(s) {
-const map = {};
-let l = 0;
-return s.split('').reduce((p, v, c) => {
-if (map[v] >= l) l = map[v] + 1;
-map[v] = c;
-const u = c - l + 1;
 return Math.max(u, p);
 }, 0);
 };

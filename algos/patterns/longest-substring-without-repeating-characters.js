@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-const lengthOfLongestSubstringLong = function(s) {
+const lengthOfLongestSubstring_1 = function(s) {
   // map and left pointer
   const map = {};
   let left = 0;
@@ -23,7 +23,7 @@ const lengthOfLongestSubstringLong = function(s) {
   }, 0);
 };
 
-const lengthOfLongestSubstring = function(s) {
+const lengthOfLongestSubstring_2 = function(s) {
   const map = {};
   let l = 0;
   return s.split('').reduce((p, v, c) => {
@@ -34,6 +34,20 @@ const lengthOfLongestSubstring = function(s) {
   }, 0);
 };
 
+const lengthOfLongestSubstring = function(s) {
+  // ASCII: 128 characters | Constant Space O(1)
+  const counts = new Array(128).fill(0);
+  let max = 0;
+  for (let left = 0, right = 0; right < s.length; right++) {
+    counts[s.charCodeAt(right)]++;
+    while (counts[s.charCodeAt(right)] > 1) {
+      counts[s.charCodeAt(left)]--;
+      left++;
+    }
+    max = Math.max(max, right - left + 1);
+  }
+  return max;
+};
 let string;
 
 string = 'abcabcbb';

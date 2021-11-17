@@ -16,7 +16,7 @@ function getSortedIndex(array, value) {
   let low = 0;
   let high = array.length;
   while (low < high) {
-    let mid = (low + high) >>> 1;
+    let mid = Math.floor((low + high) / 2);
     if (array[mid] < value) {
       low = mid + 1;
     } else {
