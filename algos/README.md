@@ -1,5 +1,11 @@
 
-# Homework 1
+# Homework
+
+## Reference Materials
+
+- [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
+- [Javascript Algorithms](https://mgechev.github.io/javascript-algorithms/index.html)
+
 
 ## Arrays
 
@@ -52,6 +58,44 @@
 
 [Top k frequent words](https://leetcode.com/problems/top-k-frequent-words/) | [My solution](bucketing-count-sort/top-k-frequent-words.js)
 
-## Reference Materials
+``
 
-- resource: [javascript-algorithms](https://mgechev.github.io/javascript-algorithms/index.html)
+
+
+## Strings & Binary Search
+
+~Problems to get exposed to the topics:
+https://leetcode.com/problems/binary-search/
+https://www.interviewbit.com/problems/sorted-insert-position/
+https://www.interviewbit.com/problems/search-for-a-range/
+https://www.interviewbit.com/problems/square-root-of-integer/
+https://www.interviewbit.com/problems/palindrome-string/
+https://www.interviewbit.com/problems/longest-common-prefix/
+https://www.interviewbit.com/problems/reverse-the-string/
+https://www.interviewbit.com/problems/roman-to-integer/
+https://www.interviewbit.com/problems/add-binary-strings/
+https://www.interviewbit.com/problems/zigzag-string/
+
+Pattern problems
+Trie
+https://leetcode.com/problems/implement-trie-prefix-tree/
+https://www.interviewbit.com/problems/hotel-reviews/
+https://www.interviewbit.com/problems/shortest-unique-prefix/
+
+## Count Parentheses
+[Valid parenthesis](https://leetcode.com/problems/valid-parentheses/) | [My solution](count-parenthesis/valid-parentheses.js)
+[Valid parenthesis](https://leetcode.com/problems/remove-invalid-parentheses/) | [My solution](count-parenthesis/remove-invalid-parentheses.js)
+
+
+Binary search - K Closest elements
+https://leetcode.com/problems/find-k-closest-elements/
+
+Binary search with non-exact conditions
+https://leetcode.com/problems/peak-index-in-a-mountain-array/
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+
+Guess by binary search
+https://www.interviewbit.com/problems/allocate-books/
+
+
