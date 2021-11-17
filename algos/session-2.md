@@ -68,31 +68,22 @@ https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-charac
 function lengthOfLongestSubstringTwoDistinct(s) {
   // ASCII: 128 characters | Constant Space O(1)
   const counts = new Array(128).fill(0);
-
   let max = 0;
   let distinct = 0;
-
   for (let left = 0, right = 0; right < s.length; right++) {
-
     if (counts[s.charCodeAt(right)] === 0) {
       distinct++;
     }
-
     counts[s.charCodeAt(right)]++;
-
     while (distinct > 2) {
       counts[s.charCodeAt(left)]--;
-
       if (counts[s.charCodeAt(left)] === 0) {
         distinct--;
       };
-
       left++;
     }
-
     max = Math.max(max, right - left + 1);
   }
-
   return max;
 }
 ```
