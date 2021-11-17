@@ -30,8 +30,8 @@ let target;
 let list;
 
 start = '010';
-target = '111';
-list = ['000', '001', '101', '110', '111'];
+target = '111'; 
+list = ['000', '001','101', '110', '111'];
 console.log(openTheLock(start, target, list)); // true
 
 start = 'bbb';
