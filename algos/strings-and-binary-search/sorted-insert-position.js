@@ -1,8 +1,8 @@
-const searchInsert = function(nums, target) {
+function searchInsert(nums, target) {
   let found = nums.findIndex((item) => item === target);
   if (found > -1) return found;
   return getSortedIndex(nums, target);
-};
+}
 
 function getSortedIndex(array, value) {
   let low = 0;
