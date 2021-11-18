@@ -74,11 +74,11 @@
 
 [Square root of integer](https://www.interviewbit.com/problems/square-root-of-integer/) | [My solution](strings-and-binary-search/square-root-of-integer.js)
 
-https://www.interviewbit.com/problems/palindrome-string/
+[Is palindrome](https://leetcode.com/problems/valid-palindrome/) | [My solution](strings-and-binary-search/valid-palindrome.js)
 
 https://www.interviewbit.com/problems/longest-common-prefix/
 
-https://www.interviewbit.com/problems/reverse-the-string/
+[Reverse the string](https://www.interviewbit.com/problems/reverse-the-string/) | [My solution](strings-and-binary-search/reverse-the-string.js)
 
 https://www.interviewbit.com/problems/roman-to-integer/
 
