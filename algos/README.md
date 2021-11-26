@@ -86,7 +86,7 @@
 
 [Add binary strings](https://leetcode.com/problems/add-binary/) | [My solution](algos/strings-and-binary-search/add-binary.js)
 
-[Zigzag string conversion](https://leetcode.com/problems/zigzag-conversion/) | [My solution](strings-and-binary-search/zigzag-string-conversion.js)
+[Convert zigzag string](https://leetcode.com/problems/zigzag-conversion/) | [My solution](strings-and-binary-search/convert-zigzag-string.js)
 
 ### Pattern problems
 
