@@ -6,7 +6,6 @@
 - [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
 - [Javascript Algorithms](https://mgechev.github.io/javascript-algorithms/index.html)
 
-
 ## Arrays
 
 [Add one to number](https://leetcode.com/problems/plus-one/) | [My solution](arrays/plus-one.js)
