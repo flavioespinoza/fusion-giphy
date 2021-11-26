@@ -54,7 +54,7 @@
 
 [Maximum size subarray sum equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | [My solution](maximum-sum-subarray/max-subarray-length.js)
 
-## Monotonic Queue
+## Monotonic Queues
 
 [Next greater element i](https://leetcode.com/problems/next-greater-element-i/) | [My solution](monotonic-queues/next-greater-element-i.js)
 
