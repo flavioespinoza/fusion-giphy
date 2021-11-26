@@ -106,7 +106,7 @@ https://www.interviewbit.com/problems/shortest-unique-prefix/
 
 **Binary search - K Closest elements**:
 
-https://leetcode.com/problems/find-k-closest-elements/
+[Find k closest elements](https://leetcode.com/problems/find-k-closest-elements/) | [My solution](strings-and-binary-search/find-k-closest-elements.js)
 
 **Binary search with non-exact conditions**:
 
