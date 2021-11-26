@@ -46,6 +46,7 @@
 ## Maximum Sum Subarray
 
 <https://www.interviewbit.com/problems/flip/>
+
 <https://www.interviewbit.com/problems/max-sum-contiguous-subarray/>
 
 **Sum subarray = k**
@@ -55,6 +56,7 @@
 ## Monotonic Queue
 
 <https://leetcode.com/problems/next-greater-element-i/>
+
 <https://leetcode.com/problems/largest-rectangle-in-histogram/>
 
 ## Bucketing (a.k.a. Counting Sort)
@@ -64,7 +66,7 @@
 
 ## Strings & Binary Search
 
-~Problems to get exposed to the topics:
+**Problems to get exposed to the topics**:
 
 [Binary search](https://leetcode.com/problems/binary-search/) | [My solution](strings-and-binary-search/binary-search.js)
 
@@ -76,36 +78,47 @@
 
 [Is palindrome](https://leetcode.com/problems/valid-palindrome/) | [My solution](strings-and-binary-search/valid-palindrome.js)
 
-https://www.interviewbit.com/problems/longest-common-prefix/
+[Longest common prefix](https://leetcode.com/problems/longest-common-prefix/) | [My solution](strings-and-binary-search/longest-common-prefix.js)
 
 [Reverse the string](https://www.interviewbit.com/problems/reverse-the-string/) | [My solution](strings-and-binary-search/reverse-the-string.js)
 
-https://www.interviewbit.com/problems/roman-to-integer/
+[Roman to integer](https://leetcode.com/problems/roman-to-integer/) | [My solution](strings-and-binary-search/roman-to-integer.js)
 
-https://www.interviewbit.com/problems/add-binary-strings/
+[Add binary strings](https://leetcode.com/problems/add-binary/) | [My solution](algos/strings-and-binary-search/add-binary.js)
 
-https://www.interviewbit.com/problems/zigzag-string/
+[Zigzag string conversion](https://leetcode.com/problems/zigzag-conversion/) | [My solution](strings-and-binary-search/zigzag-string-conversion.js)
 
-Pattern problems
-Trie
+### Pattern problems
+
+**Trie**:
+
 https://leetcode.com/problems/implement-trie-prefix-tree/
+
 https://www.interviewbit.com/problems/hotel-reviews/
+
 https://www.interviewbit.com/problems/shortest-unique-prefix/
 
-## Count Parentheses
+**Count parentheses**:
+
 [Valid parenthesis](https://leetcode.com/problems/valid-parentheses/) | [My solution](count-parenthesis/valid-parentheses.js)
-[Valid parenthesis](https://leetcode.com/problems/remove-invalid-parentheses/) | [My solution](count-parenthesis/remove-invalid-parentheses.js)
+
+[Remove invalid parenthesis](https://leetcode.com/problems/remove-invalid-parentheses/) | [My solution](count-parenthesis/remove-invalid-parentheses.js)
 
 
-Binary search - K Closest elements
+**Binary search - K Closest elements**:
+
 https://leetcode.com/problems/find-k-closest-elements/
 
-Binary search with non-exact conditions
+**Binary search with non-exact conditions**:
+
 https://leetcode.com/problems/peak-index-in-a-mountain-array/
+
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 
-Guess by binary search
+**Guess by binary search**:
+
 https://www.interviewbit.com/problems/allocate-books/
 
 
