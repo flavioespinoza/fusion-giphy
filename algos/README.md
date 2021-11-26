@@ -45,19 +45,20 @@
 
 ## Maximum Sum Subarray
 
-<https://www.interviewbit.com/problems/flip/>
+[Flip](https://www.interviewbit.com/problems/flip/) | [My solution](maximum-sum-subarray/flip.js)
 
-<https://www.interviewbit.com/problems/max-sum-contiguous-subarray/>
+
+[Max subarray](https://leetcode.com/problems/maximum-subarray/) | [My solution](maximum-sum-subarray/max-subarray.js)
 
 **Sum subarray = k**
 
-<https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/>
+[Maximum size subarray sum equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | [My solution](maximum-sum-subarray/max-subarray-length.js)
 
 ## Monotonic Queue
 
-<https://leetcode.com/problems/next-greater-element-i/>
+[Next greater element i](https://leetcode.com/problems/next-greater-element-i/) | [My solution](monotonic-queues/next-greater-element-i.js)
 
-<https://leetcode.com/problems/largest-rectangle-in-histogram/>
+[Largest rectangle in histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | [My solution](monotonic-queues/largest-rectangle-in-histogram.js)
 
 ## Bucketing (a.k.a. Counting Sort)
 
@@ -91,8 +92,7 @@
 ### Pattern problems
 
 **Trie**:
-
-https://leetcode.com/problems/implement-trie-prefix-tree/
+[Implement trie prefix tree](https://leetcode.com/problems/implement-trie-prefix-tree/) | [My solution](strings-and-binary-search/implement-trie-prefix-tree.js)
 
 https://www.interviewbit.com/problems/hotel-reviews/
 
