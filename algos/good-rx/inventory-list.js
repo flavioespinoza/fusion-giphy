@@ -15,3 +15,15 @@ function inventoryList() {
     }
   };
 }
+
+const list = inventoryList();
+list.add('shirt');
+list.add('shirt');
+list.add('pants');
+list.add('pants');
+list.add('pants');
+list.remove('shirt');
+list.remove('pants');
+list.remove('belt');
+
+console.log(list.getList()); // [ 'shirt', 'pants', 'pants' ]
