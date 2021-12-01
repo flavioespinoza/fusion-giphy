@@ -44,3 +44,17 @@ console.log(test); // [0, 0, 0]
 
 test = cyclicRotation([1, 2, 3, 4], 4);
 console.log(test); // [1, 2, 3, 4]
+
+/**
+ * @name CYCLIC_ROTATION_LEFT
+ * @url https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+ * */
+function rotLeft(array, k) {
+  const res = [];
+  array.reverse();
+  for (let i = 0; i < array.length; i++) {
+    const modIdx = (k + i) % array.length;
+    res[modIdx] = array[i];
+  }
+  return res.reverse();
+}

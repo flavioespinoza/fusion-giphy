@@ -121,3 +121,467 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 https://www.interviewbit.com/problems/allocate-books/
 
 
+
+
+```js
+Strings & Binary Search
+~Problems to get exposed to the topics:
+https://leetcode.com/problems/binary-search/ 
+https://www.interviewbit.com/problems/sorted-insert-position/
+https://www.interviewbit.com/problems/search-for-a-range/
+https://www.interviewbit.com/problems/square-root-of-integer/
+https://www.interviewbit.com/problems/palindrome-string/
+https://www.interviewbit.com/problems/longest-common-prefix/
+https://www.interviewbit.com/problems/reverse-the-string/
+https://www.interviewbit.com/problems/roman-to-integer/
+https://www.interviewbit.com/problems/add-binary-strings/
+https://www.interviewbit.com/problems/zigzag-string/
+
+Pattern problems
+Trie
+
+https://leetcode.com/problems/implement-trie-prefix-tree/ 
+https://www.interviewbit.com/problems/hotel-reviews/
+https://www.interviewbit.com/problems/shortest-unique-prefix/ 
+
+Count Parentheses
+https://leetcode.com/problems/valid-parentheses/
+https://leetcode.com/problems/remove-invalid-parentheses/
+
+Binary search - K Closest elements
+https://leetcode.com/problems/find-k-closest-elements/
+
+Binary search with non-exact conditions
+https://leetcode.com/problems/peak-index-in-a-mountain-array/ 
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+
+Guess by binary search
+https://www.interviewbit.com/problems/allocate-books/ 
+
+
+class Trie {
+  constructor() {
+    this.root = {};
+  }
+
+  insert(word) {
+    let node = this.root;
+    for (let c of word) {
+      if (node[c] == null) node[c] = {};
+      node = node[c];
+    }
+    node.isWord = true;
+  }
+
+  traverse(word) {
+    let node = this.root;
+    for (let c of word) {
+      node = node[c];
+      if (node == null) return null;
+    }
+    return node;
+  }
+  
+  search(word) {
+    const node = this.traverse(word);
+    return node != null && node.isWord === true;
+  }
+
+  startsWith(prefix) {
+    return this.traverse(prefix) != null;
+  }
+}
+
+
+Find shortest unique prefix to represent each word in the list.
+
+NOTE : Assume that no word is prefix of another. In other words, the representation is always possible.
+
+Example:
+
+Input: [zebra, dog, duck, dove]
+Output: {z, dog, du, dov}
+where we can see that
+zebra = z
+dog = dog
+duck = du
+dove = dov
+
+
+            d
+          / | \
+         o  u
+        /\  |
+       g  v c
+          | |
+          e k
+          
+          BFS (level by level)
+          
+class TrieNode {
+  boolean isUnique = true;
+  TrieNode[] next = new TrieNode[26];
+}
+public ArrayList<String> prefix(ArrayList<String> A) {
+  TrieNode root = new TrieNode();
+  for (String word : A) add(root, word);
+  ArrayList<String> r = new ArrayList<>();
+  for (String word : A) {
+    StringBuilder s = new StringBuilder();
+    TrieNode n = root;
+    for (char c: word.toCharArray()) {
+      n = n.next[c -'a'];
+      s.append(c);
+      if (n.isUnique) break;
+    }
+    r.add(s.toString());
+  }
+  return r;
+}
+private void add(TrieNode n, String word) {
+  for (char c : word.toCharArray()) {
+    int index = c - 'a';
+    if (n.next[index] == null) n.next[index] = new TrieNode();
+    else n.next[index].isUnique = false;
+    n = n.next[index];
+  }
+}
+
+0: a
+1: b
+2: c
+...
+
+
+
+Given a set of reviews provided by the customers for different hotels and a string containing Good Words, you need to sort the reviews in descending order according to their Goodness Value (Higher goodness value first). We define the Goodness Value of a string as the number of Good Words in that string.
+
+NOTE: Sorting should be stable. If review i and review j have the same Goodness Value then their original order would be preserved.
+
+You are expected to use Trie in an Interview for such problems
+
+
+
+Problem Constraints
+1 <= No.of reviews <= 200
+1 <= No. of words in a review <= 1000
+1 <= Length of an individual review <= 10,000
+1 <= Number of Good Words <= 10,000
+1 <= Length of an individual Good Word <= 4
+All the alphabets are lower case (a - z)
+
+
+Input Format
+First argument is a string A containing "Good Words" separated by "_" character
+
+Second argument is a vector B of strings containing Hotel Reviews. Review strings are also separated by "_" character.
+
+
+
+Output Format
+Return a vector of integers which contain the original indexes of the reviews in the sorted order of reviews.
+
+
+
+Example Input
+Input 1:
+
+ A = "cool_ice_wifi"
+ B = ["water_is_cool", "cold_ice_drink", "cool_wifi_speed"]
+
+
+Example Output
+Output 1:
+
+ [2, 0, 1]
+
+
+Example Explanation
+Explanation 1:
+
+ sorted reviews are ["cool_wifi_speed", "water_is_cool", "cold_ice_drink"]
+ 
+ 
+class TrieNode {
+  boolean isLeaf = false;
+  TrieNode[] next = new TrieNode[26];
+}
+public ArrayList<String> prefix(String A, ArrayList<String> B) {
+  TrieNode root = new TrieNode();
+  for (String word : A.split("_")) add(root, word); // cool_wifi_speed => A = ["cool", "wifi", "speed"]
+  
+  ArrayList<Integer> ratings = new ArrayList<>();
+  for (String review : A) {
+    int rating = 0;
+    
+    for (String word : review.split("_")) {
+      if (search(root,word)) rating++;
+    }
+    ratings.add(rating);
+  }
+  ArrayList<Integer> r = new ArrayList<>();
+  for (int i = 0; i < B.size(); i++) r.add(i);
+  Collections.sort(r, (r1, r2)) -> {
+    return ratings.get(r1) == ratings.get(r2) ? r1 - r2 : ratings.get(r2) - ratings.get(r1);
+  });
+  return r;
+}
+private void add(TrieNode n, String word) {
+  for (char c : word.toCharArray()) {
+    int index = c - 'a';
+    if (n.next[index] == null) n.next[index] = new TrieNode();
+    n = n.next[index];
+  }
+  n.isLeaf = true;
+}
+private boolean search (TrieNode n, String word) {
+  for (char c: word.toCharArray()) {
+    int index = c - 'a';
+    if (n.next[index] == null) return false;
+    n = n.next[index];
+  }
+  return n.isLeaf;
+}
+
+
+
+
+```
+
+Strings & Binary Search
+~Problems to get exposed to the topics:
+https://leetcode.com/problems/binary-search/ 
+https://www.interviewbit.com/problems/sorted-insert-position/
+https://www.interviewbit.com/problems/search-for-a-range/
+https://www.interviewbit.com/problems/square-root-of-integer/
+https://www.interviewbit.com/problems/palindrome-string/
+https://www.interviewbit.com/problems/longest-common-prefix/
+https://www.interviewbit.com/problems/reverse-the-string/
+https://www.interviewbit.com/problems/roman-to-integer/
+https://www.interviewbit.com/problems/add-binary-strings/
+https://www.interviewbit.com/problems/zigzag-string/
+
+Pattern problems
+Trie
+
+https://leetcode.com/problems/implement-trie-prefix-tree/ 
+https://www.interviewbit.com/problems/hotel-reviews/
+https://www.interviewbit.com/problems/shortest-unique-prefix/ 
+
+Count Parentheses
+https://leetcode.com/problems/valid-parentheses/
+https://leetcode.com/problems/remove-invalid-parentheses/
+
+Binary search - K Closest elements
+https://leetcode.com/problems/find-k-closest-elements/
+
+Binary search with non-exact conditions
+https://leetcode.com/problems/peak-index-in-a-mountain-array/ 
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+
+Guess by binary search
+https://www.interviewbit.com/problems/allocate-books/ 
+
+
+class Trie {
+  constructor() {
+    this.root = {};
+  }
+
+  insert(word) {
+    let node = this.root;
+    for (let c of word) {
+      if (node[c] == null) node[c] = {};
+      node = node[c];
+    }
+    node.isWord = true;
+  }
+
+  traverse(word) {
+    let node = this.root;
+    for (let c of word) {
+      node = node[c];
+      if (node == null) return null;
+    }
+    return node;
+  }
+  
+  search(word) {
+    const node = this.traverse(word);
+    return node != null && node.isWord === true;
+  }
+
+  startsWith(prefix) {
+    return this.traverse(prefix) != null;
+  }
+}
+
+
+Find shortest unique prefix to represent each word in the list.
+
+NOTE : Assume that no word is prefix of another. In other words, the representation is always possible.
+
+Example:
+
+Input: [zebra, dog, duck, dove]
+Output: {z, dog, du, dov}
+where we can see that
+zebra = z
+dog = dog
+duck = du
+dove = dov
+
+
+            d
+          / | \
+         o  u
+        /\  |
+       g  v c
+          | |
+          e k
+          
+          BFS (level by level)
+          
+class TrieNode {
+  boolean isUnique = true;
+  TrieNode[] next = new TrieNode[26];
+}
+public ArrayList<String> prefix(ArrayList<String> A) {
+  TrieNode root = new TrieNode();
+  for (String word : A) add(root, word);
+  ArrayList<String> r = new ArrayList<>();
+  for (String word : A) {
+    StringBuilder s = new StringBuilder();
+    TrieNode n = root;
+    for (char c: word.toCharArray()) {
+      n = n.next[c -'a'];
+      s.append(c);
+      if (n.isUnique) break;
+    }
+    r.add(s.toString());
+  }
+  return r;
+}
+private void add(TrieNode n, String word) {
+  for (char c : word.toCharArray()) {
+    int index = c - 'a';
+    if (n.next[index] == null) n.next[index] = new TrieNode();
+    else n.next[index].isUnique = false;
+    n = n.next[index];
+  }
+}
+
+0: a
+1: b
+2: c
+...
+
+
+
+Given a set of reviews provided by the customers for different hotels and a string containing Good Words, you need to sort the reviews in descending order according to their Goodness Value (Higher goodness value first). We define the Goodness Value of a string as the number of Good Words in that string.
+
+NOTE: Sorting should be stable. If review i and review j have the same Goodness Value then their original order would be preserved.
+
+You are expected to use Trie in an Interview for such problems
+
+
+
+Problem Constraints
+1 <= No.of reviews <= 200
+1 <= No. of words in a review <= 1000
+1 <= Length of an individual review <= 10,000
+1 <= Number of Good Words <= 10,000
+1 <= Length of an individual Good Word <= 4
+All the alphabets are lower case (a - z)
+
+
+Input Format
+First argument is a string A containing "Good Words" separated by "_" character
+
+Second argument is a vector B of strings containing Hotel Reviews. Review strings are also separated by "_" character.
+
+
+
+Output Format
+Return a vector of integers which contain the original indexes of the reviews in the sorted order of reviews.
+
+
+
+Example Input
+Input 1:
+
+ A = "cool_ice_wifi"
+ B = ["water_is_cool", "cold_ice_drink", "cool_wifi_speed"]
+
+
+Example Output
+Output 1:
+
+ [2, 0, 1]
+
+
+Example Explanation
+Explanation 1:
+
+ sorted reviews are ["cool_wifi_speed", "water_is_cool", "cold_ice_drink"]
+ 
+ 
+class TrieNode {
+  boolean isLeaf = false;
+  TrieNode[] next = new TrieNode[26];
+}
+public ArrayList<String> prefix(String A, ArrayList<String> B) {
+  TrieNode root = new TrieNode();
+  for (String word : A.split("_")) add(root, word); // cool_wifi_speed => A = ["cool", "wifi", "speed"]
+  
+  ArrayList<Integer> ratings = new ArrayList<>();
+  for (String review : A) {
+    int rating = 0;
+    
+    for (String word : review.split("_")) {
+      if (search(root,word)) rating++;
+    }
+    ratings.add(rating);
+  }
+  ArrayList<Integer> r = new ArrayList<>();
+  for (int i = 0; i < B.size(); i++) r.add(i);
+  Collections.sort(r, (r1, r2)) -> {
+    return ratings.get(r1) == ratings.get(r2) ? r1 - r2 : ratings.get(r2) - ratings.get(r1);
+  });
+  return r;
+}
+private void add(TrieNode n, String word) {
+  for (char c : word.toCharArray()) {
+    int index = c - 'a';
+    if (n.next[index] == null) n.next[index] = new TrieNode();
+    n = n.next[index];
+  }
+  n.isLeaf = true;
+}
+private boolean search (TrieNode n, String word) {
+  for (char c: word.toCharArray()) {
+    int index = c - 'a';
+    if (n.next[index] == null) return false;
+    n = n.next[index];
+  }
+  return n.isLeaf;
+}
+
+https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321
+
+chap 1, 2 (no sql vs sql), 3, 5-9 (super important!!!), 10-11 (important), 12 (skim thru)
+
+Content Serving: videos, photos, music, live videos, disappearing content etc.
+Search: Information Retrieval, Learning to Rank
+Messaging & Notification
+Social Networks: Feeds (serving, ranking, etc.), relationships, etc.
+Distributed storages: Distributed file system, key-value, databases
+Data Processing systems and Data Warehouses
+Content recommendations and Leaderboard: Netflix movie recommendations, Top Spotify songs, Top Youtube videos, etc.
+
+template for the next session
+
+
+
