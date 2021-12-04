@@ -99,40 +99,26 @@
       let square = [];
       let currentPlayer = tick_x;
 
-      const playerWon = () => {
-        const firstSquare = square[0];
-        const middleSquare = square[4];
-        const lastSquare = square[8];
-        if (firstSquare === currentPlayer) {
-          if (
-            (square[1] === currentPlayer && square[2] === currentPlayer) ||
-            (square[3] === currentPlayer && square[6] === currentPlayer) ||
-            (square[4] === currentPlayer && square[8] === currentPlayer)
-          ) {
-            return true;
-          }
-        }
-        if (middleSquare === currentPlayer) {
-          if (
-            (square[1] === currentPlayer && square[7] === currentPlayer) ||
-            (square[3] === currentPlayer && square[5] === currentPlayer) ||
-            (square[2] === currentPlayer && square[6] === currentPlayer)
-          ) {
-            return true;
-          }
-        }
-        if (lastSquare === currentPlayer) {
-          if (
-            (square[2] === currentPlayer && square[5] === currentPlayer) ||
-            (square[6] === currentPlayer && square[7] === currentPlayer)
-          ) {
-            return true;
-          }
-        }
-        return false;
-      };
+      const WIN = [
+        [0, 1, 2], // top row
+        [3, 4, 5], // middle row
+        [6, 7, 8], // bottom row
+        [0, 3, 6], // left col
+        [1, 4, 7], // middle col
+        [2, 5, 8], // right col
+        [0, 4, 8], // top-left to right-bottom diagonal
+        [2, 4, 6], // top-right to left-bottom diagonal
+      ];
 
-      const playerDraw = () => {
+      function playerWon() {
+        return WIN.some((condition) => {
+          return condition.every((index) => {
+            return boxes[index].textContent === currentPlayer;
+          });
+        });
+      }
+
+      function playerDraw() {
         let moves = 0;
         for (let i = 0; i < square.length; i++) {
           if (square[i]) {
@@ -143,9 +129,9 @@
           return true;
         }
         return false;
-      };
+      }
 
-      const boxClicked = (e) => {
+      function boxClicked(e) {
         const id = e.target.id;
         if (!square[id]) {
           square[id] = currentPlayer;
@@ -167,9 +153,9 @@
           }
         }
         return false;
-      };
+      }
 
-      const handleClick = (e) => {
+      function handleClick(e) {
         const gameOver = boxClicked(e);
         if (gameOver) {
           resetBtn.style.display = 'block';
@@ -185,9 +171,9 @@
             header.textContent = `Player 1's Turn`;
           }
         }
-      };
+      }
 
-      const handleReset = () => {
+      function handleReset() {
         square = [];
         for (const box of boxes) {
           box.textContent = '';
@@ -196,9 +182,9 @@
         resetBtn.style.display = 'none';
         header.textContent = `Player 1's Turn`;
         currentPlayer = tick_x;
-      };
+      }
 
-      const init = () => {
+      function init() {
         let id = 0;
         for (const box of boxes) {
           box.id = id;
@@ -208,7 +194,7 @@
         }
         currentPlayer = tick_x;
         resetBtn.addEventListener('click', handleReset);
-      };
+      }
 
       init();
     </script>
