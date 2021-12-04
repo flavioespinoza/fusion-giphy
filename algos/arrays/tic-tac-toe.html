@@ -10,222 +10,206 @@
       rel="stylesheet"
     /> -->
     <style>
-      :root {
-        --text: #dbdfac;
-        --bg: #2a1e5c;
-        --btn-bg: #d7f171;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        color: var(--text);
-        background-color: var(--bg);
-        font-family: 'Helvetica neue';
+      #board {
+        width: 280px;
+        min-height: 450px;
+        border-radius: 10%;
+        padding: 0 20px 20px 20px;
+        text-align: center;
+        background-color: grey;
+        color: white;
       }
 
       h1 {
-        font-size: 80px;
-        margin-bottom: 0;
-        text-transform: uppercase;
+        padding-top: 12px;
       }
 
-      .container {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+      h2 {
+        margin: 8px;
       }
 
-      #board {
-        width: 60vw;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 100px;
-        margin-top: 40px;
+      table {
+        margin: auto;
+        border-spacing: 8px;
       }
 
-      .box {
-        height: 20vh;
-        width: 20vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--text);
-      }
-
-      #winner {
-        margin-bottom: 24px;
-      }
-
-      #reset {
-        padding: 10px 20px;
-        background-color: var(--btn-bg);
-        border: none;
-        border-radius: 20px;
-        color: var(--bg);
-        font-size: 20px;
+      button {
         font-weight: bold;
+        border-radius: 8px;
         cursor: pointer;
-        text-transform: uppercase;
+        background-color: #6e072d;
+        border-color: #6e6e6e;
+        color: white;
+      }
+
+      .game-square {
+        font-size: 50px;
+        width: 70px;
+        height: 70px;
+        vertical-align: top;
+      }
+
+      .game-square:disabled {
+        cursor: default;
+      }
+
+      #restart-button {
+        display: none;
+        font-size: 24px;
+        padding: 12px;
+        margin: 12px auto;
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <h1 id="heading">Play</h1>
-      <h2 id="winner"></h2>
-      <button id="reset">Reset</button>
-      <div id="board">
-        <div class="box" id="0"></div>
-        <div class="box" id="1"></div>
-        <div class="box" id="2"></div>
-        <div class="box" id="3"></div>
-        <div class="box" id="4"></div>
-        <div class="box" id="5"></div>
-        <div class="box" id="6"></div>
-        <div class="box" id="7"></div>
-        <div class="box" id="8"></div>
-      </div>
+    <div id="board">
+      <h1>Tic Tac Toe</h1>
+      <h2 id="game-heading" aria-live="polite">Player 1's Turn</h2>
+      <table role="grid">
+        <tbody>
+          <tr>
+            <td><button class="game-square"></button></td>
+            <td><button class="game-square"></button></td>
+            <td><button class="game-square"></button></td>
+          </tr>
+          <tr>
+            <td><button class="game-square"></button></td>
+            <td><button class="game-square"></button></td>
+            <td><button class="game-square"></button></td>
+          </tr>
+          <tr>
+            <td><button class="game-square"></button></td>
+            <td><button class="game-square"></button></td>
+            <td><button class="game-square"></button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="restart-button">Restart Game</button>
     </div>
+
     <script>
-      const boxes = document.querySelectorAll('.box');
-      const text = document.querySelector('#heading');
-      const winner = document.querySelector('#winner');
-      const resetBtn = document.querySelector('#reset');
+      const boxes = document.querySelectorAll('.game-square');
+      const header = document.getElementById('game-heading');
+      const resetBtn = document.getElementById('restart-button');
 
-      const spaces = [];
-      const tick_circle = 'O';
       const tick_x = 'X';
-      let currentPlayer = tick_circle;
+      const tick_o = 'O';
 
-      const drawBoard = () => {
-        boxes.forEach((box, i) => {
-          let styleString = '';
-          if (i < 3) {
-            styleString += 'border-bottom: 3px solid var(--text);';
+      let spaces = [];
+      let currentPlayer = tick_x;
+
+      const playerWon = () => {
+        const firstSquare = spaces[0];
+        const middleSquare = spaces[4];
+        const lastSquare = spaces[8];
+        if (firstSquare === currentPlayer) {
+          if (
+            (spaces[1] === currentPlayer && spaces[2] === currentPlayer) ||
+            (spaces[3] === currentPlayer && spaces[6] === currentPlayer) ||
+            (spaces[4] === currentPlayer && spaces[8] === currentPlayer)
+          ) {
+            return true;
           }
-          if (i % 3 === 0) {
-            styleString += 'border-right: 3px solid var(--text);';
+        }
+        if (middleSquare === currentPlayer) {
+          if (
+            (spaces[1] === currentPlayer && spaces[7] === currentPlayer) ||
+            (spaces[3] === currentPlayer && spaces[5] === currentPlayer) ||
+            (spaces[2] === currentPlayer && spaces[6] === currentPlayer)
+          ) {
+            return true;
           }
-          if (i % 3 === 2) {
-            styleString += 'border-left: 3px solid var(--text);';
+        }
+        if (lastSquare === currentPlayer) {
+          if (
+            (spaces[2] === currentPlayer && spaces[5] === currentPlayer) ||
+            (spaces[6] === currentPlayer && spaces[7] === currentPlayer)
+          ) {
+            return true;
           }
-          if (i > 5) {
-            styleString += 'border-top: 3px solid var(--text);';
+        }
+        return false;
+      };
+
+      const playerDraw = () => {
+        let moves = 0;
+        for (let i = 0; i < spaces.length; i++) {
+          if (spaces[i]) {
+            moves++;
           }
-          box.style = styleString;
-          box.addEventListener('click', boxClicked);
-        });
+        }
+        if (moves === 9) {
+          return true;
+        }
+        return false;
       };
 
       const boxClicked = (e) => {
         const id = e.target.id;
-        console.log(e);
         if (!spaces[id]) {
-          console.log(spaces[id]);
           spaces[id] = currentPlayer;
-          e.target.innerText = currentPlayer;
-
+          e.target.textContent = currentPlayer;
+          e.target.disabled = true;
+          // if a player has won or if there is a tie game
           if (playerWon()) {
-            text.innerText = `${currentPlayer} has won!`;
-            restart();
-            return;
+            if (currentPlayer === 'X') {
+              header.textContent = 'Player 1 Won!';
+            } else {
+              header.textContent = 'Player 2 Won!';
+            }
+            return true;
           }
-
           if (playerDraw()) {
-            return;
+            header.textContent = 'Tie Game!';
+            return true;
           }
-          currentPlayer = currentPlayer === tick_circle ? tick_x : tick_circle;
         }
+        return false;
       };
 
-      const playerWon = () => {
-        if (spaces[0] === currentPlayer) {
-          if (spaces[1] === currentPlayer && spaces[2] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins up to top`;
-            return true;
+      const handleClick = (e) => {
+        let gameOver = boxClicked(e);
+        if (gameOver) {
+          resetBtn.style.display = 'block';
+          for (const box of boxes) {
+            box.disabled = true;
           }
-          if (spaces[3] === currentPlayer && spaces[6] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins on the left`;
-            return true;
-          }
-          if (spaces[4] === currentPlayer && spaces[8] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins diagonally`;
-            return true;
-          }
-        }
-        if (spaces[8] === currentPlayer) {
-          if (spaces[2] === currentPlayer && spaces[5] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins on the right`;
-            return true;
-          }
-          if (spaces[6] === currentPlayer && spaces[7] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins on the bottom`;
-            return true;
-          }
-        }
-        if (spaces[4] === currentPlayer) {
-          if (spaces[1] === currentPlayer && spaces[7] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins vertically on middle`;
-            return true;
-          }
-          if (spaces[3] === currentPlayer && spaces[5] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins horizontally on the middle`;
-            return true;
-          }
-          if (spaces[2] === currentPlayer && spaces[6] === currentPlayer) {
-            winner.innerText = `${currentPlayer} wins diagonally`;
-            return true;
+        } else {
+          if (currentPlayer === 'X') {
+            currentPlayer = tick_o;
+            header.textContent = `Player 2's Turn`;
+          } else {
+            currentPlayer = tick_x;
+            header.textContent = `Player 1's Turn`;
           }
         }
       };
 
-      const playerDraw = () => {
-        let draw = 0;
-        spaces.forEach((space, i) => {
-          if (spaces[i] !== null) draw++;
-        });
-        if (draw === 9) {
-          text.innerText = `Draw`;
-          restart();
+      const handleReset = () => {
+        spaces = [];
+        for (const box of boxes) {
+          box.textContent = '';
+          box.disabled = false;
         }
+        resetBtn.style.display = 'none';
+        header.textContent = `Player 1's Turn`;
+        currentPlayer = tick_x;
       };
 
-      const restart = () => {
-        setTimeout(() => {
-          spaces.forEach((space, i) => {
-            spaces[i] = null;
-          });
-          boxes.forEach((box) => {
-            box.innerText = '';
-          });
-          text.innerText = `Play`;
-          winner.innerText = ``;
-        }, 4000);
+      const init = () => {
+        let id = 0;
+        for (const box of boxes) {
+          box.id = id;
+          box.textContent = '';
+          box.addEventListener('click', handleClick);
+          id++;
+        }
+        currentPlayer = tick_x;
+        resetBtn.addEventListener('click', handleReset);
       };
 
-      const reset = () => {
-        spaces.forEach((space, i) => {
-          spaces[i] = null;
-        });
-        boxes.forEach((box) => {
-          box.innerText = '';
-        });
-        text.innerText = `Play`;
-        winner.innerText = ``;
-      };
-
-      resetBtn.addEventListener('click', reset);
-      reset();
-      drawBoard();
+      init();
     </script>
   </body>
 </html>
