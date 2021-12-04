@@ -96,35 +96,35 @@
       const tick_x = 'X';
       const tick_o = 'O';
 
-      let spaces = [];
+      let square = [];
       let currentPlayer = tick_x;
 
       const playerWon = () => {
-        const firstSquare = spaces[0];
-        const middleSquare = spaces[4];
-        const lastSquare = spaces[8];
+        const firstSquare = square[0];
+        const middleSquare = square[4];
+        const lastSquare = square[8];
         if (firstSquare === currentPlayer) {
           if (
-            (spaces[1] === currentPlayer && spaces[2] === currentPlayer) ||
-            (spaces[3] === currentPlayer && spaces[6] === currentPlayer) ||
-            (spaces[4] === currentPlayer && spaces[8] === currentPlayer)
+            (square[1] === currentPlayer && square[2] === currentPlayer) ||
+            (square[3] === currentPlayer && square[6] === currentPlayer) ||
+            (square[4] === currentPlayer && square[8] === currentPlayer)
           ) {
             return true;
           }
         }
         if (middleSquare === currentPlayer) {
           if (
-            (spaces[1] === currentPlayer && spaces[7] === currentPlayer) ||
-            (spaces[3] === currentPlayer && spaces[5] === currentPlayer) ||
-            (spaces[2] === currentPlayer && spaces[6] === currentPlayer)
+            (square[1] === currentPlayer && square[7] === currentPlayer) ||
+            (square[3] === currentPlayer && square[5] === currentPlayer) ||
+            (square[2] === currentPlayer && square[6] === currentPlayer)
           ) {
             return true;
           }
         }
         if (lastSquare === currentPlayer) {
           if (
-            (spaces[2] === currentPlayer && spaces[5] === currentPlayer) ||
-            (spaces[6] === currentPlayer && spaces[7] === currentPlayer)
+            (square[2] === currentPlayer && square[5] === currentPlayer) ||
+            (square[6] === currentPlayer && square[7] === currentPlayer)
           ) {
             return true;
           }
@@ -134,8 +134,8 @@
 
       const playerDraw = () => {
         let moves = 0;
-        for (let i = 0; i < spaces.length; i++) {
-          if (spaces[i]) {
+        for (let i = 0; i < square.length; i++) {
+          if (square[i]) {
             moves++;
           }
         }
@@ -147,11 +147,11 @@
 
       const boxClicked = (e) => {
         const id = e.target.id;
-        if (!spaces[id]) {
-          spaces[id] = currentPlayer;
+        if (!square[id]) {
+          square[id] = currentPlayer;
           e.target.textContent = currentPlayer;
           e.target.disabled = true;
-          // if a player has won or if there is a tie game
+          // if a player has won
           if (playerWon()) {
             if (currentPlayer === 'X') {
               header.textContent = 'Player 1 Won!';
@@ -160,6 +160,7 @@
             }
             return true;
           }
+          // if there is a tie game
           if (playerDraw()) {
             header.textContent = 'Tie Game!';
             return true;
@@ -169,7 +170,7 @@
       };
 
       const handleClick = (e) => {
-        let gameOver = boxClicked(e);
+        const gameOver = boxClicked(e);
         if (gameOver) {
           resetBtn.style.display = 'block';
           for (const box of boxes) {
@@ -187,7 +188,7 @@
       };
 
       const handleReset = () => {
-        spaces = [];
+        square = [];
         for (const box of boxes) {
           box.textContent = '';
           box.disabled = false;
