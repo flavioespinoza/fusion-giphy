@@ -26,7 +26,7 @@ const input = [
  * @param {array} array of people
  * @returns {string} lastName of juniors with max count
  */
-function maxJuniors(array) {
+ function maxJuniors(array) {
   const map = {};
   let max = 0;
   let maxFamily = '';
