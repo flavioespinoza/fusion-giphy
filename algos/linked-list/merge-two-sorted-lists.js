@@ -21,7 +21,8 @@ function mergeTwoLists(listOne, listTwo) {
   return listTwo;
 };
 
-function recurse(listOne, listTwo) {
+// Psudocode
+function recurse_1(listOne, listTwo) {
   // if (!listOne or !listTwo) return listOne || listTwo
 
   // if listOne-val < listTwo-val
@@ -32,7 +33,8 @@ function recurse(listOne, listTwo) {
   // return listTwo
 }
 
-function recurse(listOne, listTwo) {
+// Psudocode
+function recurse_2(listOne, listTwo) {
   // if (!listOne or !listTwo) return listOne or listTwo <-- whichever exists
 
   // if (listOne-val < listTwo-val) 
