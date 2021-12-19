@@ -30,7 +30,6 @@ const input = [
  * @returns {string} lastName of juniors with max count
  */
 function maxJuniors(juniorsArr) {
-  const result = []
   const map = {}
   const temp = []
   for (let i = 0; i < juniorsArr.length; i++) {
