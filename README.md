@@ -109,3 +109,61 @@ yarn test
 - [ ] Add automated `CI/CD` via Digital Ocean:
   - [App Platform](https://www.digitalocean.com/products/app-platform/)
 - [ ] Peer Review and discussion about application architecture, code, testing, UI/UX
+
+
+
+
+
+
+```js
+import React, { useRef, useEffect, useState } from 'react';
+
+function useRenderCount() {
+    const count = useRef(1);
+    useEffect(() => {
+        count.current += 1;
+    });
+    return count.current;
+}
+
+export default function App() {
+    const count = useRenderCount();
+    const [name, setName] = useState('Flavio');
+    const otherName = name === 'Flavio' ? 'Jeff' : 'Flavio';
+    
+    return (<div>
+        <p>Hello, {name}</p>
+        <p>Render count: {count}</p>
+        <button onClick={() => setName(otherName)}>Change Name</button>
+    </div>);
+}
+```
+
+
+
+```js
+import React, { useState, useEffect } from 'react';
+
+export default function Clock(...props) {
+    const now = new Date().toLocaleTimeString();
+    const [date, setDate] = useState(now);
+    const tick = () => {
+        const newNow = new Date().toLocaleTimeString();
+        setDate(newNow);
+    }
+    useEffect(() => {
+        const timerID = setInterval(() => {
+            tick();
+        }, 1000);
+        return () => {
+            clearInterval(timerID);
+        };
+    }, [])
+    return (
+        <div>
+            <h1>Hello, World!</h1>
+            <h2>It is {date}</h2>
+        </div>
+    )
+}
+```

@@ -39,7 +39,7 @@ function exec(...args) {
   }
 }
 
-const exec2 = (...args) => (n) => args.reduce((acc, fn) => fn(acc), n);
+const exec2 = (...args) => (n) => args.reduce((pv, fn) => fn(pv), n);
 
 console.log(exec(divide(8), add(3), increment)(4)); // 6
 console.log(exec2(divide(8), add(3), increment)(4)); // 6

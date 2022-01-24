@@ -11,6 +11,27 @@
 //   id: string,
 // }
 
+
+// const dfs__countOfNodesWithType = (obj, type) => {
+//   const countTypes = (nodes) => {
+//     let count = 0;
+//     nodes.forEach((node) => {
+//       if (node.properties.type === type) count++;
+//       count += countTypes(node.children);
+//     });
+//     return count;
+//   }
+//   return countTypes(obj.nodes);
+// };
+
+
+
+
+
+
+
+
+
 const obj = {
   nodes: [
     {
@@ -44,22 +65,22 @@ const obj = {
       ],
     },
   ],
-
   id: 'diagram1',
 };
 
-const dfs__countOfNodesWithType = (nodes, type) => {
-  const result = countTypes(nodes);
-  function countTypes(nodes) {
+const dfs__countOfNodesWithType = (obj, type) => {
+  const countTypes = (nodes) => {
     let count = 0;
-    nodes.forEach((node) => {
-      if (node.properties.type === type) count++;
-      count = count + countTypes(node.children);
-    });
+    for (const node of nodes) {
+      if (node.properties.type === type) {
+        count++;
+      }
+      count += countTypes(node.children);
+    }
     return count;
   }
-  return result;
-};
+  return countTypes(obj.nodes);
+}
 
-console.log(dfs__countOfNodesWithType(obj.nodes, 'x')); // 3
-console.log(dfs__countOfNodesWithType(obj.nodes, 'y')); // 1
+console.log(dfs__countOfNodesWithType(obj, 'x')); // 3
+console.log(dfs__countOfNodesWithType(obj, 'y')); // 1
