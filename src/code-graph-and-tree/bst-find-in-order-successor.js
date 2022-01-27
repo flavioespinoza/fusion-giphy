@@ -121,9 +121,6 @@ function findMinKeyWithinTree(current) {
   return current;
 }
 
-
-
-
 // Create a Binary Search Tree
 let bst = new BinarySearchTree();
 bst.insert(20);
