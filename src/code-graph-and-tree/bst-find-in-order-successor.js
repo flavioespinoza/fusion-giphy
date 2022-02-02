@@ -95,23 +95,17 @@ BinarySearchTree.prototype.findInOrderSuccessor = function(node) {
   if (node.right !== null) {
     return findMinKeyWithinTree(node.right);
   }
-
   // pointers
   const parent = node.parent;
   const child = node;
-
   // travel up using the parent pointer until you see
   // a node that is the left child of its parent.
-  
   // the parent of such a node is the in-order-successor! :)
   while (parent !== null && child === parent.right) {
     child = parent;
     parent = child.parent;
   }
-
   return parent;
-
-
 };
 
 function findMinKeyWithinTree(current) {
