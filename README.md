@@ -144,7 +144,7 @@ export default function App() {
 ```js
 import React, { useState, useEffect } from 'react';
 
-export default function Clock(...props) {
+export default function Clock() {
     const now = new Date().toLocaleTimeString();
     const [date, setDate] = useState(now);
     const tick = () => {
