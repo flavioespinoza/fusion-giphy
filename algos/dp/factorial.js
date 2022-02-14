@@ -8,12 +8,12 @@ function factorial(n) {
 console.log(factorial(5)); // 120
 
 
-function factorialRecursive(x) {
-  if (x === 0) {
+function factorialRecursive(n) {
+  if (n === 0) {
     return 1;
   } else {
-    return x * factorialRecursive(x - 1);
+    return n * factorialRecursive(n - 1);
   }
 }
 console.log(factorialRecursive(5)); // 120
-
+console.log(factorialRecursive(6)); // 720

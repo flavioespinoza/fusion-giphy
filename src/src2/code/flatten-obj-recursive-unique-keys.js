@@ -34,21 +34,17 @@ const details = {
 
 function flat(obj) {
   const result = {};
-  for (const prop in obj) {
-    // check if prop type is object
-    let typeObj = typeof obj[prop] === 'object';
-    if (typeObj) {
-      // if true call flat recursively with obj key of prop
-      const temp = flat(obj[prop]);
-      for (const prop2 in temp) {
-        // added a unique prop name consisting of parent and child
-        const uniqueProp = `${prop}.${prop2}`;
-        result[uniqueProp] = temp[prop2];
-      }
+  Object.keys(obj).forEach((keyName) => {
+    if (typeof obj[keyName] === 'object') {
+      const current = flat(obj[keyName]);
+      Object.keys(current).forEach((keyName2) => {
+        const keyUnique = `${keyName}.${keyName2}`;
+        result[keyUnique] = current[keyName2];
+      });
     } else {
-      result[prop] = obj[prop];
+      result[keyName] = obj[keyName];
     }
-  }
+  });
   return result;
 }
 // are you there?
